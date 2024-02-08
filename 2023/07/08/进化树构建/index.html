@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"taochh.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"检索字段","hits_empty":"抱歉，未搜索到包含: ${query} 的文章","hits_stats":"在 ${time} ms 共搜索到 ${hits} 个相关结果"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.html"};
+  </script>
+
+  <meta name="description" content="进化树构建教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;进化树构建&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;">
+<meta property="og:url" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/index.html">
+<meta property="og:site_name" content="TAO&#39;s blog">
+<meta property="og:description" content="进化树构建教程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230708124524186.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709122233628.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709123628141.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709134119902.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709140243346.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709140556454.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709141827428.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709142848137.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709143613205.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709151016236.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709151948565.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709152425729.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709154345582.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709155859918.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709160140934.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709170827697.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709174002705.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709214305700.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709214404418.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709214505100.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709224122808.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710110904445.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710112314812.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710131841786.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710132525997.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710134333042.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710134529315.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710135112398.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710140514862.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710143259112.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710141232425.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710150614942.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710163304932.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710163636468.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710163842448.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710190631216.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710191121036.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710191702956.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710192856971.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710193057201.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710193231843.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710194052393.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230712111120316.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/TAO/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93/photos/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA%E6%95%99%E7%A8%8B/image-20230712111204300.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230711231501716.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230711231339042.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230712113725461.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230712113846151.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230712120852265.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021158717.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021231835.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021309552.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021347067.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021413501.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021515681.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021659491.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021814232.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021937562.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022009796.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022042126.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022140502.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022209932.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022248486.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713030656475.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713031139793.png">
+<meta property="og:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022613518.png">
+<meta property="article:published_time" content="2023-07-08T05:52:25.779Z">
+<meta property="article:modified_time" content="2024-01-27T03:34:04.776Z">
+<meta property="article:author" content="水瓶之翼">
+<meta property="article:tag" content="进化树">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230708124524186.png">
+
+<link rel="canonical" href="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>=======进化树构建======= | TAO's blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">TAO's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">君子坦荡荡</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://taochh.github.io/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="水瓶之翼">
+      <meta itemprop="description" content="躺平了">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TAO's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          =======进化树构建=======
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-07-08 13:52:25" itemprop="dateCreated datePublished" datetime="2023-07-08T13:52:25+08:00">2023-07-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-01-27 11:34:04" itemprop="dateModified" datetime="2024-01-27T11:34:04+08:00">2024-01-27</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/" itemprop="url" rel="index"><span itemprop="name">生物信息</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/" class="post-meta-item leancloud_visitors" data-flag-title="=======进化树构建=======" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>进化树构建教程</p>
+<span id="more"></span>
+
+<h1 id="手把手教你绘制进化树（理论与实践）"><a href="#手把手教你绘制进化树（理论与实践）" class="headerlink" title="手把手教你绘制进化树（理论与实践）"></a>手把手教你绘制进化树（理论与实践）</h1><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>通过系统发育进化分析，确定目标序列与其它同源序列的演化关系、遗传距离远近，或者对细菌&#x2F;病毒序列进行基因分型。（本文分享的主要是基于编码区DNA的系统发育分析）</p>
+<h2 id="方法与过程"><a href="#方法与过程" class="headerlink" title="方法与过程"></a>方法与过程</h2><ol>
+<li><p>下载 MEGA 11.0 软件</p>
+</li>
+<li><p>使用 blast 确定序列同源性，下载目标序列</p>
+</li>
+<li><p>使用 MEGA 11.0 进行多序列比对</p>
+</li>
+<li><p>使用 MEGA 11.0 构建进化树</p>
+</li>
+<li><p>将进化树导出，使用R包 ggtree 进行可视化</p>
+</li>
+</ol>
+<h2 id="1-软件下载"><a href="#1-软件下载" class="headerlink" title="1. 软件下载"></a>1. 软件下载</h2><p>MEGA(Molecular Evolutionary Genetics Analysis)是一个开源软件，我们可以直接下载最新版用于windows系统的图形化界面(GUI)版 MEGA 11.0。</p>
+<p>MEGA 11 对大数据集的分析进行了优化，界面也更加美观，其它功能与 MEGA 7 没什么区别，当然你也可以两个版本都下载比较一下，windows上可以同时安装不同版本的MEGA。下载网址为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://www.megasoftware.net/</span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230708124524186.png" alt="image-20230708124524186" style="zoom:25%;">
+
+<p>下载时需要匿名填一些信息，下载完直接按照提示安装即可，如果下载速度较慢，那就去我的网盘里取吧：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">链接：https://pan.baidu.com/s/1dqE1fHpS__jcKKJEOSKgDA </span><br><span class="line">提取码：MEGA</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-目标序列获取"><a href="#2-目标序列获取" class="headerlink" title="2. 目标序列获取"></a>2. 目标序列获取</h2><p>一般来说，我们自己至少会有1条感兴趣的目标序列，其格式应该是 FASTA 格式。我这里举了个例子，是一个细菌序列的某个基因，第一行为<code>&gt;</code>开头，后面为该序列的注释信息，第二行之后的所有内容是该基因的核酸序列。</p>
+<p>如果你已经有自己准备好的序列就不需要进行目标序列获取这一步啦。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&gt;CP000702.1:1005082-1006524 Thermotoga petrophila RKU-1, complete genome</span><br><span class="line">ATGCCATCTGTGAAGATCGGTATCATCGGTGCGGGGAGCGCGGTGTTTTCTCTGAGGCTTGTGAGTGATC</span><br><span class="line">TTTGCAAAACGCCGGGACTCTCTGGCAGCACGGTCACCCTCATGGATATCGACGAAGAAAGACTCGACGC</span><br><span class="line">TGTTCTGACCATCGCGAAAAAATACGTTGAAGAAGTGGGAGCGGATCTGAAATTCGAAAAAACCATGAAT</span><br><span class="line">TTAGATGACGTCATCATCGACGCGGATTTTGTGATAAACACAGCGATGGTGGGTGGCCATACCTACTTGG</span><br><span class="line">AGAAAGTCAGACAGATCAGTGAGAAATACGGCTACTACAGAGGAATAGACGCTCAGGAGTTTAACATGGT</span><br><span class="line">CTCCGACTACTACACCTTCTCCAACTACAACCAGCTCAAGTACTTCGTTGAAATAGCAAGGAAGATAGAG</span><br><span class="line">AAGCTCTCCCCAAAAGCCTGGTACTTGCAGGCAGCGAATCCCGTTTTCGAAGGAACAACCCTTGTGACAA</span><br><span class="line">GAACGGTTCCCATAAAGGCAGTGGGATTCTGCCATGGACACTACGGCGTGATGGAGATCGTAGAGAAACT</span><br><span class="line">GGGGCTGGAAGAAGAAAAAGTAGATTGGCAGGTCGCAGGAGTGAACCACGGTATCTGGCTGAATAGGTTC</span><br><span class="line">AGATACAACGGGGAGAACGCGTATCCCCTCCTTGACAGGTGGATCGAGGAAAAATCAAAAGATTGGAAAC</span><br><span class="line">CAGAGAACCCCTTCAACGATCAGCTCTCTCCCGCTGCGATAGATATGTACAGATTCTACGGTGTGATGCC</span><br><span class="line">CATCGGTGACACCGTGAGAAACTCTTCGTGGAGGTACCACAGGGATCTTGAGACCAAGAAGAAATGGTAC</span><br><span class="line">GGTGAACCCTGGGGAGGAGCAGATTCTGAAATAGGCTGGAAATGGTACCAGGACACACTTGGAAAGGTAA</span><br><span class="line">CGGAGATCACAAAGAAGGTGGCAAAGTTCATCAAAGAAAATCCGTCCGCGAGGCTCTCCGACCTTGGAAG</span><br><span class="line">TGTTCTGGGAAAAGACCTCTCAGAAAAGCAGTTTGTGCTCGAAGTAGAGAAAATCCTCGATCCAGAAAGA</span><br><span class="line">AAGAGTGGAGAGCAGCACATCCCATTCATCGATGCGCTGTTGAACGATAACAAGGCAAGATTCGTGGTGA</span><br><span class="line">ACATACCAAATAGGGGTATCATCCACGGAATAGACGATGACGTGGTCGTTGAAATCCCAGCCCTTGTGGA</span><br><span class="line">CAAGAACGGAATCCATCCCGAGAAGATCGAACCACCGCTTCCAGATCGCGTGGTCAAGTACTACCTGAGA</span><br><span class="line">CCAAGGATCATGAGAATGGAAATGGCTCTGGAGGCGTTCCTCACGGGGGACATAAGGATCATAAAAGAAC</span><br><span class="line">TTCTCTACAGAGATCCAAGAACGAAGAACGACGAACAGGTAGAAAAGGTGATCGAGGAAATCCTCGCACT</span><br><span class="line">CTCGGAAAACGAAGAGATGCGGAAACATTATCTGAAGAGATGA</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>这里需要注意一个概念，我们用于进化分析的所有序列理论上应该都是同源的，所以并不是说随便下载几条序列都可以进行进化分析的。有些序列比对后仅仅能证明它们相似而不一定能证明它们同源，而 NCBI的blast工具就可以进行显著性检验，帮助我们判断序列同源的可靠性。</p>
+<blockquote>
+<p>  需要区分<strong>同源</strong>与<strong>相似</strong>的概念。</p>
+<p>  如果两个序列享有一个共同的进化上的祖先,则这两个序列是同源(homologous)的。对这个定义需要注意的一点是，同源是个定性的概念，没有“度”的差异。对两个序列，它们或者同源或者不同源，不能说它们70%同源或80%同源。</p>
+<p>  与同源相关但不同的两个概念是相似(similarity)和相同(identity)，它们都是定量的概念，基于对序列中字符的精确比较，既可以说两个核酸序列高度相似，也可以说它们 70% 的碱基相同。</p>
+</blockquote>
+<h3 id="2-1-blast获取同源序列"><a href="#2-1-blast获取同源序列" class="headerlink" title="2.1 blast获取同源序列"></a>2.1 blast获取同源序列</h3><ol>
+<li>进入ncbi在线网站 -&gt; 点击右侧的blast -&gt; 选择 Nucleotide BLAST -&gt; 将前面的序列复制进去，其它参数默认即可 -&gt; 然后点击下方的 BLAST，等待比对结果。</li>
+</ol>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709122233628.png" alt="image-20230709122233628" style="zoom:33%;"> 
+
+<ol start="2">
+<li><p>比对结果的解释</p>
+<p>blast 把我们输入的序列称为 query 序列，数据库中与之比对的序列称为 subject 序列。</p>
+</li>
+</ol>
+<ul>
+<li><p>Description 列，是对当前 subject 序列的简短介绍，它还有一个链接，鼠标左键点击它即可通往该序列比对的结果页面；</p>
+</li>
+<li><p>Scientific Name 列，不是我们关注的重点； </p>
+</li>
+<li><p>Max Score 列，代表比对到 subject 序列的片段的最高评分（因为 blast 比对时是将待比对序列拆分成一系列片段去与subject序列进行比对的）；Total Score 列，同理，即所有比对片段的评分之和。这两个评分越高，代表两个序列越相近；</p>
+</li>
+<li><p>Query Cover 列，代表与 query 序列的全长相比，有多少比例的 query 序列与 subject 序列能比对上（即序列比对时能覆盖到的比例）；</p>
+</li>
+<li><p>E value 列，即期望值。是 blast 软件进行统计显著性计算得到的值，E值越接近0，代表该 subject 序列越有可能与 query 序列同源；</p>
+</li>
+<li><p>Per.Ident 列，即两个序列完全相同的碱基比例；</p>
+</li>
+<li><p>Acc.Len 列，即 subject 序列的原始长度；Accession 列表明了 subject 序列的在 genbank 上的登录号。</p>
+</li>
+</ul>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709123628141.png" alt="image-20230709123628141" style="zoom:30%;">
+
+<ol start="3">
+<li><p>序列同源性判断与下载</p>
+<p>我们点击 Description 列的第一条序列，可以通往比对结果的链接。</p>
+</li>
+</ol>
+<ul>
+<li><p>先看红色方块中的内容，Score&#x2F;Expect&#x2F;Identities 与前面的一致（identities可以检查比对的序列是否有失配，包括插入缺失以及碱基的替换）；</p>
+<p>Gaps代表空格数（序列比对时如果有插入&#x2F;缺失，blast会通过插入空格来使序列对齐）；</p>
+<p>Strand代表 query 序列与 subject 序列的方向；</p>
+<p>Plus&#x2F;Plus 代表 subject 序列与 query序列是同向的。</p>
+</li>
+<li><p>绿色方块中显示了具体的比对情况，有gap的位置会通过<code>-</code>表示。</p>
+</li>
+<li><p>接着我们要判读该 subject 序列是不是可以下载下来作为我们进化分析的同源序列。事实上并没有一个严格的标准来界定序列是否同源，有文献把 Query Cover&gt;&#x3D;60%，E value &lt;1e-3 的序列作为区分是否同源的依据，也有文献选择 E value &lt;1e-5，所以需要我们根据自己的研究领域进行判断，如果符合我们的要求，就可以认为比对得到的这条 subject 序列与我们的 query 序列同源，就可以下载下来用于进化分析了。</p>
+</li>
+<li><p>在本例中(Query Cover&#x3D;100%，Strand&#x3D;Plus&#x2F;Plus)，可以直接点击粉色方块中的 Download -&gt; 选择 FASTA(aligned sequences)可以直接下载到完整的subject序列。</p>
+</li>
+</ul>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709134119902.png" alt="image-20230709134119902" style="zoom:33%;">
+
+<ul>
+<li><p>当 Query Cover &lt; 100%，或者 Strand&#x3D;Plus&#x2F;Minus。比如我们比对到的下面这条 subject序列，它的序列其实和我们输入的序列是反向互补的，如果直接点击 Download 其实下载的是反向互补的序列，如果我们没注意的话后面比对结果会不准确。</p>
+<p>因此我们点击下面蓝色方块中的 Genbank 链接，然后在右侧的 Customize view 中勾选 Show reverse complement，接着点击 Update View即可（如下方第2张图所示）。</p>
+<p>接着可以再确认一下更新的序列前几位是否与我们的 query 序列一致，即可下载这条 subject 序列，点击上方的 Send to 下载 FASTA 文件（如下方第3张图所示）</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709140243346.png" alt="image-20230709140243346" style="zoom:33%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709140556454.png" alt="image-20230709140556454" style="zoom:25%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709141827428.png" alt="image-20230709141827428" style="zoom:33%;"></li>
+</ul>
+<p><strong>总结：</strong></p>
+<p>这样一条条序列检查是否同源，是否同向，然后下载是比较稳妥的方法，不会出错，但是序列多了就会比较浪费时间，我们也可以直接在比对页面直接选择多个序列批量下载 FASTA 文件(如下图所示)，但是下载后<strong>一定要注意</strong>有些序列是与我们的 query 序列是反向互补的，需要将其反向互补后重新整合才能用于后面的序列比对（不过后面用MEGA也可以对序列进行反向互补操作）。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709142848137.png" alt="image-20230709142848137" style="zoom:33%;">
+
+<h3 id="2-2-自己判断序列同源性"><a href="#2-2-自己判断序列同源性" class="headerlink" title="2.2 自己判断序列同源性"></a>2.2 自己判断序列同源性</h3><p>还有一种情况是我们自己知道下载的序列一定是同源的，比如下载某个病毒的所有基因序列，就不需要通过 blast 等软件检查序列是否同源。</p>
+<p>比如我在 NCBI 的 Nucleotide 数据库中检索 PRRSV 病毒的 ORF5基因，然后下载其中一些序列用于进化分析，我们选择好需要的序列后还是和前面一样点击 Send to 下载 FASTA 文件即可。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709143613205.png" alt="image-20230709143613205" style="zoom:25%;">
+
+<h3 id="2-3-序列检查"><a href="#2-3-序列检查" class="headerlink" title="2.3 序列检查"></a>2.3 序列检查</h3><p>不管我们是如何获取到的序列，在将其用于比对之前一般应确保以下原则（1）尽量保证序列完整，既没有缺失也没有多余（2）用于进化分析的序列应同源（3）序列的方向应一致。</p>
+<p>因此一般选择某个基因全长或者CDs序列(即编码序列)这种会比较好检查。我们获取到所有序列后一般是将其保存在一个FASTA文件中，推荐使用 Sublime 软件直接打开 FASTA 文件，还可以对序列进行批量检查。检查的方式可以根据我们的序列特征进行，比如下面几种方法：</p>
+<ol>
+<li><p>检查<code>&gt;</code>的数量。</p>
+<p>因为1个序列由1个<code>&gt;</code>开头，<code>&gt;</code>的数量应与我们实际需要比对的序列数量一致。比如我这次需要比对18条序列，在 Sublime 中按 <code>Ctrl</code> + <code>F</code>进入搜索模式，然后搜索<code>&gt;</code>，此时左下角会出现文档中的<code>&gt;</code>的数量(绿色方框)，显示18个即说明序列数量正确。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709151016236.png" alt="image-20230709151016236" style="zoom:33%;">
+</li>
+<li><p>检查序列方向。针对我感兴趣的序列，因为我要比对的这18条序列都是CDs序列，因此大部分的序列应该都是以 ATG 起始密码子起始（有些物种可能出现GTG），我们不能直接搜索以ATG开头的行，这样会与序列中间的以ATG开头的行混淆。再仔细看了一下这些序列，发现都是<code>&gt;</code>所在的行以1个数字结尾，然后另起一行以ATG开头，我们通过这样去匹配就能准确匹配到到所有以ATG开始的序列。</p>
+<p>在 Sublime 中按 <code>Ctrl</code> + <code>F</code>进入搜索模式，然后点击下方最左侧的正则表达式搜索，搜索式为<code>[1-9]\nATG</code>，此时左下角显示18个即说明序列方向应该正确。（该搜索式中，<code>[1-9]</code>代表第1个字符匹配1-9之间的所有数字，<code>\n</code>代表换行符）</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709151948565.png" alt="image-20230709151948565" style="zoom:25%;">
+</li>
+<li><p>同样的，我用表达式<code>TAG\n\n</code>搜索时，发现所有18条序列都是以TAG结尾（终止密码子一般是 TAA、TAG、TGA）,因此可以确认我的所有序列都是完整的，且方向也是对的。</p>
+</li>
+</ol>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709152425729.png" alt="image-20230709152425729" style="zoom:25%;">
+
+<ol start="4">
+<li><p>批量修改注释行，一般从genbank上下载下来的序列<code>&gt;</code>所在的行不会像我的例子中这么干净，一般会有一串信息。因为之后构建进化树的时候软件一般会默认使用<code>&gt;</code>后面的信息给树中的序列命名，所以这里可以提前用 Sublime 进行批量整理。</p>
+<p>在下面的例子中，如果我们想只保留<code>&gt;</code>后面的 genbank登录号，只需要搜索<code>:</code>，然后点击右侧的 Find All，此时光标会出现在所有匹配的<code>:</code>上，此时想批量删除<code>:</code>右侧的信息，只需要按<code>Fn</code>+<code>Shift</code>+右方向键选中，然后按退格键删除即可。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709154345582.png" alt="image-20230709154345582" style="zoom:20%;"></li>
+</ol>
+<p><strong>总结：</strong></p>
+<p>前面的序列检查方法并不唯一，针对我们自己的序列特征可以进行不同的检查（比如还可以检查文档的行数，如果1个基因序列一般都占10行的话，20条序列应该就是200行，Sublime中左侧标出了行数，可以防止下载成了别的基因）。总之，其主要目的都是为了确保所有序列的方向一致，所有序列同源且完整。</p>
+<h2 id="3-使用-MEGA-进行多序列比对"><a href="#3-使用-MEGA-进行多序列比对" class="headerlink" title="3. 使用 MEGA 进行多序列比对"></a>3. 使用 MEGA 进行多序列比对</h2><h3 id="3-1-导入待比对的-fasta-序列"><a href="#3-1-导入待比对的-fasta-序列" class="headerlink" title="3.1 导入待比对的 fasta 序列"></a>3.1 导入待比对的 fasta 序列</h3><p>依次点击：ALIGN -&gt; Edit&#x2F;Build Alignment -&gt; Retrieve a sequence from a file -&gt; OK -&gt; 选择我们前面整理好的fasta文件 -&gt; 出现 Alignment Explorer 窗口</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709155859918.png" alt="image-20230709155859918" style="zoom:25%;">
+
+<p>​	导入序列后如下图所示：（这时如果还想更改某条序列的名称可以在该原名字处右键选中 Edit Sequence Name编辑）</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709160140934.png" alt="image-20230709160140934" style="zoom:25%;">
+
+<h3 id="3-2-多序列比对"><a href="#3-2-多序列比对" class="headerlink" title="3.2 多序列比对"></a>3.2 多序列比对</h3><p>MEGA提供了两种序列比对方法，Clustal W 与 MUSCLE ，有文献报道 MUSCLE 的准确性更高，且速度比Clustal W 更快，因此这里我们直接使用 MUSCLE 进行多序列比对。</p>
+<p>按<code>Ctrl</code> + <code>A</code>选中所有序列 -&gt; 点击 Alignment -&gt; 选择 Align by MUSCLE -&gt; 参数设置界面直接点击 OK 即可，一般不需要更改参数。（如果用Clustal W 进行核酸序列比对的话一般也不需要修改参数,蛋白的多序列比对参数最好设置：Gap open:3 , Gap extension : 1.8）</p>
+<p>比对后结果：</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709170827697.png" alt="image-20230709170827697" style="zoom:30%;">
+
+<h3 id="3-3-保存比对结果"><a href="#3-3-保存比对结果" class="headerlink" title="3.3 保存比对结果"></a>3.3 保存比对结果</h3><p>依次点击 Data -&gt; Export Alignment -&gt; MEGA Format，然后保存为<code>.meg</code>格式的文件即可（保存时会提示输入标题以及是否是编码序列），我这里命名为<code>example.meg</code>。另外我们这里也可以另外保存一份 FASTA格式的文件用于我们最后一步的可视化（我这里命名为<code>example.fas</code>）。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709174002705.png" alt="image-20230709174002705" style="zoom:30%;">
+
+<h3 id="3-4-比对结果可靠性检验"><a href="#3-4-比对结果可靠性检验" class="headerlink" title="3.4 比对结果可靠性检验"></a>3.4 比对结果可靠性检验</h3><ol>
+<li><p>首先，我们可以大致看一下有没有异常序列，如果有序列过长的异常序列在MEGA中我们可以直接删除这部分碱基，另外MEGA也可以对序列进行反向互补，碱基修改等操作。不过一般前面步骤 2.3 仔细检查过已经整理好了序列的话这一步通常没什么问题。</p>
+</li>
+<li><p>其次可以检验比对结果的可靠性。</p>
+<p>如果比对结果不可靠，那么构建的进化树也会不可靠。Thompson等人（1999）的一项研究比较了一些比对程序，表明当配对比对中氨基酸一致性(identity)的平均百分比太低时，多重比对的准确性低于它们能够产生可靠的系统发育树的水平。Thompson的研究表明，当氨基酸平均identity&lt;20%时，则&lt;50%的残基是被正确比对的。在20%-30% identity 之间的“过渡带”中，约80%的残基正确对齐，&gt;30%的identity中，90%的残基正确比对。</p>
+<p>因此我们可以通过计算序列之间的 p 距离(p-distance)来检验核酸或氨基酸比对的可靠性。比如在氨基酸比对中， p-distance 值为 0.6，代表氨基酸平均 identity为 1-0.6&#x3D;40%，如前所述，氨基酸的 identity 一般需要 &gt;30% 才比较可信(即 p-distance&lt;0.7)，因此当 p-distance&#x3D;0.6时，我们可以认为氨基酸的比对结果是比较可靠的。</p>
+<p>对于核酸来说，检验方法类似，假如 p-distance 为 0.33，则 67% 的 identity 就可能不足以用于准确估计进化关系。p-distance&lt;0.33 一般时认为结果比较可靠。</p>
+<p>一般来说，假如核酸序列或者氨基酸序列的 p-distance 较高时，不应将多序列比对的结果用于构建进化树，而是应该删除其中不可靠的序列重新比对，使得核酸序列或者氨基酸序列的 p-distance 满足 核酸：&lt;0.33&#x2F;氨基酸：&lt;0.7。</p>
+<ul>
+<li>在 MEGA 中依次点击：DISTANCE -&gt; Compute Overall Mean Distance -&gt; 选择前面导出的比对完的 <code>.meg</code> 文件：</li>
+</ul>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709214305700.png" alt="image-20230709214305700" style="zoom:33%;">
+
+<ul>
+<li><p>然后按照下图进行参数设置</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709214404418.png" alt="image-20230709214404418" style="zoom:25%;">
+</li>
+<li><p>点击OK后，可以得到 1 个平均 p-distance，本例中是0.26&lt;0.33，因此我们可以认为本次比对结果比较可靠。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709214505100.png" alt="image-20230709214505100" style="zoom:25%;"></li>
+</ul>
+</li>
+</ol>
+<p><strong>总结：</strong>比对方法以及比对可靠性的检验方法有很多种，上面只是介绍了其中一种。比如 MAFFT、PRANK等比对方法就被认为准确性比较高，有文献报道 MAFFT准确性比Clustal W高、速度也更快，PRANK准确性被认为比MAFFT与Clustal W都高，但速度却相对较慢。大家在实际比对时可以尝试多种方法，并在准确性与速度方面进行一定的权衡。</p>
+<h2 id="4-构建进化树"><a href="#4-构建进化树" class="headerlink" title="4. 构建进化树"></a>4. 构建进化树</h2><p>构建进化树的方法主要可以分为两类</p>
+<ol>
+<li><p>基于距离的方法，基于所计算出的序列间遗传距离来构建进化树，快速，会产生单一的树。</p>
+<ul>
+<li>邻接法：Neihbor Jioning(NJ)</li>
+<li>非加权分组平均法(UPGMA)</li>
+</ul>
+</li>
+<li><p>基于字符的方法，基于描述遗传字符演化的数学模型构建进化树，速度较慢，会产生多棵树，然后根据其最优选择标准来找出最佳进化树。</p>
+<ul>
+<li>最大简约法(Maximum Parsimony,MP)</li>
+<li>最大似然法(Maximum Likelihood,ML)</li>
+<li>贝叶斯马尔科夫链蒙特卡洛法(BMCMC)</li>
+</ul>
+</li>
+</ol>
+<p>根据《phylogenetic trees made easy》作者所述，MEGA是构建NJ树最好的程序，且其强烈反对使用UPGMA法构建系统发育树。</p>
+<h3 id="4-1-构建-NJ-树"><a href="#4-1-构建-NJ-树" class="headerlink" title="4.1 构建 NJ 树"></a>4.1 构建 NJ 树</h3><p>邻接法：Neihbor Jioning(NJ)是使用得最广泛的一种方法。我们使用MEGA根据前面的比对结果构建NJ树。</p>
+<p><strong>邻接法基本介绍：</strong></p>
+<p>邻接法是一种基于最小进化原理的算法，基于距离矩阵构建树，它不检验所有可能的拓扑结构，能同时给出拓扑结构和分支长度。它的优点是重建的树相对准确，假设少，计算速度快，只得到一棵树。</p>
+<p>NJ树适用于进化距离较小、信息位点较少的短序列，可用于大型数据集（速度很快）。其缺点主要表现在将序列上的所有位点等同对待，所分析序列的进化距离不能太大（对于距离过远的序列会出现长枝吸引现象）。</p>
+<h4 id="4-1-1-检验是否适合构建NJ树"><a href="#4-1-1-检验是否适合构建NJ树" class="headerlink" title="4.1.1 检验是否适合构建NJ树"></a>4.1.1 检验是否适合构建NJ树</h4><p>假如 Jukes-Cantor(JC)距离 &gt;1.0，则序列不适合构建NJ树，而应采用其它方法。</p>
+<p>我们采用与 3.4 相同的步骤，在 MEGA 中依次点击：DISTANCE -&gt; Compute Overall Mean Distance -&gt; 选择步骤3.3多序列比对得到的<code>.meg</code>文件，然后在参数设置中将 Model&#x2F;Method 改为 Jukes-Cantor 即可计算出 JC 距离。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230709224122808.png" alt="image-20230709224122808" style="zoom:25%;">
+
+<p>在本例中计算出的 JC 距离为 0.34，因此适合构建 NJ 树。</p>
+<h4 id="4-1-2-NJ-树的估计-理论"><a href="#4-1-2-NJ-树的估计-理论" class="headerlink" title="4.1.2 NJ 树的估计-理论"></a>4.1.2 NJ 树的估计-理论</h4><blockquote>
+<p>  为什么说是估计，类似于模型构建，因为事实上我们永远无法得到真实的物种演化的系统发育树，我们所谓的构建进化树只是在用各种算法尝试得到最接近真实进化树的一颗树。</p>
+</blockquote>
+<p>我们估计进化树时一般会估计多次，首先是在没有 Bootstrap 的情况下先估计得到一颗树，初步查看是否有明显异常的序列并分类到某个子树中（关于什么是 Bootstrap 后面会介绍）。如果有这种情况应对序列进行检查，必要时还需要删除某些序列，然后重新进行多序列比对，再重新估计树。当我们认为树中没有异常序列时，再设置 Bootstrap 值（一般为1000），估计最终的树。</p>
+<p>对于最大似然法，这样估计树可以节约很多时间，因为最大似然法设置 Bootstrap 后速度会非常慢，对于 NJ 法，在序列不多的情况下（只有数百条），可以直接设置 Bootstrap，因为 NJ 法速度很快。</p>
+<p>在 MEGA中依次点击：PHYLOGENY -&gt; Construct&#x2F;Test Neighbor Joining Tree -&gt; 设置参数，我们先看一下参数设计界面：</p>
+<hr>
+<p>估计 NJ 树时各参数的意义与设置：</p>
+<ul>
+<li>Test of Phylogeny：进化树的检验设置，我们可以根据前面说的设置为None，表明不检验（速度快），也可以设置为 Bootstrap method，然后在下面的 No.of Bootstrap Replications 设置检验次数（大部分文献中一般设置为1000），关于 Bootstrap 的介绍可见后面备注3。</li>
+<li>Substitutions Type：本文只介绍比对核酸序列构建进化树，因此直接选择默认的 Nucleotide。</li>
+<li>Model&#x2F;Method：进化模型。我们这里选择 Maximum Composite Likelihood，算法原理在后面备注1中介绍。</li>
+<li>Substitution to include：选择哪些替代类型用于计算，一般不需要改。transition 代表转换，嘌呤之间或者嘧啶之间，如 A&lt;-&gt;G,C&lt;-&gt;T；transversion 颠换，嘌呤与嘧啶之间，如A&lt;-&gt;C&#x2F;T,G&lt;-&gt;C&#x2F;T</li>
+<li>Rates among Sites ：位点之间的替换率分布。我们这里选择Gamma Distributed (G)，在 Gamma Parmamter中填的参数值可以通过MEGA计算得到。关于 Rates 的介绍可见后面备注2</li>
+<li>Patterns among Lineages不在本书讨论范围，默认</li>
+<li>Gaps&#x2F;Missing Data Treatment：该参数设置如何处理空格(gaps)。几乎完全由空格组成的位点对估计树中的分支顺序或分支长度的贡献很小，但它们确实增加了计算时间。Complete deletion，代表直接删除所有包含gap的位点。Pairwise deletion代表配对删除，从而使缺少数据的位点仅在需要时被删除而不是总被删除。Partial deletion 代表部分删除，当 Site Coverage Cutoff设置为95%时，代表如果有95%的序列在此位点上是空格，则将该位点删除。</li>
+<li>Select Condon Positions: 代表选择密码子的哪些位点来构建树，通常全选。除非你有特殊的需求，如只想根据密码子的第三位碱基构建进化树。</li>
+<li>Number of threads：代表分析时电脑的线程数设置，根据自己的电脑情况可随意设置。</li>
+</ul>
+<hr>
+<p><strong>备注1 进化模型</strong></p>
+<p>在祖先序列进化为子序列的过程中，如果仅仅计算两个核苷酸之间的距离是不够的，比如某个位点由 A 替换成了 T，我们假设计算出的它们之间的距离时是0.5，然而我们无法知道这中间是否发生了其它变化，比如可能先由 A 替换成 G，接着再从 G 替换成 T，这与 A 直接替换成 T 的替换率显然是不同的。又或者某个位点未发生替换，我们计算出的它们的距离0，然而它中间也有可能经过了其它替换，比如A-&gt;G-&gt;A。因此我们需要选择进化模型来试图解释这些替换，以更准确地估计序列进化的过程。</p>
+<ol>
+<li><p>单参数模型</p>
+<ul>
+<li>Jukes-Cantor model(JC)：该模型认为任何核苷酸改变为其它核苷酸的几率是相等的，只需要知道核苷酸替换率即可，因此称为 one-parameter model 或者 Jukes-Cantor model</li>
+<li>Felsenstein 81 (F81)模型拓展了 Jukes-Cantor model，允许碱基替换的基础替换率不同。</li>
+</ul>
+<p>在单参数模型中，碱基替换率可以通过以下矩阵表示，称之为Q矩阵，只有一种核酸替换率 α。</p>
+</li>
+</ol>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710110904445.png" alt="image-20230710110904445" style="zoom:50%;">
+
+<ol start="2">
+<li><p>其它模型</p>
+<p>然而每种核苷酸的突变几率往往是不一样的</p>
+<ul>
+<li><p>Kimura 2-parameter model(K2P) 拓展了Jukes-Cantor model，考虑核苷酸转换和颠换的替换率不一样。K2P模型 假设 Q矩阵中有两种替换率，转换一种，颠换一种。</p>
+<p>因此，K2P的Q矩阵如下，转换的替换率为a，颠换的替换率为b</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710112314812.png" alt="image-20230710112314812" style="zoom:50%;">
+</li>
+<li><p>Tamura 3-parameter model 添加了对成分偏差的修正，如果基础比率与相同频率有很大差异，可能是由于突变偏差，那么就需要考虑这种差异</p>
+</li>
+<li><p>Tamura-Nei model 延伸了前一个模型，把嘌呤之间的的转换和嘧啶之间的颠换的替换率进行了区分。</p>
+</li>
+<li><p>Felsenstein 84 (F84) model 和 HKY model也基于类似 Tamura-Nei model的假设</p>
+</li>
+<li><p>Maximum Composite Likelihood model 是一种基于似然性的 Tamura-Nei model的应用，提高了计算配对距离(pairse distance)的精确度</p>
+</li>
+<li><p>General Time-Reversible(GTR) model。该模型假设 Q矩阵有6种不同的率，认为碱基不同方向的替换概率相同(即A-&gt;C与C-&gt;Ad的替换率相同)。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>总的来说，Kimura 2-parameter 与 Maximum Composite Likelihood 模型是目前构建NJ树时文献中用得比较多的模型。</p>
+<p><strong>备注2 位点之间的替换率</strong></p>
+<p>前面的进化模型中所说的碱基替换率指的是某个位点的碱基替换为其它碱基的频率（考察的是单个位点的碱基替换），这些模型假设所有位点的碱基突变率都是一样的，但实际上，不同位点的替换率可能会不同，比如编码序列的起始密码子处，通常为ATG（有时也为GTG），因此我们可以推测起始密码子处2，3位点的碱基替换率是0。</p>
+<p>因此引入了序列中估计不同位点之间替换率的方法。Uniform Rates 假设所有序列的所有位点的进化速率是相同的。还有一种假设是不同位点的碱基替换率的分布存在一种普遍的模式，常用的分布是伽马分布(Gamma distribution)，我们可以使用MEGA预测Gamma分布的参数。</p>
+<p><strong>备注3 进化树的可靠性检验</strong></p>
+<p>前面也已经提过，事实上我们估计的所有树都是错误的，只是通过模型算法尽量找到一颗最接近真实的树。因此我们需要一种方法来评估通过这些模型构建出来的树的可靠性。其中 Bootstrap 方法是使用得最广泛的一种，NJ、ML等方法都使用 Bootstrap 检验进化树的可靠性，不过 BMCMC 通过进化枝后验概率计算树的可靠性。需要注意的是 Bootstrap 评估的是我们估计出的树的可重现性，而非树的准确性。下面介绍 bootstrap 的原理与过程。</p>
+<ol>
+<li>首先，我们把未经过Bootstrap第一次估计出的树称为原始树，比如以下面的比对结果构建出一颗原始树：</li>
+</ol>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710131841786.png" alt="image-20230710131841786" style="zoom:33%;">
+
+<ol start="2">
+<li>上面的比对结果中包括10个碱基位点，5条序列。在第1次 bootstrap 时，会重新构建1个包含10个位点的位比对结果，从10个位点中随机选取1个位点的序列作为伪比对第1个位点的碱基，接着重新从上面10个位点的序列中选取1个位点的序列作为伪比对第2个位点的碱基，如此直到形成一个新的包含10个位点的伪比对结果。这样得到的伪比对结果与原比对结果的不同在于有些位点可能会重复（有放回抽样），比如说第1次 bootstrap得到下面的伪比对结果，然后用相同的模型估计一颗新的树：</li>
+</ol>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710132525997.png" alt="image-20230710132525997" style="zoom:50%;">
+
+<ol start="3">
+<li>接着按照相同的方式进行第2次、第3次…直到第1000次 bootstrap。最后会得到一颗最终的树，该树的每个节点旁都会记录一个自展值(Bootstrap value)。假如物种A的自展值为90，代表在1000次bootstrap中，有900次物种A在进化树中都被归为某一类(clade)，剩下的100次物种A被归类到别的clade。一般认为自展值&gt;70的分支是比较可靠的。</li>
+</ol>
+<h4 id="4-1-3-NJ-树的估计-实践"><a href="#4-1-3-NJ-树的估计-实践" class="headerlink" title="4.1.3 NJ 树的估计-实践"></a>4.1.3 NJ 树的估计-实践</h4><ol>
+<li><p><strong>估计 gamma 参数</strong></p>
+<p>按照前面的理论知识，如果我们认为自己的序列在不同位点具有不同的碱基替换率，可以设置gamma分布，所以先用MEGA得到gamma分布的参数：</p>
+<p>依次点击：RATES -&gt; Gamma Parameter for Site Rates (ML) -&gt; 选择步骤3.3多序列比对得到的<code>.meg</code>文件，不用更改参数，点击 OK即可</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710134333042.png" alt="image-20230710134333042" style="zoom:50%;">
+
+<p>在结果页面，我们可以得到一个 gamma 分布的参数为 0.499 ：</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710134529315.png" alt="image-20230710134529315" style="zoom:50%;">
+</li>
+<li><p><strong>估计 NJ 进化树</strong></p>
+<p>在 MEGA中依次点击：PHYLOGENY -&gt; Construct&#x2F;Test Neighbor Joining Tree -&gt; 选择步骤3.3多序列比对得到的<code>.meg</code>文件 -&gt; 设置参数。根据前面的理论知识，我们按照下图设置参数，接着点击OK即开始估计进化树。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710135112398.png" alt="image-20230710135112398" style="zoom:33%;"></li>
+</ol>
+<h4 id="4-1-4-树的认识与MEGA中的可视化"><a href="#4-1-4-树的认识与MEGA中的可视化" class="headerlink" title="4.1.4 树的认识与MEGA中的可视化"></a>4.1.4 树的认识与MEGA中的可视化</h4><ol>
+<li><strong>进化树的基本结构</strong></li>
+</ol>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710140514862.png" alt="image-20230710140514862" style="zoom:25%;">
+
+<p>外部节点(绿色圆点)又被称为“叶节点”，表示采样及测序的实际生物体(例如，传染病研究中的病毒)，在进化生物学术语中又被称为“分类单元(taxa)”。内部节点(蓝色圆点)表示外部节点的假设祖先。根(红色圆点) 是进化树中所有物种的共同祖先。水平线条表示树的分支，又表示生物所发生的以时间或遗传分歧衡量的演变(灰色数字)。底部的线条表示这些分支长度的标尺。</p>
+<ol start="2">
+<li><p><strong>MEGA中的进化树查看</strong></p>
+<ul>
+<li><p>本例中 MEGA 得到的进化树如下图1，先看红色框，这块区域显示了树的拓扑结构，与前一个图中稍有不同的是，在内部节点旁边还出现了1个数值（红色箭头所示），这是因为我们因为设置了 Bootstrap，该数值即表示自展值。可以看得现在的进化树是比较拥挤的，因为枝长按照实际计算出的值被画了出来，这样可以显示生物体演变的实际程度，此时下方会有枝长的标尺。</p>
+</li>
+<li><p>蓝色框中是 MEGA 中绘制进化树的图形化界面选项，我们可以根据自己的需求定制不同风格的进化树，比如我们只想看一下各个分类单元的分类情况，可以点击蓝色框中 Layout -&gt; Toggle Scaling of the Tree（粉红色箭头），就可以隐藏枝长的实际值（如下方第2张图所示），此时分支的长度不代表实际意义。</p>
+</li>
+<li><p>又比如我们前面提到自展值过小的得到的分支一般不是很可靠，我们也可以通过蓝色框中的 Compute -&gt; 设置自展值 Cutoff 值为50，则会合并自展值小于50的分支（如下方第3张图所示）。</p>
+</li>
+<li><p>另外我们还可以在蓝色框中设置是否显示自展值、枝长、显示为环形进化树、设置clade、提取子树等，只需要点击即可实时显示效果，比较简单，而且不是特别方便用文字描述，因此MEGA中的可视化大家可以自己去探索。</p>
+</li>
+<li><p>另外在绿色方框中会有两个树，Bootstrap Consensus Tree可以让我们更好地看清自展值与对应的节点，不过我们后续进化树可视化一般使用Original Tree 即可。</p>
+</li>
+</ul>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710143259112.png" alt="image-20230710143259112" style="zoom:25%;"></li>
+</ol>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710141232425.png" alt="image-20230710141232425" style="zoom:30%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710150614942.png" alt="image-20230710150614942" style="zoom:33%;">
+
+<h4 id="4-1-5-绘制有根树"><a href="#4-1-5-绘制有根树" class="headerlink" title="4.1.5 绘制有根树"></a>4.1.5 绘制有根树</h4><p><strong>关于无根树与有根树</strong></p>
+<p>我们构建的树（包括其它方法如ML法、MP法等）基本上得到的都是无根树。无根树没有方向性可言，能从一个节点追溯其父节点也可以追溯其子节点，如果移除无根树的某个分支，可以拆分到不同的分组，这些不同的分组称为 <strong>splits</strong>。有根树有方向性，不能从一个节点追溯其父节点，只能追溯其子节点，因为物种进化是有方向的，如果移除有根树的某个分支，得到的分组称为 <strong>clades</strong>。</p>
+<p>虽然得到的是无根树，但是 MEGA 绘制出来的进化树看起来容易让人认为是有根树。我们在进化分析时往往希望得到的是有根树，因为只有有根树才能分析物种的演化关系。因此有时候通常会通过无根树人为绘制有根树。在一堆同源性较高的序列中去寻找它们的根往往不容易，因此我们往往需要借助额外的信息，常用的是借助外群(outgroup)。</p>
+<p>外群(outgroup)可以被定义为1条或多条序列，这些序列与内群(ingroup)序列的距离比内群序列之间的距离都要远。</p>
+<hr>
+<p>在前面的例子中，我选了18条 PRRSV 病毒的 ORF5 基因的序列，要绘制有根树，我需要另外加入1条外群序列，我选择的是与 PRRSV 病毒在同一个科下的另一种病毒的 ORF5 基因序列。在重新进行多序列比对、进化树估计后，得到下方的进化树，红框中的序列为新加入的外群序列，可以发现其与前面的18条序列相比形成了单独的一个分支：</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710163304932.png" alt="image-20230710163304932" style="zoom:30%;">
+
+<p>接下来绘制有根树，首先在图中鼠标左键点击外群所在的分支，然后鼠标右键选择 Root tree 即可（如下图1所示），接着我们得到了1颗有根树（如下图2所示）。</p>
+<p>虽然我们绘制的有根树看起来和无根树没什么区别，但实际上已经设置了1个根节点（下方图2中绿色箭头所示），而且仔细观察可以发现两颗树的分支长度发生了变化。上图无根树的分支看起来有两个分支分成了外群与内群，但实际上只有1个分支，其实际分支长度为这两个长度之和，MEGA中将其绘制成了有两个分支的图形。下图2的有根树的分支确实存在两个分支，将其分成了内群与外群，因此分支长度也发生了改变。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710163636468.png" alt="image-20230710163636468" style="zoom:33%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710163842448.png" alt="image-20230710163842448" style="zoom:33%;">
+
+<hr>
+<p>接着我们就可以根据这个有根树添加不同的 clade 了。首先点击某个类别所有分类单元所在的共同分支（下图红色箭头），然后依次选择 Subtree -&gt; Draw Options -&gt; Format Subtree，即可进入设置 clade 的界面。（如果要删除设置的某个clade，还是这样选择，会出现一个Clear clade或者Clear All subtree options的选项，代表清楚某个分类或者清楚所有分类设置）</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710190631216.png" alt="image-20230710190631216" style="zoom:25%;">
+
+<p>有一系列选项可以进行子树的设置（下图1），大家可以自行探索。可见 MEGA 自带的绘图功能也很强大，可以达到很美观的效果，设置 clade 后如下图2所示：</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710191121036.png" alt="image-20230710191121036" style="zoom:35%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710191702956.png" alt="image-20230710191702956" style="zoom:33%;">
+
+<h4 id="4-1-6-树的保存与导出"><a href="#4-1-6-树的保存与导出" class="headerlink" title="4.1.6 树的保存与导出"></a>4.1.6 树的保存与导出</h4><ol>
+<li><p>如果不需要对树进行进一步编辑，可以直接导出 MEGA 制作的进化树图片，选择 Image，可以保存为各种格式的图片文件。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710192856971.png" alt="image-20230710192856971" style="zoom:33%;">
+</li>
+<li><p>如果想要将进化树数据导出，在其它软件中编辑，我们可以选择 File -&gt; Export Current Tree(Newick)（下图1） -&gt; 勾选两个选项，即同时导出枝长与自举值（下图2），接着会出现<code>.nwk</code>格式文件的编辑窗口（下图3），直接点击保存然后命名为想要的名字即可。我这里保存为<code>example.nwk</code>等待步骤5使用。</p>
+<p>Newick格式是计算机可读形式的树文件标准格式，与 NEXUS、Phylip 等均是较为常见的储存系统发育树及其节点和分支相关数据的文件格式。我们通过MEGA得到树文件后，将其导出为 Newick 格式的树文件，然后可以使用 ggtree 进行可视化。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710193057201.png" alt="image-20230710193057201" style="zoom:33%;"></li>
+</ol>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710193231843.png" alt="image-20230710193231843" style="zoom:40%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230710194052393.png" alt="image-20230710194052393" style="zoom:30%;">
+
+<ol start="3">
+<li>我们也可以保存一份树文件，等待下一次使用MEGA时继续编辑，只需要点击 File -&gt; Save Current Session -&gt; 然后保存为 <code>.mtsx</code>或者<code>.mts</code>格式的文件即可。</li>
+</ol>
+<h3 id="4-2-构建-ML-树"><a href="#4-2-构建-ML-树" class="headerlink" title="4.2 构建 ML 树"></a>4.2 构建 ML 树</h3><p>最大似然法(Maximum Likelihood,ML)也是使用得比较普遍的一种进化树构建方法。因此我这里也介绍一下如何用MEGA构建MJ树。</p>
+<p><strong>最大似然法基本介绍：</strong></p>
+<p>最大似然法是一种基于进化模型和位点信息的树构建方法，其理论基础是基于两条基本假设：不同的性状进化是独立的、物种发生分歧后进化独立。在ML法中，以一个特定的替代模型分析既定的一组序列数据，使所获得的每一个拓扑结构的似然率均为最大，挑出其最大似然率的最大拓扑结构为最终树。其主要优点是如果进化模型选择合理，ML树与真实进化的吻合度最高。然而，ML树的缺点在于计算强度大，非常耗时。</p>
+<h4 id="4-2-1-选择最佳模型"><a href="#4-2-1-选择最佳模型" class="headerlink" title="4.2.1 选择最佳模型"></a>4.2.1 选择最佳模型</h4><p>我们先看一下MEGA中估计ML树的参数，选择 PHYLOGENY -&gt;  Construct&#x2F;Test Maximum Parsimony Tree(s) -&gt; 可以进入参数设置页面，可以看到在 Model&#x2F;Method 中提供了可以6个模型选项（下图1），Rates among sites提供了4个选项。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230712111120316.png" alt="image-20230712111120316" style="zoom:25%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/TAO/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93/photos/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA%E6%95%99%E7%A8%8B/image-20230712111204300.png" alt="image-20230712111204300" style="zoom:25%;">
+
+<p>接着我可以们直接使用MEGA软件预测一个适合我们数据的上述两个参数的最佳组合。我们依次点击：MODELS -&gt; Find Best DNA&#x2F;Protein Models (ML)… -&gt; 选择步骤3.3多序列比对得到的<code>.meg</code>文件 -&gt; 参数设置页面不需要更改（如下图1），点击OK后一段时间会出现一个模型预测结果的窗口（如下图2）。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230711231501716.png" alt="image-20230711231501716" style="zoom:33%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230711231339042.png" alt="image-20230711231339042" style="zoom:50%;">
+
+<p>上图中红色框区域为MEGA为我们找到的模型结果，绿色框区域有一个对该结果的介绍。我们主要关注前5列（蓝色框所示）。</p>
+<ul>
+<li>Model：替换模型与Rates参数简称的组合，从上到下排序为最好到最差。如 K2+G+I，代表 Model&#x2F;Method 参数选择 Kimura 2-parameter 模型；Rates among Sites参数选择 Gamma Distributed With Invariant Sites(G+I)。</li>
+<li>Paramaters：该模型组合所需的参数数量，想应模型下必须要估计的参数的数量，在所有条件都相同的情况下，通常认为估计更少的参数会更好。这里的条件指的是用合适的模型来衡量（当然条件通常不相同）</li>
+<li>BIC、AICc、InL是三种方法计算出的分数，BIC分数计算采用的是贝叶斯信息准则(Bayesian Information Criterion)，分数越低代表模型越好，MEGA对Model列的排序就是基于BIC进行排序的。AICc分数计算采用的是校正后AIC信息准则(Akaike Information Criterion,correction)，分数越低代表模型越好。InL代表极大似然值(Maximum Likelihood value)，绝对值越低代表模型越好。</li>
+</ul>
+<p>在本例中，虽然参数数量第一个模型组合比第二个模型组合大1，但其BIC、AICc、InL分数都是第一种模型组合更好一点，因此我们选择第一个组合（K2+G+I）。有时候第一个模型组合的BIC分数可能小于第二个模型组合，但是如果相差不大，且AIC、InL、参数数量都是第二个模型组合比较好的话，我们也可以考虑选择使用第二个模型组合。</p>
+<h4 id="4-2-2-估计-ML-树"><a href="#4-2-2-估计-ML-树" class="headerlink" title="4.2.2 估计 ML 树"></a>4.2.2 估计 ML 树</h4><p>依次点击：PHYLOGENY -&gt;  Construct&#x2F;Test Maximum Likelihood Tree -&gt; 选择步骤3.3多序列比对得到的<code>.meg</code>文件，设置参数如下图2所示。点击OK即可开始比对。</p>
+<p><strong>关于参数的设置</strong></p>
+<ul>
+<li><p>Bootstrap：注意估计 ML 树设置 Bootstrap 检验会很耗时（电脑不太好的话有时候MEGA程序还会卡住或者闪退）。</p>
+</li>
+<li><p>Gaps&#x2F;Missing Data Treatment与NJ树一致，其它参数我们直接选择默认即可，一般不需要修改。</p>
+</li>
+</ul>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230712113725461.png" alt="image-20230712113725461" style="zoom:33%;">
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230712113846151.png" alt="image-20230712113846151" style="zoom:33%;">
+
+<p>最后我们可以得到最大似然法估计出的进化树，如下图所示，左下角红色箭头处会显示该树的log似然值（该值比真实树的似然值肯定会差一些）。其它关于树在MEGA中的可视化与NJ树一致，可见步骤4.1.4-4.1.6</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230712120852265.png" alt="image-20230712120852265" style="zoom:33%;">
+
+<h2 id="5-使用-ggtree-进行可视化"><a href="#5-使用-ggtree-进行可视化" class="headerlink" title="5.使用 ggtree 进行可视化"></a>5.使用 ggtree 进行可视化</h2><p>前面步骤 4.1.6 我们得到了导出的 Newick 格式的树文件，接着就可以使用R包 treeio 处理以及 ggtree 进行美化了。可视化的部分并没有统一的规范，每个人的需求不同。建议有R语言一定基础的同学去看一看Y叔的书《R实战：系统发育树的数据集成操作及可视化》，里面讲得很详细（了解ggplot2语法学起来会很快）。不想用R画图的同学可以借助一些软件如iTOL、Figtree等，或者直接使用前面介绍的MEGA中绘制出来的进化树图片。</p>
+<p>下面我仅简单介绍一下如何使用treeio以及ggtree进行简单绘图，而不深入探索高级绘图的细节。我们一步一步探索ggtree的绘图过程：</p>
+<hr>
+<p>如果没有安装ggtree，treeio，tidytree，需要先安装：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span><span class="punctuation">(</span><span class="operator">!</span>require<span class="punctuation">(</span><span class="string">&quot;ggtree&quot;</span><span class="punctuation">,</span>quietly <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span> BiocManager<span class="operator">::</span>install<span class="punctuation">(</span><span class="string">&quot;ggtree&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="keyword">if</span><span class="punctuation">(</span><span class="operator">!</span>require<span class="punctuation">(</span><span class="string">&quot;tidytree&quot;</span><span class="punctuation">,</span>quietly <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span> BiocManager<span class="operator">::</span>install<span class="punctuation">(</span><span class="string">&quot;tidytree&quot;</span><span class="punctuation">)</span></span><br><span class="line"><span class="keyword">if</span><span class="punctuation">(</span><span class="operator">!</span>require<span class="punctuation">(</span><span class="string">&quot;treeio&quot;</span><span class="punctuation">,</span>quietly <span class="operator">=</span> <span class="built_in">T</span><span class="punctuation">)</span><span class="punctuation">)</span> BiocManager<span class="operator">::</span>install<span class="punctuation">(</span><span class="string">&quot;treeio&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-1-treeio与ggtree使用介绍与练习"><a href="#5-1-treeio与ggtree使用介绍与练习" class="headerlink" title="5.1 treeio与ggtree使用介绍与练习"></a>5.1 treeio与ggtree使用介绍与练习</h3><p>加载需要的包</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">library<span class="punctuation">(</span>treeio<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtree<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidytree<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>导入Newick格式的进化树</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree <span class="operator">&lt;-</span> read.tree<span class="punctuation">(</span><span class="string">&quot;example.nwk&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>我们可以先看一下 read.tree() 函数读入树文件后储存的对象格式，phylo对象是储存系统发育数据常用的一种格式，系统发育分析中用到的大多数R包都依赖于phylo对象。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">class</span><span class="punctuation">(</span>tree<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## [1] &quot;phylo&quot;</span><br></pre></td></tr></table></figure>
+<p>然后就可以使用ggtree画出最简单的树的拓扑结构了</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ggtree<span class="punctuation">(</span>tree<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021158717.png" alt="image-20230713021158717" style="zoom:50%;">
+
+<p>接着我们使用geom_tiplab()给每个分类单元添加名称，其实ggtree与ggplot函数的语法基本是一致的，如果要掌握ggtree最好先去了解一下ggplot语法。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggtree<span class="punctuation">(</span>tree<span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">1.5</span><span class="punctuation">,</span>color<span class="operator">=</span><span class="string">&quot;purple&quot;</span><span class="punctuation">)</span> <span class="comment"># size与color参数分别设置字体大小与颜色</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021231835.png" alt="image-20230713021231835" style="zoom:50%;">
+
+<p>我们前面画出的树中，其分支长度代表了物种实际的进化程度，因此可以使用geom_treescale()添加标尺，其中标尺x,y参数的设置只需要将整个图想象成第一象限的坐标轴，然后调整标尺的位置即可：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ggtree<span class="punctuation">(</span>tree<span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">1.5</span><span class="punctuation">,</span>color<span class="operator">=</span><span class="string">&quot;purple&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_treescale<span class="punctuation">(</span>x<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span>y<span class="operator">=</span><span class="number">20</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021309552.png" alt="image-20230713021309552" style="zoom:50%;">
+
+<p>前面的树不是很整齐，如果我们不需要体现分枝长度，只需要知道各分类单元属于哪个clade，那么可以设置 branch.length&#x3D;”none”参数去除分支长度，使树更加美观，layout参数可以指定树的布局方式。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggtree<span class="punctuation">(</span>tree<span class="punctuation">,</span>branch.length <span class="operator">=</span> <span class="string">&quot;none&quot;</span><span class="punctuation">,</span>layout<span class="operator">=</span><span class="string">&quot;circular&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">1.5</span><span class="punctuation">,</span>color<span class="operator">=</span><span class="string">&quot;purple&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021347067.png" alt="image-20230713021347067" style="zoom:50%;">
+
+<p>这个phylo树对象在R语言中实际上是一个列表。前面画的矩形树图没有1个明显的根分支，我们可以给列表添加1个元素，即根分支的长度，我这里把长度设置为0.5，然后使用geom_rootedge()画出明显的根分支</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tree<span class="operator">$</span>root.edge <span class="operator">&lt;-</span> 0.5</span><br><span class="line">ggtree<span class="punctuation">(</span>tree<span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">1.5</span><span class="punctuation">,</span>color<span class="operator">=</span><span class="string">&quot;purple&quot;</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_rootedge<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021413501.png" alt="image-20230713021413501" style="zoom:50%;">
+
+<hr>
+<p>接下来我们探索如何对各个分类单元进行分组，即设置clade。<br>在这之前我们先了解一下我们的树数据。因为phylo对象不容易直观理解，因此可以通过as_tibble()函数将phylo对象转换为tibble表格，与数据框差不多：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree_tibble <span class="operator">&lt;-</span> as_tibble<span class="punctuation">(</span>tree<span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>我们打开 tree_tibble 看一下就可以发现数据其实很简单，只有4列数据，node列保存了分类单元所在的节点编号，parent列保存了其父节点的编号，branch.length列保存了分支长度，label列保存了该节点对应的标签（叶节点的标签即分类单元的名称，内部节点的标签即自展值），关于节点、分支、分类单元等概念忘记的可以去步骤 4.1.4 进行回顾。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021515681.png" alt="image-20230713021515681" style="zoom:33%;">
+
+<p>因为每个节点都有一个编号或者标签，因此我们可以通过该编号定位到某个节点。这样就可以实现对不同 clade 进行分类、标注颜色等操作。比如说下图中红色和蓝色圆圈所在的节点下所有分类单元分别可以被归为clade1与 clade2，我们只要往tree数据中添加基于此的分组信息即可方便地使用ggplot2语法进行分组标记颜色与注释clade。</p>
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021659491.png" alt="image-20230713021659491" style="zoom:40%;">
+
+<hr>
+<p>我们先看一下可以提取节点信息的几个函数，对于tree这个phylo对象的数据，parent()函数返回了第1个节点的父节点的节点编号</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parent<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## [1] 26</span><br></pre></td></tr></table></figure>
+<p>相应的还有child()函数可以提取某个节点子节点的编号，</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">child<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="number">26</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## [1] 1 2</span><br></pre></td></tr></table></figure>
+<p>ancestor()函数提取某个节点所有父辈节点编号，直到追溯到根节点</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ancestor<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## [1] 26 25 24 23 22 21 20</span><br></pre></td></tr></table></figure>
+<p>offspring()函数提取某个节点所有子代节点编号</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">offspring<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="number">20</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">##  [1] 21 31 19 22 11 23 28 24 27 25  4 26  3  1  2  5  6  7 29  8 30  9 10 12 32</span><br><span class="line">## [26] 33 35 34 15 13 14 16 36 17 18</span><br></pre></td></tr></table></figure>
+<p>sibling()函数返回某个节点的兄弟节点</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sibling<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## [1] 2</span><br></pre></td></tr></table></figure>
+<p>上述函数也可以针对前面转换的tibble数据进行提取，可以得到更全的信息，比如：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">child<span class="punctuation">(</span>tree_tibble<span class="punctuation">,</span><span class="number">26</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## # A tibble: 2 × 4</span><br><span class="line">##   parent  node branch.length label     </span><br><span class="line">##    &lt;int&gt; &lt;int&gt;         &lt;dbl&gt; &lt;chr&gt;     </span><br><span class="line">## 1     26     1       0.0102  MT268280.1</span><br><span class="line">## 2     26     2       0.00610 FJ548853.1</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>回到前面讲的，我们的目的是获取红蓝色圈对应的节点编号，以实现分类，因此我们只需要找到根节点编号，然后根据根节点编号获取其两个子节点编号就是我们相要的两个节点编号。</p>
+<ul>
+<li>有一种比较简单的方法，先将所有节点编号显示在图中，然后我们从图中找到直接用于后面的输入，使用geom_nodelab()函数映射节点编号即可，可以发现我们想要的编号是21与31：</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ggtree<span class="punctuation">(</span>tree<span class="punctuation">,</span>branch.length <span class="operator">=</span> <span class="string">&quot;none&quot;</span><span class="punctuation">)</span><span class="operator">+</span>geom_nodelab<span class="punctuation">(</span>aes<span class="punctuation">(</span>label<span class="operator">=</span>node<span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021814232.png" alt="image-20230713021814232" style="zoom:50%;">
+
+
+<ul>
+<li>还有一种方法是直接提取，我们首先通过<code>ancestor(tree,1)</code>得到任意节点（这里选择了节点1）的所有祖先节点，它返回的编号顺序是一级一级往前推的，因此最后一个编号就是根节点编号，然后通过<code>rev()</code>函数反向，再取其第一个编号就是根节点编号了。</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">(</span> node_root <span class="operator">&lt;-</span> rev<span class="punctuation">(</span>ancestor<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span> <span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## [1] 20</span><br></pre></td></tr></table></figure>
+<p>然后我们只需要使用<code>child()</code>函数即可得到想要的节点编号，示例的进化树中根节点分出了3个节点，前两个就是我们想要用于分组的节点。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">(</span> node <span class="operator">&lt;-</span> child<span class="punctuation">(</span>tree<span class="punctuation">,</span>node_root<span class="punctuation">)</span> <span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## [1] 21 31 19</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>接着通过groupClade函数，我们可以给树添加分组信息，只需要传入我们想要分组的节点的向量即可。下面的例子中，groupClade函数把节点21的所有子节点分为一组，把节点31的所有子节点分为另一组，转换为tibble数据查看一下，我们可以明显发现数据中添加了1列group信息，1代表第1组，2代表第2组，如果有别的节点不包含在我们输入的节点的子节点中，该函数会默认将这些节点标记为另外一组0。（需要注意groupClade只能对内部节点进行分组，想要将叶节点进行分组可以使用groupOTU函数）</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupClade<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">21</span><span class="punctuation">,</span><span class="number">31</span><span class="punctuation">)</span><span class="punctuation">)</span> <span class="operator">%&gt;%</span> as_tibble<span class="punctuation">(</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">## # A tibble: 36 × 5</span><br><span class="line">##    parent  node branch.length label       group</span><br><span class="line">##     &lt;int&gt; &lt;int&gt;         &lt;dbl&gt; &lt;chr&gt;       &lt;fct&gt;</span><br><span class="line">##  1     26     1       0.0102  MT268280.1  1    </span><br><span class="line">##  2     26     2       0.00610 FJ548853.1  1    </span><br><span class="line">##  3     25     3       0.00733 OQ883907.1  1    </span><br><span class="line">##  4     24     4       0.00288 OQ357724.1  1    </span><br><span class="line">##  5     27     5       0       NC_038291.1 1    </span><br><span class="line">##  6     27     6       0.00921 AF331831.1  1    </span><br><span class="line">##  7     28     7       0.0821  JN660150.1  1    </span><br><span class="line">##  8     29     8       0.0547  MW803134.1  1    </span><br><span class="line">##  9     30     9       0.0601  MZ416787.1  1    </span><br><span class="line">## 10     30    10       0.0816  JN654459.1  1    </span><br><span class="line">## # ℹ 26 more rows</span><br></pre></td></tr></table></figure>
+
+<p>分组以后我们需要将其保存为一个新的tree变量才可以进一步画图，这里保存为tree2。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree2 <span class="operator">&lt;-</span> groupClade<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">21</span><span class="punctuation">,</span><span class="number">31</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+
+<p>接着我们只需要使用ggplot2语法，使用aes函数将group分组信息映射到图中即可</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p <span class="operator">&lt;-</span> ggtree<span class="punctuation">(</span>tree2<span class="punctuation">,</span>aes<span class="punctuation">(</span>color<span class="operator">=</span>group<span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span><span class="punctuation">)</span></span><br><span class="line">p</span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713021937562.png" alt="image-20230713021937562" style="zoom:50%;">
+
+<hr>
+<p>接下来我们要进一步在分类单元右边添加clade标注。先构建一个数据框，node中还是填入刚才用于分类的编号形成的向量，name中填入对应的clade名称组成的向量，比如我想把节点21所在的分类命名为L1，把节点31所在的分类命名为L2,可以这样设置：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dat <span class="operator">&lt;-</span> data.frame<span class="punctuation">(</span>node<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="number">21</span><span class="punctuation">,</span><span class="number">31</span><span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                  name<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;L1&quot;</span><span class="punctuation">,</span><span class="string">&quot;L2&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<p>然后使用geom_cladelab函数添加一个图层，将前面制造的dat数据映射上去即可，offset参数代表设置文本到条带之间的距离。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p<span class="operator">+</span>geom_cladelab<span class="punctuation">(</span>data <span class="operator">=</span> dat<span class="punctuation">,</span></span><br><span class="line">                mapping <span class="operator">=</span> aes<span class="punctuation">(</span>node<span class="operator">=</span>node<span class="punctuation">,</span>label<span class="operator">=</span>name<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                offset<span class="operator">=</span><span class="number">0.5</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022009796.png" alt="image-20230713022009796" style="zoom:50%;">
+
+<hr>
+<p>如果我们想要移除某个分类单元怎么办呢？比如我现在不想NC_001639.1出现在图中，只需要使用drop.tip函数传入需要移除的分类单元名称组成的向量即可，然后对新的树tree3绘图。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tree3 <span class="operator">&lt;-</span> drop.tip<span class="punctuation">(</span>tree2<span class="punctuation">,</span><span class="string">&quot;NC_001639.1&quot;</span><span class="punctuation">)</span></span><br><span class="line">ggtree<span class="punctuation">(</span>tree3<span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_cladelab<span class="punctuation">(</span>data <span class="operator">=</span> dat<span class="punctuation">,</span></span><br><span class="line">                mapping <span class="operator">=</span> aes<span class="punctuation">(</span>node<span class="operator">=</span>node<span class="punctuation">,</span>label<span class="operator">=</span>name<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                offset<span class="operator">=</span><span class="number">0.5</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022042126.png" alt="image-20230713022042126" style="zoom:50%;">
+
+<p>如果我们只想给其中几个分类单元标上颜色，只需要映射想要标记颜色的分类单元到颜色参数即可。</p>
+<ul>
+<li>可以映射分类单元名称</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mark <span class="operator">&lt;-</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;MT268280.1&quot;</span><span class="punctuation">,</span><span class="string">&quot;JN660150.1&quot;</span><span class="punctuation">,</span><span class="string">&quot;OQ803248.1&quot;</span><span class="punctuation">)</span></span><br><span class="line">ggtree<span class="punctuation">(</span>tree3<span class="punctuation">,</span>aes<span class="punctuation">(</span>color<span class="operator">=</span>label <span class="operator">%in%</span> mark<span class="punctuation">)</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_cladelab<span class="punctuation">(</span>data <span class="operator">=</span> dat<span class="punctuation">,</span></span><br><span class="line">                mapping <span class="operator">=</span> aes<span class="punctuation">(</span>node<span class="operator">=</span>node<span class="punctuation">,</span>label<span class="operator">=</span>name<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                offset<span class="operator">=</span><span class="number">0.5</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022140502.png" alt="image-20230713022140502" style="zoom:50%;">
+
+<ul>
+<li>也可以映射分类单元的节点编号：</li>
+</ul>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ggtree<span class="punctuation">(</span>tree<span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span>aes<span class="punctuation">(</span>color<span class="operator">=</span>node <span class="operator">%in%</span> <span class="built_in">c</span><span class="punctuation">(</span><span class="number">1</span><span class="punctuation">,</span><span class="number">7</span><span class="punctuation">,</span><span class="number">14</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022209932.png" alt="image-20230713022209932" style="zoom:50%;">
+
+<p>另外treeio也可以提取某个子树进行画图，比如我现在只想要L1所对应的子树，只需要使用subtree函数对子树进行提取即可。node参数指定要提取的子树的某个叶节点的编号或者标签均可，levels_back参数指定子集树应该包括多少从选定节点返回的节点（即叶节点往前追溯多少数量的节点）</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tree4 <span class="operator">&lt;-</span> tree_subset<span class="punctuation">(</span>tree<span class="punctuation">,</span>node<span class="operator">=</span><span class="number">1</span><span class="punctuation">,</span>levels_back <span class="operator">=</span> <span class="number">6</span><span class="punctuation">)</span></span><br><span class="line">ggtree<span class="punctuation">(</span>tree4<span class="punctuation">)</span><span class="operator">+</span></span><br><span class="line">  geom_tiplab<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">2</span><span class="punctuation">,</span>color<span class="operator">=</span><span class="string">&quot;purple&quot;</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022248486.png" alt="image-20230713022248486" style="zoom:50%;">
+
+<h3 id="5-2-进化树的可视化实践"><a href="#5-2-进化树的可视化实践" class="headerlink" title="5.2 进化树的可视化实践"></a>5.2 进化树的可视化实践</h3><ol>
+<li>下面我展示了我自己画出来的一个进化树</li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 载入包</span></span><br><span class="line">library<span class="punctuation">(</span>treeio<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtree<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidytree<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#导入树文件</span></span><br><span class="line">tree <span class="operator">&lt;-</span> read.tree<span class="punctuation">(</span><span class="string">&quot;example.nwk&quot;</span><span class="punctuation">)</span></span><br><span class="line">tree <span class="operator">&lt;-</span> drop.tip<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="string">&quot;NC_001639.1&quot;</span><span class="punctuation">)</span> <span class="comment"># 移除不需要展示的分类单元</span></span><br><span class="line"><span class="comment">#设置根分支长度</span></span><br><span class="line">tree<span class="operator">$</span>root.edge <span class="operator">&lt;-</span> 0.3</span><br><span class="line"><span class="comment">#获取分类节点编号</span></span><br><span class="line">tree_tibble <span class="operator">&lt;-</span> as_tibble<span class="punctuation">(</span>tree<span class="punctuation">)</span></span><br><span class="line">node_root <span class="operator">&lt;-</span> rev<span class="punctuation">(</span>ancestor<span class="punctuation">(</span>tree<span class="punctuation">,</span><span class="number">1</span><span class="punctuation">)</span><span class="punctuation">)</span><span class="punctuation">[</span><span class="number">1</span><span class="punctuation">]</span> <span class="comment">#获取根节点编号</span></span><br><span class="line">node <span class="operator">&lt;-</span> child<span class="punctuation">(</span>tree<span class="punctuation">,</span>node_root<span class="punctuation">)</span><span class="punctuation">[</span><span class="operator">-</span><span class="number">3</span><span class="punctuation">]</span> <span class="comment">#获取分类节点编号</span></span><br><span class="line">tree2 <span class="operator">&lt;-</span> groupClade<span class="punctuation">(</span>tree<span class="punctuation">,</span>node<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#定义clade名称</span></span><br><span class="line">dat <span class="operator">&lt;-</span> data.frame<span class="punctuation">(</span>node<span class="operator">=</span>node<span class="punctuation">,</span></span><br><span class="line">                  name<span class="operator">=</span><span class="built_in">c</span><span class="punctuation">(</span><span class="string">&quot;L1&quot;</span><span class="punctuation">,</span><span class="string">&quot;L2&quot;</span><span class="punctuation">)</span><span class="punctuation">)</span></span><br><span class="line"><span class="comment">#ggtree可视化</span></span><br><span class="line">p <span class="operator">&lt;-</span> ggtree<span class="punctuation">(</span>tree2<span class="punctuation">,</span></span><br><span class="line">       aes<span class="punctuation">(</span>color<span class="operator">=</span>group<span class="punctuation">)</span><span class="punctuation">,</span> <span class="comment">#映射分组信息</span></span><br><span class="line">       branch.length <span class="operator">=</span> <span class="string">&quot;none&quot;</span><span class="punctuation">,</span></span><br><span class="line">       size<span class="operator">=</span><span class="number">1</span><span class="punctuation">)</span><span class="operator">+</span> <span class="comment">#分支粗细</span></span><br><span class="line">     geom_tiplab<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">3</span><span class="punctuation">,</span>color<span class="operator">=</span><span class="string">&quot;purple&quot;</span><span class="punctuation">,</span>offset <span class="operator">=</span> <span class="number">0.2</span><span class="punctuation">)</span><span class="operator">+</span> <span class="comment">#叶节点字体大小与颜色</span></span><br><span class="line">     geom_tippoint<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">2</span><span class="punctuation">)</span><span class="operator">+</span> <span class="comment">#给叶节点添加圆点</span></span><br><span class="line">     geom_cladelab<span class="punctuation">(</span>data <span class="operator">=</span> dat<span class="punctuation">,</span> <span class="comment">#添加clade分类数据</span></span><br><span class="line">                   mapping <span class="operator">=</span> aes<span class="punctuation">(</span>node<span class="operator">=</span>node<span class="punctuation">,</span>label<span class="operator">=</span>name<span class="punctuation">)</span><span class="punctuation">,</span></span><br><span class="line">                   offset<span class="operator">=</span><span class="number">1</span><span class="punctuation">,</span> <span class="comment">#线条与分类单元文本之间的距离</span></span><br><span class="line">                   offset.text<span class="operator">=</span><span class="number">0.02</span><span class="punctuation">,</span> <span class="comment">#线条与clade文本之间的距离</span></span><br><span class="line">                   geom<span class="operator">=</span><span class="string">&quot;label&quot;</span><span class="punctuation">,</span> <span class="comment">#为clade文本添加背景</span></span><br><span class="line">                   fill<span class="operator">=</span><span class="string">&quot;lightblue&quot;</span><span class="punctuation">,</span> <span class="comment">#clade文本背景颜色</span></span><br><span class="line">                   fontsize<span class="operator">=</span><span class="number">3.5</span><span class="punctuation">,</span> <span class="comment">#clade文本字体大小</span></span><br><span class="line">                   barsize<span class="operator">=</span><span class="number">0.7</span><span class="punctuation">,</span> <span class="comment">#线条粗细</span></span><br><span class="line">                   align<span class="operator">=</span><span class="built_in">T</span><span class="punctuation">,</span></span><br><span class="line">                   barcolor<span class="operator">=</span><span class="string">&quot;grey&quot;</span><span class="punctuation">)</span><span class="operator">+</span><span class="comment">#线条颜色</span></span><br><span class="line">     geom_rootedge<span class="punctuation">(</span><span class="punctuation">)</span><span class="operator">+</span> <span class="comment">#添加根分支图层</span></span><br><span class="line">     theme_tree<span class="punctuation">(</span><span class="string">&quot;#FEE4E9&quot;</span><span class="punctuation">)</span><span class="operator">+</span> <span class="comment">#设置主题</span></span><br><span class="line">     theme<span class="punctuation">(</span>legend.position <span class="operator">=</span> <span class="string">&quot;none&quot;</span><span class="punctuation">)</span> <span class="comment">#去除图例</span></span><br><span class="line">p</span><br><span class="line"></span><br><span class="line"><span class="comment">#保存进化树图片</span></span><br><span class="line">ggsave<span class="punctuation">(</span>p<span class="punctuation">,</span>file<span class="operator">=</span><span class="string">&quot;plot1.png&quot;</span><span class="punctuation">,</span>width <span class="operator">=</span> <span class="number">8</span><span class="punctuation">,</span>height <span class="operator">=</span> <span class="number">12</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713030656475.png" alt="image-20230713030656475" style="zoom:30%;">
+
+<hr>
+<p>在得到上面的树后，如果我们想要调换某个分支的展示顺序，只需要简单地通过rotate函数即可完成,比如我对上图的节点20对应的分支调换展示顺序：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rotate<span class="punctuation">(</span>p<span class="punctuation">,</span><span class="number">20</span><span class="punctuation">)</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713031139793.png" alt="image-20230713031139793" style="zoom:30%;">
+
+<ol start="2">
+<li>我们还可以将进化树结果与多序列比对结果放在同一张图中进行展示，多序列比对结果（example.fas）我们已经从步骤3.3得到</li>
+</ol>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#载入需要的包</span></span><br><span class="line">library<span class="punctuation">(</span>treeio<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>ggtree<span class="punctuation">)</span></span><br><span class="line">library<span class="punctuation">(</span>tidytree<span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#导入Newick树文件与多序列比对FASTA文件</span></span><br><span class="line">tree <span class="operator">&lt;-</span> read.tree<span class="punctuation">(</span><span class="string">&quot;example.nwk&quot;</span><span class="punctuation">)</span></span><br><span class="line">msa <span class="operator">&lt;-</span> read.fasta<span class="punctuation">(</span><span class="string">&quot;example.fas&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#因为read.fasta函数导入多序列比对结果后_会识别为空格，因此需要先将空格转换为_，否则会导致无法与进化树的分类单元名匹配而绘图失败。</span></span><br><span class="line">library<span class="punctuation">(</span>stringr<span class="punctuation">)</span></span><br><span class="line"><span class="built_in">names</span><span class="punctuation">(</span>msa<span class="punctuation">)</span> <span class="operator">&lt;-</span> str_replace<span class="punctuation">(</span><span class="built_in">names</span><span class="punctuation">(</span>msa<span class="punctuation">)</span><span class="punctuation">,</span><span class="string">&quot; &quot;</span><span class="punctuation">,</span><span class="string">&quot;_&quot;</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#先绘制进化树</span></span><br><span class="line">p1 <span class="operator">&lt;-</span> ggtree<span class="punctuation">(</span>tree<span class="punctuation">,</span>branch.length <span class="operator">=</span> <span class="string">&quot;none&quot;</span><span class="punctuation">)</span><span class="operator">+</span>geom_tiplab<span class="punctuation">(</span>size<span class="operator">=</span><span class="number">2</span><span class="punctuation">)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#然后用msaplot函数将两个结果绘制在一起</span></span><br><span class="line">msaplot<span class="punctuation">(</span>p1<span class="punctuation">,</span>msa<span class="punctuation">,</span></span><br><span class="line">        offset <span class="operator">=</span> <span class="number">3</span><span class="punctuation">,</span>width <span class="operator">=</span> <span class="number">2</span><span class="punctuation">)</span> <span class="comment"># offset为多序列比对结果与进化树之间的距离</span></span><br></pre></td></tr></table></figure>
+
+<img src="/2023/07/08/%E8%BF%9B%E5%8C%96%E6%A0%91%E6%9E%84%E5%BB%BA/image-20230713022613518.png" alt="image-20230713022613518" style="zoom:50%;">
+
+<h2 id="6-MEGA-Ubuntu-使用"><a href="#6-MEGA-Ubuntu-使用" class="headerlink" title="6. MEGA Ubuntu 使用"></a>6. MEGA Ubuntu 使用</h2><h3 id="6-1-安装"><a href="#6-1-安装" class="headerlink" title="6.1 安装"></a>6.1 安装</h3><p>在官网下载安装包后，命令行进入安装包所在目录，输入下面的代码安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i mega-cc_11.0.13-1_amd64.deb</span><br></pre></td></tr></table></figure>
+
+<p>出现报错：Errors were encountered while processing:  mega-cc</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先执行下面代码</span></span><br><span class="line"><span class="built_in">cd</span> /var/lib/dpkg</span><br><span class="line">sudo <span class="built_in">mv</span> info info~</span><br><span class="line">sudo <span class="built_in">mkdir</span> info</span><br><span class="line">sudo apt-get upgrade </span><br><span class="line"><span class="comment"># 会出现类似于下面的错误</span></span><br><span class="line">// Errors were encountered <span class="keyword">while</span> processing:</span><br><span class="line">// python3</span><br><span class="line">// python3-apt</span><br><span class="line">// python3-dbus</span><br><span class="line">// language-selector-common</span><br><span class="line"><span class="comment"># 接着在 /var/lib/dpkg/info目录下，删除以上出现包名字开头的文件，然后执行：sudo apt-get -f install</span></span><br><span class="line"><span class="comment"># 最后重新运行 sudo dpkg -i mega-cc_11.0.13-1_amd64.deb 安装 megacc</span></span><br><span class="line"><span class="comment"># 然后执行 megacc -v 发现软件成功安装</span></span><br><span class="line"><span class="comment"># 最后需要把 info~ 重命名回 info</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-2-使用"><a href="#6-2-使用" class="headerlink" title="6.2 使用"></a>6.2 使用</h3><h4 id="6-2-1-创建-mao-配置文件"><a href="#6-2-1-创建-mao-配置文件" class="headerlink" title="6.2.1 创建 .mao 配置文件"></a>6.2.1 创建 .mao 配置文件</h4><ol>
+<li><p>首先打开 Windows 下的 MEGA11，点击右下角的 PROTOTYPE，选择代比对的序列类型。</p>
+</li>
+<li><p>Align -&gt; MUSCLE DNA alignment -&gt; 设置好后点击 Save Settings 即得到多序列比对的 .mao 配置文件</p>
+</li>
+<li><p>同理，如果要进行进化树构建，保存构建进化树的配置文件即可。</p>
+</li>
+</ol>
+<h4 id="6-2-2-比对"><a href="#6-2-2-比对" class="headerlink" title="6.2.2 比对"></a>6.2.2 比对</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">megacc -a muscle_align_nucleotide.mao -d example.fasta -o ./output/prefix -f MEGA</span><br></pre></td></tr></table></figure>
+
+<p><code>-f</code>后设置比对结果输出格式，默认为 MEGA 即输出 .meg 文件，更改为 Fasta 即输出为 fasta 比对结果文件</p>
+<h4 id="6-2-3-构建进化树"><a href="#6-2-3-构建进化树" class="headerlink" title="6.2.3 构建进化树"></a>6.2.3 构建进化树</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">megacc -a infer_NJ_nucleotide.mao -d xx.meg -o ./output/tree_prefix</span><br></pre></td></tr></table></figure>
+
+<p>得到 nwk 文件</p>
+<h2 id="7-iTol-可视化"><a href="#7-iTol-可视化" class="headerlink" title="7. iTol 可视化"></a>7. iTol 可视化</h2><p><a target="_blank" rel="noopener" href="https://itol.embl.de/">iTOL网站</a></p>
+<hr>
+<h2 id="附录-1-MEGA-屏幕分辨率问题"><a href="#附录-1-MEGA-屏幕分辨率问题" class="headerlink" title="附录 1 MEGA 屏幕分辨率问题"></a>附录 1 MEGA 屏幕分辨率问题</h2><p>MEGA在有些笔记本电脑上界面功能框特别小：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/wye7Jrc146KNgSi_bUjcYQ">解决方案</a></p>
+<p><strong>参考资料</strong></p>
+<p>《Phylogenetic Trees Made Easy》第五版，Barry G. Hall，2018</p>
+<p>《R实战 系统发育树的数据集成操作及可视化》第一版，余光创，2023</p>
+<p>《生物信息学》第一版，李霞，2010</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BF%9B%E5%8C%96%E6%A0%91/" rel="tag"># 进化树</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/06/01/blast/" rel="prev" title="======= blast =======">
+      <i class="fa fa-chevron-left"></i> ======= blast =======
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/01/22/biopython/" rel="next" title="=======biopython=======">
+      =======biopython======= <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E7%BB%98%E5%88%B6%E8%BF%9B%E5%8C%96%E6%A0%91%EF%BC%88%E7%90%86%E8%AE%BA%E4%B8%8E%E5%AE%9E%E8%B7%B5%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">手把手教你绘制进化树（理论与实践）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E7%9A%84"><span class="nav-number">1.1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%8E%E8%BF%87%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">方法与过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.3.</span> <span class="nav-text">1. 软件下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%9B%AE%E6%A0%87%E5%BA%8F%E5%88%97%E8%8E%B7%E5%8F%96"><span class="nav-number">1.4.</span> <span class="nav-text">2. 目标序列获取</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-blast%E8%8E%B7%E5%8F%96%E5%90%8C%E6%BA%90%E5%BA%8F%E5%88%97"><span class="nav-number">1.4.1.</span> <span class="nav-text">2.1 blast获取同源序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E8%87%AA%E5%B7%B1%E5%88%A4%E6%96%AD%E5%BA%8F%E5%88%97%E5%90%8C%E6%BA%90%E6%80%A7"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.2 自己判断序列同源性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%BA%8F%E5%88%97%E6%A3%80%E6%9F%A5"><span class="nav-number">1.4.3.</span> <span class="nav-text">2.3 序列检查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BD%BF%E7%94%A8-MEGA-%E8%BF%9B%E8%A1%8C%E5%A4%9A%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9"><span class="nav-number">1.5.</span> <span class="nav-text">3. 使用 MEGA 进行多序列比对</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%AF%BC%E5%85%A5%E5%BE%85%E6%AF%94%E5%AF%B9%E7%9A%84-fasta-%E5%BA%8F%E5%88%97"><span class="nav-number">1.5.1.</span> <span class="nav-text">3.1 导入待比对的 fasta 序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%A4%9A%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9"><span class="nav-number">1.5.2.</span> <span class="nav-text">3.2 多序列比对</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E4%BF%9D%E5%AD%98%E6%AF%94%E5%AF%B9%E7%BB%93%E6%9E%9C"><span class="nav-number">1.5.3.</span> <span class="nav-text">3.3 保存比对结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E6%AF%94%E5%AF%B9%E7%BB%93%E6%9E%9C%E5%8F%AF%E9%9D%A0%E6%80%A7%E6%A3%80%E9%AA%8C"><span class="nav-number">1.5.4.</span> <span class="nav-text">3.4 比对结果可靠性检验</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9E%84%E5%BB%BA%E8%BF%9B%E5%8C%96%E6%A0%91"><span class="nav-number">1.6.</span> <span class="nav-text">4. 构建进化树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%9E%84%E5%BB%BA-NJ-%E6%A0%91"><span class="nav-number">1.6.1.</span> <span class="nav-text">4.1 构建 NJ 树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-1-%E6%A3%80%E9%AA%8C%E6%98%AF%E5%90%A6%E9%80%82%E5%90%88%E6%9E%84%E5%BB%BANJ%E6%A0%91"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">4.1.1 检验是否适合构建NJ树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-2-NJ-%E6%A0%91%E7%9A%84%E4%BC%B0%E8%AE%A1-%E7%90%86%E8%AE%BA"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">4.1.2 NJ 树的估计-理论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-3-NJ-%E6%A0%91%E7%9A%84%E4%BC%B0%E8%AE%A1-%E5%AE%9E%E8%B7%B5"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">4.1.3 NJ 树的估计-实践</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-4-%E6%A0%91%E7%9A%84%E8%AE%A4%E8%AF%86%E4%B8%8EMEGA%E4%B8%AD%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">1.6.1.4.</span> <span class="nav-text">4.1.4 树的认识与MEGA中的可视化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-5-%E7%BB%98%E5%88%B6%E6%9C%89%E6%A0%B9%E6%A0%91"><span class="nav-number">1.6.1.5.</span> <span class="nav-text">4.1.5 绘制有根树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-6-%E6%A0%91%E7%9A%84%E4%BF%9D%E5%AD%98%E4%B8%8E%E5%AF%BC%E5%87%BA"><span class="nav-number">1.6.1.6.</span> <span class="nav-text">4.1.6 树的保存与导出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E6%9E%84%E5%BB%BA-ML-%E6%A0%91"><span class="nav-number">1.6.2.</span> <span class="nav-text">4.2 构建 ML 树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-1-%E9%80%89%E6%8B%A9%E6%9C%80%E4%BD%B3%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.6.2.1.</span> <span class="nav-text">4.2.1 选择最佳模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-2-%E4%BC%B0%E8%AE%A1-ML-%E6%A0%91"><span class="nav-number">1.6.2.2.</span> <span class="nav-text">4.2.2 估计 ML 树</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E4%BD%BF%E7%94%A8-ggtree-%E8%BF%9B%E8%A1%8C%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">1.7.</span> <span class="nav-text">5.使用 ggtree 进行可视化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-treeio%E4%B8%8Eggtree%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%BB%8D%E4%B8%8E%E7%BB%83%E4%B9%A0"><span class="nav-number">1.7.1.</span> <span class="nav-text">5.1 treeio与ggtree使用介绍与练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E8%BF%9B%E5%8C%96%E6%A0%91%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96%E5%AE%9E%E8%B7%B5"><span class="nav-number">1.7.2.</span> <span class="nav-text">5.2 进化树的可视化实践</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-MEGA-Ubuntu-%E4%BD%BF%E7%94%A8"><span class="nav-number">1.8.</span> <span class="nav-text">6. MEGA Ubuntu 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E5%AE%89%E8%A3%85"><span class="nav-number">1.8.1.</span> <span class="nav-text">6.1 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%E4%BD%BF%E7%94%A8"><span class="nav-number">1.8.2.</span> <span class="nav-text">6.2 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-1-%E5%88%9B%E5%BB%BA-mao-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">1.8.2.1.</span> <span class="nav-text">6.2.1 创建 .mao 配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-2-%E6%AF%94%E5%AF%B9"><span class="nav-number">1.8.2.2.</span> <span class="nav-text">6.2.2 比对</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-3-%E6%9E%84%E5%BB%BA%E8%BF%9B%E5%8C%96%E6%A0%91"><span class="nav-number">1.8.2.3.</span> <span class="nav-text">6.2.3 构建进化树</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-iTol-%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">1.9.</span> <span class="nav-text">7. iTol 可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%BD%95-1-MEGA-%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E9%97%AE%E9%A2%98"><span class="nav-number">1.10.</span> <span class="nav-text">附录 1 MEGA 屏幕分辨率问题</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="水瓶之翼"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">水瓶之翼</p>
+  <div class="site-description" itemprop="description">躺平了</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">水瓶之翼</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'Mdmc1I6TUmAZfI19jt0kRu8e-gzGzoHsz',
+      appKey     : 'DJRCgUX7mIx8PPT0Cy3cvLFN',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-CN' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"taochh.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"检索字段","hits_empty":"抱歉，未搜索到包含: ${query} 的文章","hits_stats":"在 ${time} ms 共搜索到 ${hits} 个相关结果"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.html"};
+  </script>
+
+  <meta name="description" content="快捷链接： NEB-核酸摩尔浓度与质量浓度换算 诺唯赞-生物计算器 氨基酸密码子表 蛋白分子量计算-纽普生物oPro DNA拷贝数计算 氨基酸密码子与逆密码子表 天根无缝克隆引物设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 软件 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;">
+<meta property="og:url" content="https://taochh.github.io/2024/02/11/%E8%BD%AF%E4%BB%B6/index.html">
+<meta property="og:site_name" content="TAO&#39;s blog">
+<meta property="og:description" content="快捷链接： NEB-核酸摩尔浓度与质量浓度换算 诺唯赞-生物计算器 氨基酸密码子表 蛋白分子量计算-纽普生物oPro DNA拷贝数计算 氨基酸密码子与逆密码子表 天根无缝克隆引物设计">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://taochh.github.io/2024/02/11/%E8%BD%AF%E4%BB%B6/TAO/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93/photos/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20230601155221346.png">
+<meta property="og:image" content="https://taochh.github.io/2024/02/11/%E8%BD%AF%E4%BB%B6/image-20230420173336682.png">
+<meta property="og:image" content="https://taochh.github.io/2024/02/11/%E8%BD%AF%E4%BB%B6/image-20230420173729737.png">
+<meta property="og:image" content="https://taochh.github.io/2024/02/11/%E8%BD%AF%E4%BB%B6/image-20230420174008476.png">
+<meta property="article:published_time" content="2024-02-11T12:35:51.000Z">
+<meta property="article:modified_time" content="2024-07-13T13:42:34.951Z">
+<meta property="article:author" content="水瓶之翼">
+<meta property="article:tag" content="软件">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://taochh.github.io/2024/02/11/%E8%BD%AF%E4%BB%B6/TAO/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93/photos/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20230601155221346.png">
+
+<link rel="canonical" href="https://taochh.github.io/2024/02/11/%E8%BD%AF%E4%BB%B6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>======= 软件 ======= | TAO's blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">TAO's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">哈喽呀！</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://taochh.github.io/2024/02/11/%E8%BD%AF%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="水瓶之翼">
+      <meta itemprop="description" content="躺平了">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TAO's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ======= 软件 =======
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-02-11 20:35:51" itemprop="dateCreated datePublished" datetime="2024-02-11T20:35:51+08:00">2024-02-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-07-13 21:42:34" itemprop="dateModified" datetime="2024-07-13T21:42:34+08:00">2024-07-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">软件</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2024/02/11/%E8%BD%AF%E4%BB%B6/" class="post-meta-item leancloud_visitors" data-flag-title="======= 软件 =======" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2024/02/11/%E8%BD%AF%E4%BB%B6/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2024/02/11/%E8%BD%AF%E4%BB%B6/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>快捷链接</strong>：</p>
+<p><a target="_blank" rel="noopener" href="https://nebiocalculator.neb.com/#!/dsdnaamt">NEB-核酸摩尔浓度与质量浓度换算</a></p>
+<p><a target="_blank" rel="noopener" href="https://it.vazyme.com:8002/calculator-web/">诺唯赞-生物计算器</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.youbio.cn/kb/10040">氨基酸密码子表</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.novopro.cn/tools/protein_mw.html">蛋白分子量计算-纽普生物oPro</a></p>
+<p><a target="_blank" rel="noopener" href="https://agbio.com.cn/soft/tools/copy/index.html">DNA拷贝数计算</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.youbio.cn/kb/10040">氨基酸密码子与逆密码子表</a></p>
+<p><a target="_blank" rel="noopener" href="http://yw.tiangen.com/">天根无缝克隆引物设计</a></p>
+<span id="more"></span>
+
+<h3 id="A"><a href="#A" class="headerlink" title="A"></a>A</h3><h4 id="Aspera"><a href="#Aspera" class="headerlink" title="Aspera"></a>Aspera</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">下载1个文件</span></span><br><span class="line">ascp -v -QT -l 400m -P33001 -k1 -i $HOME/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/srr/SRR122/079/SRR12207279 /home/spirit/bioinformatics/rnaseq/test1/raw/sra</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">fastq，单端</span></span><br><span class="line">cat SRR_list |while read id; do(nohup ascp -v -QT -l 400m -P33001 -k1 -i $HOME/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR122/0$&#123;id&#125;/SRR122072$&#123;id&#125;/SRR122072$&#123;id&#125;.fastq.gz $HOME/bioinfo/rnaseq2/rawdata&gt;rawdata.log 2&gt;&amp;1 &amp;);done</span><br><span class="line"></span><br><span class="line">cat SRR_list |while read id; do(nohup ascp -v -QT -l 400m -P33001 -k1 -i $HOME/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR122/0$&#123;id&#125;/SRR122072$&#123;id&#125;/SRR122072$&#123;id&#125;_2.fastq.gz $HOME/bioinfo/rnaseq2/rawdata&gt;rawdata.log 2&gt;&amp;1 &amp;);done</span><br></pre></td></tr></table></figure>
+
+<p><strong>ascp 参数</strong> <code>-v</code> 能让你实时知道程序在干啥，方便查错。<code>-Q</code> 用于自适应流量控制，磁盘限制所需。<code>-T</code> 设置为无需加密传输。<code>-l</code> 设置最大传输速度，一般200m到500m，如果不设置，反而速度会比较低，可能有个较低的默认值。<code>-P</code> 用于SSH身份验证的TCP端口，一般是33001。<code>-k</code> 断点续传，一般设置为值1。<code>-i</code> 提供私钥文件的地址，免密从SRA和ENA下载，不能少，地址一般是~&#x2F;.aspera&#x2F;connect&#x2F;etc中的asperaweb_id_dsa.openssh文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载单端测序文件</span></span><br><span class="line"><span class="built_in">cat</span> SRR_list_single.txt|<span class="built_in">cut</span> -c 10-11|<span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span>;<span class="keyword">do</span> (<span class="built_in">nohup</span> ascp -v -QT -l 400m -P33001 -k1 -i <span class="variable">$HOME</span>/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR105/0<span class="variable">$&#123;id&#125;</span>/SRR105048<span class="variable">$&#123;id&#125;</span>/SRR105048<span class="variable">$&#123;id&#125;</span>.fastq.gz <span class="variable">$HOME</span>/bioinfo/transcriptome/rawdata &amp; );<span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载双端测序文件_1</span></span><br><span class="line"><span class="built_in">cat</span> SRR_list_pair.txt|<span class="built_in">cut</span> -c 10-11|<span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span>;<span class="keyword">do</span> (<span class="built_in">nohup</span> ascp -v -QT -l 400m -P33001 -k1 -i <span class="variable">$HOME</span>/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR105/0<span class="variable">$&#123;id&#125;</span>/SRR105048<span class="variable">$&#123;id&#125;</span>/SRR105048<span class="variable">$&#123;id&#125;</span>_1.fastq.gz <span class="variable">$HOME</span>/bioinfo/transcriptome/rawdata &amp; );<span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载双端测序文件_2</span></span><br><span class="line"><span class="built_in">cat</span> SRR_list_pair.txt|<span class="built_in">cut</span> -c 10-11|<span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span>;<span class="keyword">do</span> (<span class="built_in">nohup</span> ascp -v -QT -l 400m -P33001 -k1 -i <span class="variable">$HOME</span>/.aspera/connect/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/fastq/SRR105/0<span class="variable">$&#123;id&#125;</span>/SRR105048<span class="variable">$&#123;id&#125;</span>/SRR105048<span class="variable">$&#123;id&#125;</span>_2.fastq.gz <span class="variable">$HOME</span>/bioinfo/transcriptome/rawdata &amp; );<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="B"><a href="#B" class="headerlink" title="B"></a>B</h3><h4 id="blast"><a href="#blast" class="headerlink" title="blast"></a>blast</h4><p>[blast使用](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\blast使用.md)</p>
+<h4 id="blat"><a href="#blat" class="headerlink" title="blat"></a>blat</h4><p>命令行 | 比对双序列，不用构建索引</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># axt格式</span><br><span class="line">blast xx1.fa xx2.fa -out=axt out.axt</span><br><span class="line"># blast格式</span><br><span class="line">blast xx1.fa xx2.fa -out=blast out.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="bowtie2"><a href="#bowtie2" class="headerlink" title="bowtie2"></a>bowtie2</h4><p>安装：<code>conda install bowtie2</code><br>索引： <a target="_blank" rel="noopener" href="https://benlangmead.github.io/aws-indexes/bowtie">https://benlangmead.github.io/aws-indexes/bowtie</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"># 构建索引</span><br><span class="line">bowtie2-build ASFV_genome_NC_001659.2.fasta ./index/bowtie2/ASFV_NC_001659.2/ASFV_NC_001659.2_index</span><br><span class="line"></span><br><span class="line"># 比对</span><br><span class="line">cat  &gt;RNA_list  # 10 16 21</span><br><span class="line"># 创建一个脚本bowtie2.sh</span><br><span class="line">bowtie2_index=$HOME/index/bowtie2/GRCh38_noalt_as/GRCh38_noalt_as</span><br><span class="line">dir=$HOME/rna_test2/clean</span><br><span class="line">cat RNA_list|while read id</span><br><span class="line">do</span><br><span class="line">(nohup bowtie2 -p 5 -x $bowtie2_index -1 $&#123;dir&#125;/SRR116186$&#123;id&#125;_1_val_1.fq.gz -2 $&#123;dir&#125;/SRR116186$&#123;id&#125;_2_val_2.fq.gz -S $HOME/rna_test2/ali/SRR116186$&#123;id&#125;_bowtie2.sam &gt;&gt;bowtie2.log 2&gt;&amp;1 &amp;)</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"># 执行脚本</span><br><span class="line">bash bowtie2.sh</span><br><span class="line"># 将sam文件转换为bam文件</span><br><span class="line">ls *bowtie2.sam|while read id;do (nohup samtools sort -@ 5 -o $&#123;id%%.*&#125;.bam $id &amp;);done</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>bowtie2参数</strong>：<code>-x</code> 由bowtie2-build所生成的索引文件的前缀。<code>-S</code> 所生成的SAM格式的文件前缀。 <code>-p</code> 线程数</p>
+<p><code>-5/--trim5</code> 剪掉5’端长度的碱基，再用于比对(default: 0)。<code>-3/--trim3 </code>剪掉3’端长度的碱基，再用于比对(default: 0)。<code>-U</code> 单端数据。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/I7Gcci8I1YVjz_BL4BQvrw">https://mp.weixin.qq.com/s/I7Gcci8I1YVjz_BL4BQvrw</a></p>
+<h4 id="busco"><a href="#busco" class="headerlink" title="busco"></a>busco</h4><p>BUSCO (Benchmarking Universal Single-Copy Orthologs) 主要用于转录组和基因组组装质量进行评估的软件。BUSCO对拼接结果的评估与quast不同，它并不追求基因组拼接的长度，而关注的是是否将一些单拷贝直系后源基因拼接出来，与checkM类似。在相近的物种之间总有一些保守的序列而BUSCO就是使用这些保守序列与组装的结果进行比对，鉴定组装的结果是否包含这些序列，包含单条、多条还是部分或者不包含等等情况来给出结果。</p>
+<p><a target="_blank" rel="noopener" href="https://gitlab.com/ezlab/busco">官网</a> <a target="_blank" rel="noopener" href="https://www.orthodb.org/?page=filelist">数据下载</a>（需要下载直系同源单拷贝基因数据库进行评估）（可以从<a target="_blank" rel="noopener" href="http://busco.ezlab.org/%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%8C%85%E6%8B%AC%E4%BB%A5%E4%B8%8B%E5%86%85%E5%AE%B9%E3%80%82Bacteria">http://busco.ezlab.org/下载，包括以下内容。Bacteria</a>: 细菌（5609），Eukaryotes真核生物（1271），Viruses病毒（6488），Archaea 古细菌 404）截至2021年）</p>
+<p><strong>安装</strong>：conda安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n busco -y busco=5.6.1</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看数据库</span></span><br><span class="line">busco --list-datasets</span><br><span class="line">busco --list-datasets|grep bacteria <span class="comment"># 获取细菌数据库名称</span></span><br><span class="line"><span class="comment"># 下载数据库</span></span><br><span class="line">busco --download bacteria_odb10</span><br><span class="line"></span><br><span class="line"><span class="comment">#使用</span></span><br><span class="line">busco -i ../quast/spades.fa -o busco -m genome -c 12 --offline -l busco_downloads/lineages/bacteria_odb10/</span><br><span class="line"></span><br><span class="line">////</span><br><span class="line">-i 拼接好的 scaffold</span><br><span class="line">-o 输出文件夹</span><br><span class="line">-m 模式，可以是基因组水平，转录组水平，蛋白水平等</span><br><span class="line">-l 指定同源基因数据库</span><br><span class="line">--offline 离线运行</span><br><span class="line">-c 线程</span><br><span class="line">////</span><br></pre></td></tr></table></figure>
+
+<p><strong>结果</strong></p>
+<p>complete Busco: 有122个完整的Busco，其中有多少的单拷贝Busco</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计的结果在 busco 文件夹下</span></span><br><span class="line">le short_summary.specific.bacteria_odb10.busco.txt</span><br><span class="line"><span class="comment"># 预测的基因</span></span><br><span class="line">le prodigal_output/predicted_genes/predicted.faa</span><br><span class="line"><span class="comment"># 绘图，利用上面的 txt 文件，需要在生成的busco文件夹前面运行（实际为 ggplot2 画图），在 busco 文件夹下生成 png 文件</span></span><br><span class="line">generate_plot.py -wd busco</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="bwa"><a href="#bwa" class="headerlink" title="bwa"></a>bwa</h4><p><strong>下载 、安装（<code>make</code>）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># http://sourceforge.net/projects/bio-bwa/files/</span><br><span class="line">wget https://sourceforge.net/projects/bio-bwa/files/bwa-0.7.17.tar.bz2</span><br></pre></td></tr></table></figure>
+<p><strong>构建索引</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bwa index -a bwtsw -p bwa_index ~/bioinfo/genome/Homo_sapiens.GRCh38.dna.toplevel.fa.gz</span><br><span class="line"></span><br><span class="line">bwa index -a is -p ref_OM515125 OM515125.fasta</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>索引构建参数：</strong><code>-p</code> 输出数据库的前缀，默认和输入的文件名一致。<code>-a</code> [is|bwtsw] 构建index的算法，有以下两个选项：<code>-a is</code> 是默认的算法，虽然相对较快，但是需要较大的内存，当构建的数据库大于2GB的时候就不能正常工作了;<code>-a bwtsw</code> 对于短的参考序列式不工作的，必须要大于等于10MB, 但能用于较大的基因组数据，比如人的全基因组。</p>
+<p>&#x3D;&#x3D;bwa-mem2&#x3D;&#x3D;</p>
+<p>优化运行时间、批处理等，更快</p>
+<h3 id="C"><a href="#C" class="headerlink" title="C"></a>C</h3><h4 id="Conda"><a href="#Conda" class="headerlink" title="Conda"></a>Conda</h4><p> <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1919758#:~:text=mamba%20%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B9%9F%E6%AF%94%E8%BE%83%E7%AE%80%E5%8D%95%EF%BC%8C%E9%A6%96%E5%85%88%E4%BD%BF%E7%94%A8%20conda%20%E5%AE%89%E8%A3%85%20mamba%EF%BC%8C%E5%90%8E%E9%9D%A2%E6%89%80%E6%9C%89%E7%94%A8%E5%88%B0%20conda%20%E7%9A%84%E5%9C%B0%E6%96%B9%EF%BC%8C%E9%83%BD%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%20mamba,-y%20bcftools%20%E4%B8%BA%20mamba%20%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D%20alias%20%27conda%3D%20mamba%27">conda</a> 使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加清华镜像https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/ 在.condarc里按步骤执行命令</span></span><br><span class="line"><span class="comment"># https://mp.weixin.qq.com/s?__biz=MzAxMDkxODM1Ng==&amp;mid=2247518195&amp;idx=1&amp;sn=d6d82ceda8531ebdc294dab0bf9d5519&amp;scene=21#wechat_redirect</span></span><br><span class="line">conda create -n name python=3.8      <span class="comment"># 创建环境</span></span><br><span class="line">conda <span class="built_in">env</span> list                         <span class="comment"># 查看环境</span></span><br><span class="line">conda activate name                    <span class="comment"># 激活环境</span></span><br><span class="line">conda deactivate                       <span class="comment"># 退出环境</span></span><br><span class="line">conda search app                       <span class="comment"># 安装前先搜索一下软件是否存在</span></span><br><span class="line">conda install app                      <span class="comment"># 安装</span></span><br><span class="line">conda install -y app1 app2 app3        <span class="comment"># 批量安装，而且-y表示安装过程不需要询问 yes/no</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="关于安装-mamba-过程的一个笔记"><a href="#关于安装-mamba-过程的一个笔记" class="headerlink" title="关于安装 mamba 过程的一个笔记"></a>关于安装 mamba 过程的一个笔记</h5><p>一般来说，输入<code>sh Mambaforge-Linux-x86_64.sh </code>安装mamba的过程中会出现两次提示，需要我们手动输入yes，但是我这次安装的时候在第二个提示处手滑直接按了Enter键，即默认的no，所以安装完刷新环境变量后输入<code>mamba</code>会显示mamba未安装。    </p>
+<p>经检查发现确实选择了no:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Do you wish the installer to initialize Mambaforge</span><br><span class="line">by running conda init? [<span class="built_in">yes</span>|no]</span><br><span class="line">[no] &gt;&gt;&gt;</span><br><span class="line">You have chosen to not have conda modify your shell scripts at all.</span><br><span class="line">To activate conda<span class="string">&#x27;s base environment in your current shell session:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">eval &quot;$(/home/tao/mambaforge/bin/conda shell.YOUR_SHELL_NAME hook)&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">To install conda&#x27;</span>s shell <span class="built_in">functions</span> <span class="keyword">for</span> easier access, first activate, <span class="keyword">then</span>:</span><br><span class="line"></span><br><span class="line">conda init</span><br><span class="line"></span><br><span class="line">If you<span class="string">&#x27;d prefer that conda&#x27;</span>s base environment not be activated on startup,</span><br><span class="line"><span class="built_in">set</span> the auto_activate_base parameter to <span class="literal">false</span>:</span><br><span class="line"></span><br><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">Thank you <span class="keyword">for</span> installing Mambaforge!</span><br></pre></td></tr></table></figure>
+
+<p>所以这时候需要手动激活conda环境，按照上面的提示，只需要把<code>YOUR_SHELL_NAME</code>改成<code>bash</code>，然后添加到环境变量即可，也就是输入下面的代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/home/tao/mambaforge/bin/conda shell.bash hook &gt;&gt;~/.bashrc</span><br><span class="line"><span class="comment"># 刷新环境变量</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc </span><br></pre></td></tr></table></figure>
+
+<p>这时再输入<code>mamba</code>，就会显示可以使用了：</p>
+<img src="/2024/02/11/%E8%BD%AF%E4%BB%B6/TAO/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BB%93%E5%BA%93/photos/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE/image-20230601155221346.png" alt="image-20230601155221346" style="zoom:33%;">
+
+<p>另外如果后面在用mamba激活小环境时失败的话只需要运行<code>mamba init</code>，然后重新启动终端即可正常使用mamba命令激活小环境。</p>
+<h4 id="centrifuge-D-TAO-5-软件使用方法笔记-Window系统软件使用-centrifuge使用-md"><a href="#centrifuge-D-TAO-5-软件使用方法笔记-Window系统软件使用-centrifuge使用-md" class="headerlink" title="[centrifuge](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\centrifuge使用.md)"></a>[centrifuge](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\centrifuge使用.md)</h4><h3 id="E"><a href="#E" class="headerlink" title="E"></a>E</h3><h4 id="entrez-direct"><a href="#entrez-direct" class="headerlink" title="entrez-direct"></a>entrez-direct</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y entrez-direct</span><br></pre></td></tr></table></figure>
+
+<h5 id="efetch"><a href="#efetch" class="headerlink" title="efetch"></a>efetch</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载1条</span></span><br><span class="line">efetch -db nuccore -format fasta -<span class="built_in">id</span> NC_045512 &gt; NC_045512.fa</span><br><span class="line"><span class="comment"># 下载多条</span></span><br><span class="line"><span class="built_in">cat</span>  AC.txt|<span class="built_in">sort</span>|<span class="built_in">uniq</span>|xargs <span class="comment">#先将多行输出为1行以空格间隔的格式</span></span><br><span class="line">efetch -db nuccore -format fasta -<span class="built_in">id</span> <span class="string">&quot;NC_045512 NC_045513&quot;</span> &gt; all.fa <span class="comment">#然后直接从屏幕拷贝即可</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="F"><a href="#F" class="headerlink" title="F"></a>F</h3><h4 id="fasterq-dump-Sratoolkit"><a href="#fasterq-dump-Sratoolkit" class="headerlink" title="fasterq-dump(Sratoolkit)"></a>fasterq-dump(Sratoolkit)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fasterq-dump --split-3 -e 4 -O ./ --include-technical SRR*</span><br><span class="line"><span class="comment"># 压缩fq文件</span></span><br><span class="line"><span class="built_in">ls</span> *.fastq | <span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span> ;<span class="keyword">do</span>(gzip <span class="variable">$id</span> &amp;);<span class="keyword">done</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># fastq-dump</span></span><br><span class="line">fastq-dump --split-3 --gzip -O ./ SRR*</span><br></pre></td></tr></table></figure>
+
+<p><code>-e</code> 线程数，<code>--include-technical</code> 对于10X的单细胞测序数据，虽然速度极快，但是fasterq-dump没有把SRR分为-1，-2，-3三个部分，这可能会影响CellRanger的后续分析。对于10x的SRR需要加–include-technical参数，<code>--split-3</code> 将双端测序分为两份,放在不同的文件，对于一方有而一方没有的reads会单独放在一个文件夹里。</p>
+<p><strong>总结</strong>：fasterq-dump更快但是不支持gzip，最多也只能先解压为fastq再用其它工具压缩为gzip，我虚拟机内存不够所以不能用这种方法了。fastq-dump支持gzip格式但是要转换的SRA数据比较多的话会很慢。所以下次下载的时候可以直接从EBI下载fastq.gz数据。</p>
+<h4 id="fastqc"><a href="#fastqc" class="headerlink" title="fastqc"></a>fastqc</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对所有文件质控</span></span><br><span class="line">fastqc *.gz </span><br><span class="line">fastqc *.gz -t 8  <span class="comment">#调用 8 个线程</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ls</span> *.fastq.gz | <span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span> ;<span class="keyword">do</span> (<span class="built_in">nohup</span> fastqc -t 4 -o ./fastqc <span class="variable">$id</span> &gt;&gt;fq.log &amp;);<span class="keyword">done</span> </span><br><span class="line">multiqc *.zip -o ./ &gt;multiqc.log &amp;</span><br><span class="line"></span><br><span class="line"><span class="comment"># -o --outdir FastQC生成的报告文件的储存路径，生成的报告的文件名是根据输入来定的</span></span><br><span class="line"><span class="comment"># --extract 生成的报告默认会打包成1个压缩文件，使用这个参数是让程序不打包</span></span><br><span class="line"><span class="comment"># -t --threads 选择程序运行的线程数，每个线程会占用250MB内存，越多越快咯</span></span><br><span class="line"><span class="comment"># -c --contaminants 污染物选项，输入的是一个文件，格式是Name [Tab] Sequence，里面是可能的污染序列，如果有这个选项，FastQC会在计算时候评估污染的情况，并在统计的时候进行分析，一般用不到</span></span><br><span class="line"><span class="comment"># -a --adapters 也是输入一个文件，文件的格式Name [Tab] Sequence，储存的是测序的adpater序列信息，如果不输入，目前版本的FastQC就按照通用引物来评估序列时候有adapter的残留</span></span><br><span class="line"><span class="comment"># -q --quiet 安静运行模式，一般不选这个选项的时候，程序会实时报告运行的状况。</span></span><br></pre></td></tr></table></figure>
+<p><strong>fastqc结果</strong>：<code>%Dups</code> 重复reads的比例（dupli越高，说明有用序列越少）。<code>Sequence Quality Histograms</code> 每个read各位置碱基的平均测序质量。<code>Per Sequence Quality Scores</code> 具有平均质量分数的reads的数量。<code>Per Base Sequence Content</code> 每个read各位置碱基ATCG的比例。<code>Per Sequence GC Content</code> reads的平均GC含量，正常的样本的GC含量曲线会趋近于正态分布曲线。<code>Per Base N Content</code> 每条reads各位置N碱基含量比例。<code>Sequence Duplication Levels</code> 每个序列的相对重复水平, 测序深度越高，越容易产生一定程度的duplication，这是正常的现象，但如果duplication的程度很高，就提示我们可能有bias的存在。<code>Overrepresented sequences</code> 文库中过表达序列的比例。<code>Adapter Content </code> 接头含量。</p>
+<hr>
+<h4 id="falco"><a href="#falco" class="headerlink" title="falco"></a>falco</h4><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/sHS1NzOFD92LgLKJhQ6vOA">介绍</a></p>
+<p>&#x3D;&#x3D;安装&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># conda中下载安装</span></span><br><span class="line">conda install  -c bioconda falco</span><br><span class="line"><span class="comment"># 平替 fastqc</span></span><br><span class="line"><span class="built_in">alias</span> fastqc=falco</span><br></pre></td></tr></table></figure>
+
+<p>最后是输出部分，fastqc会输出一个zip文件和一个html文件，而falco有所不同，他会为每个样本输出3个文件，分别是 <code>文件名_fastqc_data.txt</code>, <code>文件名_fastqc_report.html</code>, <code>文件名_summary.txt</code>, 其中html文件内容和fastqc一样。而fastqc_data.txt文件需要做一点小小的修改，才能用于后续分析。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 为每个样本建立一个文件夹， 因为multiqc 只能识别文件名为 fastqc_data.txt</span></span><br><span class="line"><span class="built_in">ls</span> *fastqc_data.txt | <span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span> ; <span class="keyword">do</span> sample=<span class="variable">$&#123;id%%.*&#125;</span>; <span class="built_in">mkdir</span>  <span class="variable">$sample</span> &amp;&amp; <span class="built_in">mv</span> <span class="variable">$id</span> <span class="variable">$sample</span>/fastqc_data.txt ; <span class="keyword">done</span></span><br><span class="line"><span class="comment"># 运行multiqc</span></span><br><span class="line">multiqc SRP424639_1  SRP424639_2</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;模板&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#简易版</span></span><br><span class="line">falco -t 6 -o ../</span><br><span class="line"><span class="comment">#优化版</span></span><br><span class="line">time <span class="built_in">ls</span> *.fq.gz|<span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span>;<span class="keyword">do</span> falco <span class="variable">$id</span> -t 6 -D ../fastqc/<span class="variable">$&#123;id%%.*&#125;</span>_fastqc_data.txt -skip-report -skip-summary; <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="fastp"><a href="#fastp" class="headerlink" title="fastp"></a>fastp</h4><p>&#x3D;&#x3D;下载&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda install -c bioconda fastp</span><br><span class="line">fastp --version <span class="comment"># 看了一下是0.23.2最新版本，与github上一致</span></span><br></pre></td></tr></table></figure>
+
+<p>检测到接头去除接头的机制：将接头部分以及接头后的序列全部剪除，因为这个接头只是测序接头的其中一段保守序列，用于正则匹配，实际trim的时候要剪去。</p>
+<p>&#x3D;&#x3D;使用模板&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fastp \</span><br><span class="line"><span class="comment"># 需更改相应名称</span></span><br><span class="line">-i SRR16931573.fq1 -I SRR16931573.fq2 -o SRR16931573_clean1.fastq.gz -O SRR16931573_clean2.fastq.gz -h SRR16931573_fastp.html \</span><br><span class="line"><span class="comment"># 按需更改</span></span><br><span class="line">-q 20 -n 10 -u 30 \</span><br><span class="line">-l 20 -f 9 -F 9 \</span><br><span class="line">-w 6 -z 4 -D \</span><br><span class="line"><span class="comment"># 裁剪</span></span><br><span class="line">-5 -W 1 -M 15 -r --cut_right_window_size 4 \</span><br><span class="line"><span class="comment"># 默认开启illumina接头过滤，以下为华大接头</span></span><br><span class="line">--adapter_sequence AAGTCGGAGGCCAAGCGGTCTTAGGAAGACAA --adapter_sequence_r2 AAGTCGGATCGTAGCCATGTCGTTCTGTGAGCCAAGGAGTTG</span><br></pre></td></tr></table></figure>
+
+<p><strong>输入输出</strong></p>
+<ul>
+<li><p><code>-i</code> 输入第一端的fastq文件</p>
+</li>
+<li><p><code>-I</code>假如是双端测序，输入第二端的fastq文件</p>
+</li>
+<li><p><code>-o</code>输出第一端的过滤后的fastq文件，如果不指定该参数，则仅输出质控报告，不输出质控后的文件</p>
+</li>
+<li><p><code>-O</code>输出第二端的过滤后的fastq文件</p>
+</li>
+<li><p><code>-h</code>输出报告的名称</p>
+</li>
+</ul>
+<p><strong>质量过滤（默认开启）</strong></p>
+<ul>
+<li><p><code>-q</code>碱基质量值的阈值，默认是15</p>
+</li>
+<li><p><code>-n</code> 设置N碱基的数量，如果超过该值，该reads被丢弃,默认为5</p>
+</li>
+<li><p><code>-u</code> 默认为40，即一个read最多只允许40%的碱基质量不合格，值越小越严格</p>
+</li>
+<li><p><code>-Q</code>fastp默认质量过滤，可通过该参数设置为不过滤</p>
+</li>
+<li><p><code>e</code>如果一条reads平均质量分数小于某个值，则删除该reads，默认没有要求</p>
+</li>
+</ul>
+<p><strong>长度过滤（默认开启）</strong></p>
+<ul>
+<li><p><code>-l</code>设置read最小长度，小于该长度的会被丢弃，默认15</p>
+</li>
+<li><p><code>--length_limit</code>设置read最大长度，大于该长度的会被丢弃，默认无要求</p>
+</li>
+<li><p><code>-L</code>fastp默认长度过滤，可通过该参数设置为不过滤</p>
+</li>
+<li><p><code>-f</code> <code>-t</code> <code>-F</code> <code>-T</code> 移除read头&#x2F;尾多少个碱基(小写字母read1，大写字母read2)</p>
+</li>
+</ul>
+<p><strong>接头（默认开启）</strong></p>
+<ul>
+<li><p><code>-A</code> 关闭接头过滤</p>
+</li>
+<li><p>SE数据：fastp默认检测前1Mreads尾部是否有一致性接头序列。可通过<code>-a</code>指定接头序列，假如指定了接头序列，SE的接头自动检测功能会被关闭。</p>
+</li>
+<li><p>PE数据：fastq会自动检测双端reads的overlap,这种方法好用且快速，所以PE数据一般不需要自己指定接头（即使你知道接头序列），当然你也可以指定接头通过参数<code>--adapter_sequence</code>指定read1的接头,<code>--adapter_sequence_r2</code>指定read2的接头，假如 fastp 由于碱基质量低等原因找不到overlap,就会使用这些指定的接头。</p>
+</li>
+</ul>
+<p><strong>其它</strong></p>
+<ul>
+<li><p><code>-w</code>线程数,默认为3</p>
+</li>
+<li><p><code>-z</code>压缩输出结果, 1-9级，默认4级</p>
+</li>
+<li><p><code>-D</code>去除duplication</p>
+</li>
+</ul>
+<p><strong>低复杂性过滤（默认关闭）</strong></p>
+<p>指某个碱基与下一个碱基不同则认为具有复杂性，通过<code>-y</code>设置复杂性，默认值为30，即至少需要30%的复杂性，复杂百分比&#x3D;具有复杂性的碱基除以（总碱基数-1）</p>
+<p><strong>滑窗质量剪裁</strong></p>
+<p>很多时候，一个read的低质量序列都是集中在read的末端，也有少部分是在read的开头。fastp支持像Trimmomatic那样对滑动窗口中的碱基计算平均质量值，然后将不符合的滑窗直接剪裁掉。使用<code>-5</code>参数开启在5’端，也就是read的开头的剪裁，使用<code>-3</code>参数开启在3’端，也就是read的末尾的剪裁。使用<code>-W</code>参数指定滑动窗大小，默认是4，使用<code>-M</code>参数指定要求的平均质量值，默认是20，也就是Q20。</p>
+<ul>
+<li><p><code>-5</code> 5’端滑窗质量裁剪，与trimmomatic的<code>LEADING</code>功能类似，设置了<code>-W</code>一个窗口的碱基大小为1，<code>-M</code>碱基质量阈值为15。也就是说，从5’端开始，按照1个碱基的窗口大小向右滑动，假如碰到质量值大于15的，就会停止过滤；</p>
+</li>
+<li><p><code>-r</code> 滑窗质量裁剪，与trimmomatic的<code>SLIDINGWINDOW</code>功能类似，假如不设置窗口大小或阈值，默认使用<code>-W</code>与<code>-M</code>的参数设置。这里更改了一下窗口大小，使用<code>--cut_right_window_size</code>参数设置窗口大小为4，碱基质量的阈值依然为15则不需要另外设置。也就是说，窗口从reads的左向右滑动，如果遇到平均质量值小于设置的阈值（这里是15）的，删除该窗口中的以及窗口右侧的所有碱基。（如果同时设置了<code>-5</code> <code>-r</code>，是没有必要设置<code>-3</code>进行3’端滑窗质量裁剪的）</p>
+</li>
+</ul>
+<h5 id="fastp安装报错解决"><a href="#fastp安装报错解决" class="headerlink" title="fastp安装报错解决"></a>fastp安装报错解决</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fastp: /home/tao/miniforge3/envs/rna_seq/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.26<span class="string">&#x27; not found (required by fastp)</span></span><br><span class="line"><span class="string">fastp: /home/tao/miniforge3/envs/rna_seq/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.22&#x27;</span> not found (required by fastp)</span><br></pre></td></tr></table></figure>
+
+<p>应该是缺少GLIBCXX3.4.26与GLIBCXX3.4.22两个版本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查</span></span><br><span class="line"><span class="built_in">cd</span> /usr/bin</span><br><span class="line">strings ./usr/lib/libstdc++.so.6 | grep GLIBCXX  <span class="comment"># 发现找不到</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入 rna_seq环境的lib文件夹下</span></span><br><span class="line">/home/tao/miniforge3/envs/rna_seq/lib</span><br><span class="line"><span class="built_in">ls</span> libstdc++.so.6 <span class="comment"># 发现存在该文件</span></span><br><span class="line">strings libstdc++.so.6 | grep GLIBCXX <span class="comment"># 发现确实不存在上面的两个版本</span></span><br></pre></td></tr></table></figure>
+
+<p>浏览器下载<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=http://www.vuln.cn/wp-content/uploads/2019/08/libstdc.so_.6.0.26.zip">libstdc.so_.6.0.26.zip</a>，上传到服务器。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更改文件</span></span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">unzip libstdc.so_.6.0.26.zip</span><br><span class="line"><span class="comment"># 把原来的文件改名</span></span><br><span class="line"><span class="built_in">mv</span> libstdc++.so.6 libstdc++.so.6_copy</span><br><span class="line"><span class="comment"># 构建新文件的软链接，注意在rna_seq的lib下操作</span></span><br><span class="line"><span class="built_in">ln</span> -s ~/software/libstdc++.so.6.0.26 libstdc++.so.6</span><br><span class="line"></span><br><span class="line">fastp <span class="comment"># 运行fastp看是否成功 </span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>&#x3D;&#x3D;参考资料&#x3D;&#x3D;</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/33601691">知乎</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/OpenGene/fastp">github</a>  <a href="D:\TAO\学习笔记\学习\Linux\软件\fastp\fastp_README.md">github英文说明书</a></p>
+<h4 id="featureCounts"><a href="#featureCounts" class="headerlink" title="featureCounts"></a>featureCounts</h4><p>软件安装包地址：<a target="_blank" rel="noopener" href="https://sourceforge.net/projects/subread/files/">Subread - Browse Files at SourceForge.net</a></p>
+<p><strong>安装</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mamba install -c bioconda -y subread</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gtf=$HOME/genome/Homo_sapiens.GRCh38.108.chr.gtf.gz</span><br><span class="line">nohup featureCounts -T 4 -p -t exon -g gene_id -a $gtf -o count.txt *bam 1&gt;count.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+
+<p><strong>featureCounts参数</strong>：<code>-a</code>  参考gtf文件名，支持gzip文件格式。<code>-T</code> 线程数。<code>-p</code> 只能用在paired-end的情况中，会统计fragment而不统计read。<code>-g</code> 当参考的gtf提供的时候，我们需要提供一个id identifier 来将feature水平的统计汇总为meta-feature水平的统计，默认为gene_id，参考gtf第9列注释信息。<code>-t</code> 设置feature-type，指定的必须是gtf中有的feature，同时read只有落到这些feature上才会被统计到，默认是“exon”。</p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/KjZja271HXb06uYzN-JOSg">featureCount的使用介绍 (qq.com)</a></p>
+<h4 id="filtlong"><a href="#filtlong" class="headerlink" title="filtlong"></a>filtlong</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># filtlong过滤。过滤小于 700bp，平均质量值小于90的序列</span></span><br><span class="line">filtlong --min_length 700 --min_mean_q 90 hifi_reads.fq.gz | gzip &gt; hifi_reads.filtlong.fq.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>–keep_percent：保留最好数据的百分比</li>
+<li>–target_bases：保留多少数据，单位为bp</li>
+</ul>
+<h3 id="G"><a href="#G" class="headerlink" title="G"></a>G</h3><h4 id="GapCloser"><a href="#GapCloser" class="headerlink" title="GapCloser"></a>GapCloser</h4><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y soapdenovo2-gapcloser</span><br></pre></td></tr></table></figure>
+
+<p>可以输入任意拼接软件生成的 scaffold 文件名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对 soapdenovo2 拼接的结果进行补洞</span></span><br><span class="line">GapCloser -a kmer45.scafSeq -b config.list -o kmer45.gapfill.fa -t 16</span><br><span class="line"><span class="comment"># 对 spades 拼接结果进行补洞</span></span><br><span class="line">GapCloser -a ../spades/scaffolds.fasta -b config.list -o ../spades/spades.gapfill.fa -t 16</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="genomescope2"><a href="#genomescope2" class="headerlink" title="genomescope2"></a>genomescope2</h4><p>R包，搭配 jellyfish 使用进行可视化</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y genomescope2</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="guppy"><a href="#guppy" class="headerlink" title="guppy"></a>guppy</h4><p>&#x3D;&#x3D;guppy功能&#x3D;&#x3D;</p>
+<ol>
+<li>碱基识别</li>
+</ol>
+<ul>
+<li>Guppy使用神经网络算法 (RNN) 将电信号数据解读为DNA或RNA的五个标准碱基。</li>
+</ul>
+<ol start="2">
+<li>拆分条码数据</li>
+</ol>
+<ul>
+<li>添加条形码的每条序列，在序列开端和尾端均有 Oxford Nanopore Technologies 提供的条形码序列。Guppy数据拆分功能基于识别出的碱基序列。</li>
+</ul>
+<ol start="3">
+<li>比对</li>
+</ol>
+<ul>
+<li>用户可以提供 FASTA 或者 minimap2index 的文件作为输入文件。比对过程基于Oxford Nanopore Technologies预设的参数，通过内置的minimap2将数据比对到参考序列。</li>
+</ul>
+<p>&#x3D;&#x3D;下载&#x3D;&#x3D;</p>
+<p>官方的需要买了机器才能下载到。（登录 Nanopore 社区下载）</p>
+<p>&#x3D;&#x3D;使用&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取平台信息(可选，看一下就行)</span></span><br><span class="line">guppy_basecaller --print_workflows</span><br><span class="line"><span class="comment"># 把 fast5文件放在 rawdata下，可放多个 。如果是GPU版本的guppy还可以设置-x参数选择显卡(cuda代表英伟达的显卡)</span></span><br><span class="line">guppy_basecaller -i rawdata -s fastq_files --config /home/tao/biosoft/ont-guppy-cpu/data/dna_r9.4.1_450bps_fast.cfg -r</span><br><span class="line"><span class="comment"># pass文件夹下就有fastq文件，可通过cat将多个文件合并</span></span><br><span class="line"><span class="built_in">cat</span> *.fastq | gzip &gt;all.fq.gz</span><br><span class="line"><span class="comment"># 可以统计序列信息</span></span><br><span class="line">seqkit stats fq.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>-i|-input：输入文件夹</li>
+<li>-s 输出文件夹</li>
+<li>–config 配置文件</li>
+<li>-r 文件夹下，里面可放多个，递归处理</li>
+<li>–flowcell 芯片类型（FLO-MIN106&#x2F;FLO-MIN107）（如果不知道配置文件，通过该参数写上芯片的信息）</li>
+<li>–fast5_out 指定输入fast5格式文件路径</li>
+<li>–compress_fastq 压缩</li>
+<li>–num_callers 并行处理，每个num产生1个fastq文件</li>
+<li>–cpu_threads_per_caller CPU线程数</li>
+</ul>
+<p>&#x3D;&#x3D;barcode拆分&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1. basecalling同时拆分barcode</span></span><br><span class="line">guppy_basecaller -i /ifs1/VipData/03.sequencing/data/16s_fast5/ -s fastq --config dna_r9.4.1_450bps_hac.cfg -r  -x cuda:all --trim_barcodes --barcode_kits SQK-RBK004 --min_score 10</span><br><span class="line"></span><br><span class="line"><span class="comment">#2. basecalling与拆分barcode分步完成。因为basecalling很慢，有时需要多次设置min_score，分步更方便一点。</span></span><br><span class="line"><span class="comment">#（1）首先进行basecalling</span></span><br><span class="line">guppy_basecaller -i /ifs1/VipData/03.sequencing/data/16s_fast5/ -s fastq --config dna_r9.4.1_450bps_hac.cfg -r  -x cuda:all</span><br><span class="line"><span class="comment">#（2）拆分barcode</span></span><br><span class="line">guppy_barcoder -i  fastq -s barcode --trim_barcodes --barcode_kits SQK-RBK004 --min_score 10</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>–trim_barcodes 拆分时剪掉 barcode</li>
+<li>–min_score 因为barcode也存在测序错误，需要一个分值判断是不是需要修剪出错误的barcode，分值越高越严格，默认60</li>
+</ul>
+<h3 id="H"><a href="#H" class="headerlink" title="H"></a>H</h3><h4 id="hisat2"><a href="#hisat2" class="headerlink" title="hisat2"></a>hisat2</h4><p>安装：</p>
+<p><code>conda install  -y -c bioconda hisat2 </code></p>
+<p>索引： <a target="_blank" rel="noopener" href="https://daehwankimlab.github.io/hisat2/download/#version-hisat2-221">https://daehwankimlab.github.io/hisat2/download/#version-hisat2-221</a></p>
+<p>&#x3D;&#x3D;构建索引&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gunzip -d Sus_scrofa.Sscrofa11.1.dna.toplevel.fa.gz</span><br><span class="line">hisat2-build -p 4 Sus_scrofa.Sscrofa11.1.dna.toplevel.fa Sus_scrofa.Sscrofa11.1.dna.toplevel  <span class="comment"># 前面为fa文件，后面为索引前缀</span></span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;比对&#x3D;&#x3D;</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hisat2结束后保存为sam文件</span></span><br><span class="line"></span><br><span class="line">cat SRR_list.txt  # SRR_list中已经提前存入了3个SRR文件名</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建一个脚本，命名为 ali_hisat2.sh</span></span><br><span class="line">conda activate rna</span><br><span class="line">hisat2_index=$HOME/rna_test2/human_index/hisat2/grch38/genome</span><br><span class="line">clean_dir=$HOME/rna_test2/clean</span><br><span class="line">cat SRR_list.txt |while read id ;do (nohup hisat2 -x $&#123;hisat2_index&#125; -1 $&#123;clean_dir&#125;/$&#123;id&#125;_1_val_1.fq.gz -2 $&#123;clean_dir&#125;/$&#123;id&#125;_2_val_2.fq.gz -p 4 -t -S $&#123;id&#125;.sam &gt;&gt;ali.log &amp; );done</span><br><span class="line">conda deactivate</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">运行脚本</span></span><br><span class="line">bash -i ali_hisat2.sh</span><br></pre></td></tr></table></figure>
+
+<p><strong>hisat2参数</strong>：<code>-t</code> 输出比对时间，<code>-p</code> 线程数，<code>-x</code> 索引文件，<code>-1</code> <code>-2</code>分别输入双端测序文件，<code>-S</code> 输出文件命名。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">hisat2结束后直接转换为bam文件，不需要sam文件</span></span><br><span class="line"></span><br><span class="line">cat SRR_list.txt  # SRR_list中已经提前存入了3个SRR文件名</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建一个脚本，命名为 qc.sh</span></span><br><span class="line">conda activate rna</span><br><span class="line">hisat2_index=$HOME/rna_test2/human_index/hisat2/grch38/genome</span><br><span class="line">clean_dir=$HOME/rna_test2/clean</span><br><span class="line">cat SRR_list.txt |while read id ;do (nohup hisat2 -x $&#123;hisat2_index&#125; -1 $&#123;clean_dir&#125;/$&#123;id&#125;_1_val_1.fq.gz -2 $&#123;clean_dir&#125;/$&#123;id&#125;_2_val_2.fq.gz -p 4 -t 2&gt;&gt;qc.log |samtools sort -@ 2 -o $&#123;id&#125;.bam &amp;);done</span><br><span class="line">conda deactivate</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">运行脚本</span></span><br><span class="line">bash -i qc.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="I"><a href="#I" class="headerlink" title="I"></a>I</h3><h4 id="ivar"><a href="#ivar" class="headerlink" title="ivar"></a>ivar</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y ivar</span><br></pre></td></tr></table></figure>
+
+<p>使用可见 proj_G2，搭配samtools</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#先进行堆叠，然后使用ivar生成一致性序列，不能把代码拆分，必须通过管道传输samtools结果</span><br><span class="line">samtools mpileup -A -d 1000 -B -Q 0 --reference index/fcv_ref.fasta fcv_mapped.bam | ivar consensus -p ivar_consensus -n N</span><br></pre></td></tr></table></figure>
+
+<h3 id="J"><a href="#J" class="headerlink" title="J"></a>J</h3><h4 id="jellyfish"><a href="#jellyfish" class="headerlink" title="jellyfish"></a>jellyfish</h4><p>conda 安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -m kmer长度；-s 取多少数据进行统计；-C 输入的文件，不能输入压缩文件；-t 线程</span></span><br><span class="line">jellyfish count -m 15 -s 2G -t 8 -o kmer15.count -C &lt;(zcat ../rawdata/SRR8482586_clean_1.fastq.gz)</span><br><span class="line"><span class="comment"># 统计 kmer</span></span><br><span class="line">jellyfish stats kmer15.count -o kmer15.stats</span><br><span class="line"><span class="comment"># 统计每个 kmer 的分布，可用于画图</span></span><br><span class="line">jellyfish histo kmer15.count &gt;kmer15.histo</span><br><span class="line"><span class="comment"># R包 genomescope2 可视化；-p 单倍体（细菌为单倍体）；-k kmer长度</span></span><br><span class="line">genomescope2 -i kmer15.histo -o genomescope2_output -p 1 -k 15</span><br></pre></td></tr></table></figure>
+
+<h3 id="L"><a href="#L" class="headerlink" title="L"></a>L</h3><h4 id="lineardesign"><a href="#lineardesign" class="headerlink" title="lineardesign"></a>lineardesign</h4><p>[lineardesign](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\LinearDesign使用.md)</p>
+<h3 id="M"><a href="#M" class="headerlink" title="M"></a>M</h3><h4 id="mamba"><a href="#mamba" class="headerlink" title="mamba"></a>mamba</h4><p>见 conda 或 linux 虚拟机安装</p>
+<h4 id="md5sum"><a href="#md5sum" class="headerlink" title="md5sum"></a>md5sum</h4><p>假设用户A要把文件 file.fq 传给用户B，为了确保文件传输后没有缺失，可以进行md5校检。</p>
+<p>首先用户A为文件 file.fq 创建 md5 校检文件：<code>md5sum file.fq &gt;file.fq.md5</code>。然后用户A把文件 file.fq 以及校检文件 file.fq.md5 都发给用户B，当这两个文件在同一个文件夹下时，用户B通过命令：<code>md5sum -c file.fq.md5</code>可以进行文件完整性的校验。若文件完整，则结果返回OK。若不完整，会显示不匹配。</p>
+<h4 id="mafft-D-TAO-5-软件使用方法笔记-Window系统软件使用-mafft使用-md"><a href="#mafft-D-TAO-5-软件使用方法笔记-Window系统软件使用-mafft使用-md" class="headerlink" title="[mafft](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\mafft使用.md)"></a>[mafft](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\mafft使用.md)</h4><h4 id="megahit"><a href="#megahit" class="headerlink" title="megahit"></a>megahit</h4><p>&#x3D;&#x3D;安装&#x3D;&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mamba install -y megahit</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;使用&#x3D;&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">megahit -1 fcv_mapped_read1.fq.gz -2 fcv_mapped_read2.fq.gz -o ../megahit -t 8 1&gt;megahit.log 2&gt;megahit.err</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="N"><a href="#N" class="headerlink" title="N"></a>N</h3><h4 id="nanoplot"><a href="#nanoplot" class="headerlink" title="nanoplot"></a>nanoplot</h4><p>&#x3D;&#x3D;安装&#x3D;&#x3D;</p>
+<p>conda安装即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mamba install -y nanoplot</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;使用&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">NanoPlot --fastq fastq文件 -t 12 --maxlength 40000 --plots hex dot pauvre kde -o nanoplot</span><br><span class="line"><span class="comment">#对guppy生成的sequencing_summary.txt的绘图</span></span><br><span class="line">Nanoplot --summary sequencing_summary.txt --loglength -o summary</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>-t：线程数目</li>
+<li>-o, –outdir：输出结果目录</li>
+<li>-p, –prefix：输出结果前缀</li>
+<li>–color：点的颜色</li>
+<li>–N50 表示在序列读长的直方图中显示N50的标识</li>
+<li>–minlength：忽略nbp以下的reads</li>
+<li>–fastq：输入fastq格式文件</li>
+<li>-f：图片类型</li>
+<li>–plots：绘图类型，kde,hex,dot,pauvre</li>
+</ul>
+<h3 id="P"><a href="#P" class="headerlink" title="P"></a>P</h3><h4 id="pigz"><a href="#pigz" class="headerlink" title="pigz"></a>pigz</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">mamba install pigz</span><br><span class="line"><span class="comment"># 单文件压缩</span></span><br><span class="line">pigz -p 8 -k a.txt  </span><br><span class="line"><span class="comment"># 单文件解压</span></span><br><span class="line">pigz -d -p 8 -k a.gz</span><br><span class="line"><span class="comment"># 多文件压缩</span></span><br><span class="line">tar -cvf - file1 file2 file3 | pigz -p 8&gt;output.tar.gz</span><br><span class="line"><span class="comment"># 多文件解压</span></span><br><span class="line">pigz -d -c -p 8 input.tar.gz | tar -xf -</span><br><span class="line"></span><br><span class="line">-d 解压缩</span><br><span class="line">-p 线程数</span><br><span class="line">-k 保留源文件</span><br><span class="line">-c 输出到标准输出流(也就是打印到屏幕上)，这样就可以通过管道符传递了</span><br></pre></td></tr></table></figure>
+
+<h3 id="Q"><a href="#Q" class="headerlink" title="Q"></a>Q</h3><h4 id="quast"><a href="#quast" class="headerlink" title="quast"></a>quast</h4><p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n quast -y quast</span><br></pre></td></tr></table></figure>
+
+<p>准备拼接好的 scaffold，参考序列（假如有），如果有需要还可以加入 gff，甚至可以预测基因</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">quast -o quast -r NC_009648.fa -t 12 soapdenovo.fa spades.fa</span><br><span class="line"><span class="comment"># 还可以加入 gff 文件</span></span><br><span class="line">quast -o quast_gff -r NC_009648.fa -g NC_009648.gff3 -t 12 --gene-finding soapdenovo.fa spades.fa</span><br></pre></td></tr></table></figure>
+
+<p>可以看 report.html</p>
+<h3 id="S"><a href="#S" class="headerlink" title="S"></a>S</h3><h4 id="samtools"><a href="#samtools" class="headerlink" title="samtools"></a>samtools</h4><p><strong>安装</strong></p>
+<p>下载安装包而不要使用conda，conda安装的是低版本 <a target="_blank" rel="noopener" href="https://github.com/samtools/samtools">github</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//https://github.com/samtools/samtools/blob/develop/INSTALL</span><br><span class="line"><span class="comment"># 下载 bz2 文件</span></span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar -jxvf xx.tar.bz2</span><br><span class="line"><span class="comment"># 查看环境配置</span></span><br><span class="line">./configure</span><br><span class="line"><span class="comment"># 根据提示安装相应的环境依赖，比如：</span></span><br><span class="line">sudo apt install liblzma-dev</span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">make</span><br><span class="line">make install <span class="comment"># root 权限下执行</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将 sam 文件转换为 bam 文件并直接 sort 排序，这样文件会更小</span></span><br><span class="line"><span class="built_in">ls</span> *.sam|<span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span> ;<span class="keyword">do</span> (samtools <span class="built_in">sort</span> -@ 4 -o $(<span class="built_in">basename</span> <span class="variable">$id</span> <span class="string">&quot;.sam&quot;</span>).bam <span class="variable">$id</span>);<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>samtools sort参数</strong>：<code>-@</code> 线程数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 将 sam 文件转换为 bam 文件，不进行 sort 排序</span><br><span class="line">ls *.sam|while read id ;do (samtools view -bS $id -o $&#123;id&#125;.bam );done</span><br><span class="line"># 单个</span><br><span class="line">samtools view -@ 12 -b -o bwa_results.bam bwa_results.sam</span><br><span class="line">samtools sort -n -@ 12 -o results_rdname_sort.bam results.bam</span><br></pre></td></tr></table></figure>
+<p><strong>samtools view参数</strong>：<code>-b</code> 输出bam文件，<code>-S</code> 输入sam文件。不加参数可以查看bam文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 批量构建索引</span><br><span class="line">ls *.bam |xargs -i samtools index &#123;&#125;</span><br><span class="line">#对bam结果进行批量qc</span><br><span class="line">ls *.bam |while read id ;do (samtools flagstat -@ 6 $id &gt;$&#123;id&#125;.flagstat );done</span><br></pre></td></tr></table></figure>
+
+<p><strong>samtools index 构建索引</strong>、<strong>samtools flagstat 质控</strong></p>
+<h4 id="sam格式"><a href="#sam格式" class="headerlink" title="sam格式"></a>sam格式</h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/12c81825c1f4">SAM&#x2F;BAM文件介绍</a></p>
+<p><a target="_blank" rel="noopener" href="https://broadinstitute.github.io/picard/explain-flags.html">flag值查询（Picard）</a></p>
+<h4 id="stringtie"><a href="#stringtie" class="headerlink" title="stringtie"></a>stringtie</h4><p><a target="_blank" rel="noopener" href="https://ccb.jhu.edu/software/stringtie/index.shtml">官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1702981">转录组分析 | 使用Stringtie对数据进行下游处理 - 腾讯云开发者社区-腾讯云 (tencent.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/4mELFykunBmSFMJ9knH63A">微信</a></p>
+<p>&#x3D;&#x3D;安装&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># linux二进制安装包安装</span></span><br><span class="line">tar -zxvf stringtie-2.2.1.Linux_x86_64.tar.gz</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=~/software/stringtie-2.2.1.Linux_x86_64:$PATH&#x27;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;定量&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压 gtf 文件</span></span><br><span class="line">gunzip -d Sus_scrofa.Sscrofa11.1.109.gtf.gz</span><br><span class="line"><span class="comment"># 赋值</span></span><br><span class="line">gtf=<span class="variable">$HOME</span>/bioinfo/genome/Sus_scrofa.Sscrofa11.1.109.gtf</span><br><span class="line">output=<span class="variable">$HOME</span>/bioinfo/proj_9/stringtie</span><br><span class="line"><span class="comment"># 定量，得到每个样本的定量结果</span></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">id</span> <span class="keyword">in</span> &#123;73..81&#125; ;<span class="keyword">do</span> (<span class="built_in">nohup</span> stringtie -p 6 -e \</span><br><span class="line">-A <span class="variable">$&#123;output&#125;</span>/SRR169315<span class="variable">$&#123;id&#125;</span>_gene_abund.tab \</span><br><span class="line">-G <span class="variable">$gtf</span> -o <span class="variable">$&#123;output&#125;</span>/SRR169315<span class="variable">$&#123;id&#125;</span>.gtf SRR169315<span class="variable">$&#123;id&#125;</span>.bam &amp;);<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;merge&#x3D;&#x3D;</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d828d45d8b6c">stringtie需要merge吗？</a></p>
+<p>&#x3D;&#x3D;获取 count 矩阵&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 准备样本gtf路径数据文本</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> &#123;73..81&#125;;<span class="keyword">do</span> <span class="built_in">echo</span> SRR169315<span class="variable">$i</span> /home/tao/bioinfo/proj_9/stringtie/SRR169315<span class="variable">$&#123;i&#125;</span>.gtf&gt;&gt;sample_lst.txt;<span class="keyword">done</span></span><br><span class="line">prepDE.py3 -l 148 -i sample_lst.txt</span><br></pre></td></tr></table></figure>
+
+<p>最后得到基因水平与转录本水平的 count 矩阵</p>
+<h4 id="seqkit"><a href="#seqkit" class="headerlink" title="seqkit"></a>seqkit</h4><p>[笔记](D:\TAO\5. 软件使用方法笔记\linux系统软件使用\seqkit.md)</p>
+<p>&#x3D;&#x3D;安装&#x3D;&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y seqkit</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;使用&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计序列数量，序列长度</span></span><br><span class="line">seqkit -j 16 stats Z-1_1.fq.gz Z-1_2.fq.gz &gt;xulie_tongji.txt</span><br><span class="line"><span class="comment"># 过滤不同长度、不同碱基质量的数据</span></span><br><span class="line">seqkit -j 16 <span class="built_in">seq</span> -m 1000 fq.gz &gt;fa_filt.gz</span><br><span class="line"><span class="comment"># 转换成列表</span></span><br><span class="line">seqkit fx2tab fq.gz</span><br><span class="line"><span class="comment"># 排序 </span></span><br><span class="line">seqkit <span class="built_in">sort</span> </span><br><span class="line"><span class="comment"># 随机抽取一定数量的reads</span></span><br><span class="line">seqkit sample -p 0.2 fq.gz  <span class="comment">#抽取20%</span></span><br><span class="line"><span class="comment"># 提取每条序列的id</span></span><br><span class="line">seqkit <span class="built_in">seq</span></span><br><span class="line"><span class="comment"># 根据 id 提取序列</span></span><br><span class="line">seqkit -j 16 grep -f id.list fq.gz &gt;id.fq.gz</span><br><span class="line"><span class="comment"># 可视化</span></span><br><span class="line">seqkit watch</span><br><span class="line"><span class="comment"># 把序列拉直，更好看一点</span></span><br><span class="line">seqkit fx2tab xx.fa</span><br></pre></td></tr></table></figure>
+
+<h4 id="seqtk"><a href="#seqtk" class="headerlink" title="seqtk"></a>seqtk</h4><p>&#x3D;&#x3D;安装&#x3D;&#x3D;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -y seqtk</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;使用&#x3D;&#x3D;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 统计每条序列的碱基组成等情况</span></span><br><span class="line">seqtk comp Z-1_1.fq.gz Z-1_2.fq.gz &gt; base_comp.txt</span><br><span class="line"><span class="comment"># 统计碱基质量</span></span><br><span class="line">seqtk fqchk</span><br><span class="line"><span class="comment"># 合并两个fq文件</span></span><br><span class="line">seqtk mergepe</span><br><span class="line"><span class="comment"># 截取序列</span></span><br><span class="line">seqtk trimfq -b 15 -e 20 -Q fq.gz &gt;trim.fq.gz  <span class="comment">#去除首尾一定数量的碱基，-Q代表输出格式强制为fastq格式</span></span><br><span class="line"><span class="comment"># 把小于 Q20 的换成小写字母</span></span><br><span class="line">seqtk <span class="built_in">seq</span> -q 20 fq.gz &gt;replace.fq.gz</span><br></pre></td></tr></table></figure>
+
+<h4 id="spades"><a href="#spades" class="headerlink" title="spades"></a>spades</h4><p>conda 安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spades.py --isolate -o ../spades -t 12 -1 SRR8482586_clean_1.fastq.gz SRR8482586_clean_2.fastq.gz</span><br></pre></td></tr></table></figure>
+
+<h4 id="soapdenovo2"><a href="#soapdenovo2" class="headerlink" title="soapdenovo2"></a>soapdenovo2</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">conda install -y soapdenovo2</span><br><span class="line"><span class="comment"># 使用。有  SOAPdenovo-63mer  SOAPdenovo-127mer 两个程序。</span></span><br><span class="line"><span class="comment"># 实际运行的时候会卡住，重复运行后又能成功，可能和内存资源配置有关，会出一些 bug。一般来说运行速度很快，超过 spades</span></span><br><span class="line">SOAPdenovo-63mer all -s config.list -K 41 -o kmer41 -D 1 -d 1 -u 2 -p 16</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">-s &lt;string&gt;    配置文件：config</span><br><span class="line">-o &lt;string&gt;    输出图形文件名的前缀</span><br><span class="line">-K &lt;<span class="type">int</span>&gt;       输入的kmer(最小<span class="number">13</span>, 最大<span class="number">63</span>/<span class="number">127</span>): 默认值[<span class="number">23</span>]</span><br><span class="line">-p &lt;<span class="type">int</span>&gt;       线程数,默认值[<span class="number">8</span>]</span><br><span class="line">-a &lt;<span class="type">int</span>&gt;       初始化内存:避免内存再分配,默认[<span class="number">0</span>]G</span><br><span class="line">-d &lt;<span class="type">int</span>&gt;       去除kmers频数不大于该值的k-mer，默认值[<span class="number">0</span>]</span><br><span class="line">-R (optional)  利用read鉴别短的重复序列，默认值[<span class="literal">NO</span>]</span><br><span class="line">-D &lt;<span class="type">int</span>&gt;       去除频数不大于该值（edgeCovCutoff）的由k-mer连接的边，默认值[<span class="number">1</span>]，即该边上每个点的频数都小于等于<span class="number">1</span>时才去除</span><br><span class="line">-M &lt;<span class="type">int</span>&gt;       在contiging操作时，合并相似序列的强度，默认值为[<span class="number">1</span>]，最小值<span class="number">0</span>，最大值<span class="number">3</span></span><br><span class="line">-f (optional)  在map那一步中，对于使用SRkgf去填充gap，输出与gap相关的reads,默认[<span class="literal">NO</span>]</span><br><span class="line">-F (optional)  利用read对scaffold中的gap进行填补，默认[<span class="literal">NO</span>]</span><br><span class="line">-u (optional)  构建scaffolding前不屏蔽高/低覆盖度的contigs，这里高频率覆盖度指平均contig覆盖深度的<span class="number">2</span>倍。默认[mask]屏蔽</span><br><span class="line">-G &lt;<span class="type">int</span>&gt;       估计gap的大小和实际补gap的大小的差异值，默认值[<span class="number">50</span>]bp</span><br><span class="line">-L &lt;<span class="type">int</span>&gt;       用于构建scaffold的contig的最短长度(minContigLen)，默认为：[Kmer参数值+<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<p>配置文件，文件名任意</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">max_rd_len=150</span><br><span class="line">[LIB]</span><br><span class="line">avg_ins=439</span><br><span class="line">reverse_seq=0</span><br><span class="line">asm_flags=3</span><br><span class="line">rank=1</span><br><span class="line">pair_num_cutoff=3</span><br><span class="line">q1=/home/tao/bioinfo/proj_sub1/rawdata/SRR8482586_clean_1.fastq.gz</span><br><span class="line">q2=/home/tao/bioinfo/proj_sub1/rawdata/SRR8482586_clean_2.fastq.gz</span><br></pre></td></tr></table></figure>
+
+<p><code>max_rd_len</code>最大 reads 长度</p>
+<p><code>[LIB]</code>第一个文库的配置</p>
+<p><code>avg_ins</code> 平均插入片段长度</p>
+<p><code>reverse_seq</code> 是否需要翻转，小片段文库为 O ，大片段文库需要改为 1</p>
+<p><code>asm_flags</code> 组装标记，1 代表只组装 contig，2 代表只组装 scaffold，3 代表构建 contig 与 scaffold，4 代表只进行补洞</p>
+<p><code>rank</code> 文库等级，第 1 个文库为 1，第 2 个文库为 2</p>
+<p><code>pair_num_cutoff</code> 至少几对 reads 支持它，才把两个 contig 连接起来</p>
+<p><strong>结果</strong></p>
+<p>soapdenovo2 生成的 scaffold 结果文件中 C 开头的代表没有与其它 contig 连接的剩下的 contig，一般都比较短，有些还有可能是质粒所以会长一点。</p>
+<h3 id="T"><a href="#T" class="headerlink" title="T"></a>T</h3><h4 id="trim-galore"><a href="#trim-galore" class="headerlink" title="trim_galore"></a>trim_galore</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> *_1.fastq.gz &gt;fq1</span><br><span class="line"><span class="built_in">ls</span> *_2.fastq.gz &gt;fq2</span><br><span class="line"><span class="built_in">paste</span> fq1 fq2 &gt;config   </span><br><span class="line">conda activate rna  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建如下脚本，命名为trim.sh</span></span><br><span class="line"><span class="built_in">cat</span> config |<span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">arr=(<span class="variable">$id</span>)</span><br><span class="line">fq1=<span class="variable">$&#123;arr[0]&#125;</span></span><br><span class="line">fq2=<span class="variable">$&#123;arr[1]&#125;</span></span><br><span class="line"><span class="built_in">nohup</span> trim_galore  -q 25 --phred33 --length 30 --stringency 3 --paired --gzip --fastqc -j 4 -o ~/rna_test2/trimgalore <span class="variable">$fq1</span> <span class="variable">$fq2</span> &gt;&gt;qc_log &amp;</span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行脚本，进行数据过滤然后用multiqc整合</span></span><br><span class="line">bash trim.sh</span><br><span class="line">multiqc *fastqc.zip    </span><br><span class="line">conda deactivate   </span><br></pre></td></tr></table></figure>
+
+<p><strong>trim_galore参数</strong>：<code>-q</code> 设定的碱基质量的阈值，默认为20。<code>--phred33</code> 选择phred33或者phred64，表示测序平台使用的Phred quality score，在ncbi上可以查到本次处理的3个数据是illumina平台双端100bp测序的单细胞数据，所以选<code>--phred33</code>。<code>--stringency</code> 设定可以忍受的前后adapter重叠的碱基数，默认为1（非常苛刻），可以适度放宽，因为后一个adapter几乎不可能被测序仪读到。<code>--length</code> 设定输出reads长度阈值，小于设定值会被抛弃。<code>--paired</code> 对于双端测序结果，一对reads中，如果有一个被剔除，那么另一个会被同样抛弃，而不管是否达到标准。<code>--gzip</code> 清洗后的数据打包。<code>--fastqc</code> 可以选择是否过滤完直接运行fastqc。<code>-j</code> 线程数。<code>-o</code> 结果输出文件夹。<code>fq1</code>、<code>fq2</code> 输入需要过滤的双端文件。</p>
+<p><code>--illumina</code>   ‘AGATCGGAAGAGC’ 。<code>--nextera</code>   ‘CTGTCTCTTATA’ 。<code>--small_rna</code> ‘TGGAATTCTCGG’ (GATCGTCGGACT) 。</p>
+<h3 id="W"><a href="#W" class="headerlink" title="W"></a>W</h3><h4 id="wgsim"><a href="#wgsim" class="headerlink" title="wgsim"></a>wgsim</h4><p>模拟全基因组测序数据，可以控制序列长度、测序错误率等</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -1,-2 生成的序列长度</span></span><br><span class="line">wgsim ref.fasta out1.fq out2.fq -1 50 -2 50</span><br></pre></td></tr></table></figure>
+
+<h4 id="winscp"><a href="#winscp" class="headerlink" title="winscp"></a>winscp</h4><p>如何通过 winscp 软件上传到终端。</p>
+<ul>
+<li>首先登录 winscp，还是输入 ip，用户名与密码，然后保存登录：</li>
+</ul>
+<img src="/2024/02/11/%E8%BD%AF%E4%BB%B6/image-20230420173336682.png" alt="image-20230420173336682" style="zoom:33%;">
+
+<ul>
+<li>然后左侧选择需要上传的文件，右侧选择终端保存文件的目录</li>
+</ul>
+<img src="/2024/02/11/%E8%BD%AF%E4%BB%B6/image-20230420173729737.png" alt="image-20230420173729737" style="zoom:33%;">
+
+<ul>
+<li><p>接着单击需要上传的文件，上传即可。</p>
+<img src="/2024/02/11/%E8%BD%AF%E4%BB%B6/image-20230420174008476.png" alt="image-20230420174008476" style="zoom:33%;"></li>
+</ul>
+<h3 id="X"><a href="#X" class="headerlink" title="X"></a>X</h3><h4 id="Xshell"><a href="#Xshell" class="headerlink" title="Xshell"></a>Xshell</h4><p>下载并安装 Xshell 后，进行相应设置。为了更高效的使用 xshell 软件，需要对软件进行一系列设置，主要包括以下几项：</p>
+<p>1、自动登录（保存用户名密码）；</p>
+<p>2、左键选中，右键粘贴（工具、选项、键盘和鼠标）</p>
+<p>3、前景色背景色（放大镜右边），字体大小，支持中文显示（地球仪设置为 UTF-8）；</p>
+<p>4、不自动掉线（文件夹图标，选择对应主机，点击属性，重新连接打勾）；</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#window与终端文件互传，传输单个小文件</span></span><br><span class="line">sz [file]  <span class="comment">#xshell直接传到windows,s代表send</span></span><br><span class="line">rz  <span class="comment">#上传window文件或者直接拖进去,r代表receive</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#传输文件夹或大文件，使用xftp</span></span><br><span class="line">//xshell中有快捷键可直接打开xftp</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="暂存"><a href="#暂存" class="headerlink" title="暂存"></a>暂存</h3><h4 id="压缩-解压缩"><a href="#压缩-解压缩" class="headerlink" title="压缩&#x2F;解压缩"></a>压缩&#x2F;解压缩</h4><p>tar不是用来压缩的，是将多个文件解压或压缩的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar -zxvf a.gz</span><br><span class="line"></span><br><span class="line">4．常见解压/压缩命令</span><br><span class="line"></span><br><span class="line">tar </span><br><span class="line">解包：tar xvf FileName.tar</span><br><span class="line">打包：tar cvf FileName.tar DirName</span><br><span class="line">（注：tar是打包，不是压缩！）</span><br><span class="line"></span><br><span class="line">.tar.gz 和 .tgz</span><br><span class="line">解压：tar zxvf FileName.tar.gz</span><br><span class="line">压缩：tar zcvf FileName.tar.gz DirName</span><br><span class="line"></span><br><span class="line">.tar.bz2</span><br><span class="line">解压：tar jxvf FileName.tar.bz2</span><br><span class="line">压缩：tar jcvf FileName.tar.bz2 DirName</span><br><span class="line"></span><br><span class="line">.tar.bz</span><br><span class="line">解压：tar jxvf FileName.tar.bz</span><br><span class="line">压缩：未知</span><br><span class="line"></span><br><span class="line">.Z</span><br><span class="line">解压：uncompress FileName.Z</span><br><span class="line">压缩：compress FileName</span><br><span class="line">.tar.Z</span><br><span class="line">解压：tar Zxvf FileName.tar.Z</span><br><span class="line">压缩：tar Zcvf FileName.tar.Z DirName</span><br><span class="line">.zip</span><br><span class="line">解压：unzip FileName.zip</span><br><span class="line">压缩：zip FileName.zip DirName</span><br><span class="line"></span><br><span class="line">.rar</span><br><span class="line">解压：rar x FileName.rar</span><br><span class="line">压缩：rar a FileName.rar DirName </span><br><span class="line"></span><br><span class="line">5．使用实例</span><br><span class="line"></span><br><span class="line">实例1：将文件全部打包成tar包</span><br><span class="line"></span><br><span class="line">命令：</span><br><span class="line"></span><br><span class="line">tar -cvf log.tar log2012.log</span><br><span class="line">tar -zcvf log.tar.gz log2012.log</span><br><span class="line">tar -jcvf log.tar.bz2 log2012.log</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="UMAP-TSNE-PCA"><a href="#UMAP-TSNE-PCA" class="headerlink" title="UMAP TSNE PCA"></a>UMAP TSNE PCA</h4><p><strong>UMAP图</strong></p>
+<ol>
+<li><p>不同颜色代表不同细胞分群（cluster）,一个点代表一个细胞，有相似基因表达特点的细胞会被聚在一群中</p>
+</li>
+<li><p>umap也会考虑全局性，不在一个群，但是有一定相似性，群之间的距离会更近</p>
+</li>
+<li><p>缺点：由于考虑到了全局性，细胞特别多的时候，有一些小的cluster可能会被覆盖</p>
+</li>
+<li><p>保留更多局部结构，耗时更短，能直接应用组更高维度上</p>
+</li>
+</ol>
+<p><strong>t-SNE</strong>（一般把主成分中前30的成分进行分析）</p>
+<ol>
+<li>不考虑全局结果，只考虑局部结果，会把每一个cluster都尽可能铺开</li>
+</ol>
+<p><strong>PCA图</strong>（主成分分析）</p>
+<ol>
+<li>图中每一个点是一个细胞，PC1代表第一个主成分，PC2代表第二个主成分</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"># 软件</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/02/11/windows/" rel="prev" title="======= windows =======">
+      <i class="fa fa-chevron-left"></i> ======= windows =======
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/08/06/new-blog/" rel="next" title="======= title =======">
+      ======= title ======= <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#A"><span class="nav-number">1.</span> <span class="nav-text">A</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Aspera"><span class="nav-number">1.1.</span> <span class="nav-text">Aspera</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B"><span class="nav-number">2.</span> <span class="nav-text">B</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#blast"><span class="nav-number">2.1.</span> <span class="nav-text">blast</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#blat"><span class="nav-number">2.2.</span> <span class="nav-text">blat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bowtie2"><span class="nav-number">2.3.</span> <span class="nav-text">bowtie2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#busco"><span class="nav-number">2.4.</span> <span class="nav-text">busco</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bwa"><span class="nav-number">2.5.</span> <span class="nav-text">bwa</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C"><span class="nav-number">3.</span> <span class="nav-text">C</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Conda"><span class="nav-number">3.1.</span> <span class="nav-text">Conda</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%AE%89%E8%A3%85-mamba-%E8%BF%87%E7%A8%8B%E7%9A%84%E4%B8%80%E4%B8%AA%E7%AC%94%E8%AE%B0"><span class="nav-number">3.1.1.</span> <span class="nav-text">关于安装 mamba 过程的一个笔记</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#centrifuge-D-TAO-5-%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%AC%94%E8%AE%B0-Window%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8-centrifuge%E4%BD%BF%E7%94%A8-md"><span class="nav-number">3.2.</span> <span class="nav-text">[centrifuge](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\centrifuge使用.md)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E"><span class="nav-number">4.</span> <span class="nav-text">E</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#entrez-direct"><span class="nav-number">4.1.</span> <span class="nav-text">entrez-direct</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#efetch"><span class="nav-number">4.1.1.</span> <span class="nav-text">efetch</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F"><span class="nav-number">5.</span> <span class="nav-text">F</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fasterq-dump-Sratoolkit"><span class="nav-number">5.1.</span> <span class="nav-text">fasterq-dump(Sratoolkit)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fastqc"><span class="nav-number">5.2.</span> <span class="nav-text">fastqc</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#falco"><span class="nav-number">5.3.</span> <span class="nav-text">falco</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fastp"><span class="nav-number">5.4.</span> <span class="nav-text">fastp</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#fastp%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3"><span class="nav-number">5.4.1.</span> <span class="nav-text">fastp安装报错解决</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#featureCounts"><span class="nav-number">5.5.</span> <span class="nav-text">featureCounts</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#filtlong"><span class="nav-number">5.6.</span> <span class="nav-text">filtlong</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#G"><span class="nav-number">6.</span> <span class="nav-text">G</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GapCloser"><span class="nav-number">6.1.</span> <span class="nav-text">GapCloser</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#genomescope2"><span class="nav-number">6.2.</span> <span class="nav-text">genomescope2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#guppy"><span class="nav-number">6.3.</span> <span class="nav-text">guppy</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#H"><span class="nav-number">7.</span> <span class="nav-text">H</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hisat2"><span class="nav-number">7.1.</span> <span class="nav-text">hisat2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I"><span class="nav-number">8.</span> <span class="nav-text">I</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ivar"><span class="nav-number">8.1.</span> <span class="nav-text">ivar</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#J"><span class="nav-number">9.</span> <span class="nav-text">J</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jellyfish"><span class="nav-number">9.1.</span> <span class="nav-text">jellyfish</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L"><span class="nav-number">10.</span> <span class="nav-text">L</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#lineardesign"><span class="nav-number">10.1.</span> <span class="nav-text">lineardesign</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#M"><span class="nav-number">11.</span> <span class="nav-text">M</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mamba"><span class="nav-number">11.1.</span> <span class="nav-text">mamba</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#md5sum"><span class="nav-number">11.2.</span> <span class="nav-text">md5sum</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mafft-D-TAO-5-%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%AC%94%E8%AE%B0-Window%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8-mafft%E4%BD%BF%E7%94%A8-md"><span class="nav-number">11.3.</span> <span class="nav-text">[mafft](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\mafft使用.md)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#megahit"><span class="nav-number">11.4.</span> <span class="nav-text">megahit</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#N"><span class="nav-number">12.</span> <span class="nav-text">N</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nanoplot"><span class="nav-number">12.1.</span> <span class="nav-text">nanoplot</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P"><span class="nav-number">13.</span> <span class="nav-text">P</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#pigz"><span class="nav-number">13.1.</span> <span class="nav-text">pigz</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q"><span class="nav-number">14.</span> <span class="nav-text">Q</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#quast"><span class="nav-number">14.1.</span> <span class="nav-text">quast</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S"><span class="nav-number">15.</span> <span class="nav-text">S</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#samtools"><span class="nav-number">15.1.</span> <span class="nav-text">samtools</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sam%E6%A0%BC%E5%BC%8F"><span class="nav-number">15.2.</span> <span class="nav-text">sam格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stringtie"><span class="nav-number">15.3.</span> <span class="nav-text">stringtie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#seqkit"><span class="nav-number">15.4.</span> <span class="nav-text">seqkit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#seqtk"><span class="nav-number">15.5.</span> <span class="nav-text">seqtk</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#spades"><span class="nav-number">15.6.</span> <span class="nav-text">spades</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#soapdenovo2"><span class="nav-number">15.7.</span> <span class="nav-text">soapdenovo2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#T"><span class="nav-number">16.</span> <span class="nav-text">T</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trim-galore"><span class="nav-number">16.1.</span> <span class="nav-text">trim_galore</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#W"><span class="nav-number">17.</span> <span class="nav-text">W</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#wgsim"><span class="nav-number">17.1.</span> <span class="nav-text">wgsim</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#winscp"><span class="nav-number">17.2.</span> <span class="nav-text">winscp</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#X"><span class="nav-number">18.</span> <span class="nav-text">X</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Xshell"><span class="nav-number">18.1.</span> <span class="nav-text">Xshell</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%82%E5%AD%98"><span class="nav-number">19.</span> <span class="nav-text">暂存</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%8B%E7%BC%A9-%E8%A7%A3%E5%8E%8B%E7%BC%A9"><span class="nav-number">19.1.</span> <span class="nav-text">压缩&#x2F;解压缩</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UMAP-TSNE-PCA"><span class="nav-number">19.2.</span> <span class="nav-text">UMAP TSNE PCA</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="水瓶之翼"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">水瓶之翼</p>
+  <div class="site-description" itemprop="description">躺平了</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">水瓶之翼</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'Mdmc1I6TUmAZfI19jt0kRu8e-gzGzoHsz',
+      appKey     : 'DJRCgUX7mIx8PPT0Cy3cvLFN',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-CN' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

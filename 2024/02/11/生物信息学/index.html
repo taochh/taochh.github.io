@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"taochh.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"检索字段","hits_empty":"抱歉，未搜索到包含: ${query} 的文章","hits_stats":"在 ${time} ms 共搜索到 ${hits} 个相关结果"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.html"};
+  </script>
+
+  <meta name="description" content="快捷链接：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 生物信息学 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;">
+<meta property="og:url" content="https://taochh.github.io/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/index.html">
+<meta property="og:site_name" content="TAO&#39;s blog">
+<meta property="og:description" content="快捷链接：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://taochh.github.io/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/image-20231029030434440.png">
+<meta property="og:image" content="https://taochh.github.io/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/image-20240117190823134.png">
+<meta property="article:published_time" content="2024-02-11T10:09:31.000Z">
+<meta property="article:modified_time" content="2024-02-19T01:12:39.919Z">
+<meta property="article:author" content="水瓶之翼">
+<meta property="article:tag" content="生物信息学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://taochh.github.io/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/image-20231029030434440.png">
+
+<link rel="canonical" href="https://taochh.github.io/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>======= 生物信息学 ======= | TAO's blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?41fc030db57d5570dd22f78997dc4a7e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">TAO's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">哈喽呀！</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://taochh.github.io/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="水瓶之翼">
+      <meta itemprop="description" content="躺平了">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TAO's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ======= 生物信息学 =======
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-02-11 18:09:31" itemprop="dateCreated datePublished" datetime="2024-02-11T18:09:31+08:00">2024-02-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-02-19 09:12:39" itemprop="dateModified" datetime="2024-02-19T09:12:39+08:00">2024-02-19</time>
+              </span>
+
+          
+            <span id="/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/" class="post-meta-item leancloud_visitors" data-flag-title="======= 生物信息学 =======" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>快捷链接</strong>：</p>
+<span id="more"></span>
+
+
+
+<h1 id="生物软件与数据库"><a href="#生物软件与数据库" class="headerlink" title="生物软件与数据库"></a>生物软件与数据库</h1><h2 id="一、生物软件安装"><a href="#一、生物软件安装" class="headerlink" title="一、生物软件安装"></a>一、生物软件安装</h2><h3 id="1-编译源代码"><a href="#1-编译源代码" class="headerlink" title="1. 编译源代码"></a>1. 编译源代码</h3><p>编译就是把高级语言变成计算机可以识别的 2 进制语言。可以分为编译型语言和解释型语言。</p>
+<ul>
+<li><p>编译型语言的是将源代码编译成二进制代码之后才能运行，因此执行效率更高，可已移植性更好。编译型语言代表有：C 语言，C++、Object-C 等；通常都会对源代码进行编译，生成可以执行的二进制代码，执行的是编译后的结果</p>
+</li>
+<li><p>解释型语言的优点是不需要编译就可以直接运行，方便查看源代码。解释型语言代表有：JavaScript、Python、Erlang、PHP、Perl、Ruby 等；通常不用对源代码进行编译，一般是通过解释器载入脚本后运行。由于每个语句都是执行的时候才进行解释翻译，这样解释性语言每次执行就要翻译一次，效率相对要低。（Java 具有编译与解释两种特性）</p>
+</li>
+</ul>
+<p><strong>软件编译过程</strong></p>
+<h4 id="1-configure"><a href="#1-configure" class="headerlink" title="(1) configure"></a>(1) configure</h4><p>configure 是在编译前检查环境配置，也可以通过选项参数，来更改软件安装目录。configure是一个 shell 脚本文件，可以直接打开查看。configure 运行时会不停检查环境，提示一些warnings 和 error 信息。warnings 可以忽略，但是遇到 error 就会停止，需要解决这个依赖，然后重新运行 configure，直到全部检查通过，才可以进行下一步 make。</p>
+<h4 id="2-make"><a href="#2-make" class="headerlink" title="(2) make"></a>(2) make</h4><p>当 configure 运行结束，且没有问题的时候，可以使用 make 进行编译。make 就是将源代码编译成二进制的过程。有些软件 make 之前还有一个 make test，make check 等过程。也有一些软件不需要 configure，直接 make 编译。make 结束之后就会在目录下发现有些可执行文件，或者多出一个 bin 目录。这个时候就可以直接运行这些软件了。</p>
+<h4 id="3-make-install"><a href="#3-make-install" class="headerlink" title="(3) make install"></a>(3) make install</h4><p>make 已经完成了编译过程，make install 主要是将软件链接到指定的安装目录，即第一步configue 指定的目录下。如果第一步没有指定，则安装到默认的目录下，一般是&#x2F;usr 目录。这里需要注意，如果不是管理员用户，则没有权限写入&#x2F;usr 目录，这个时候会提示一个权限的问题，“<strong>Permission denied”</strong>，这个不影响软件运行，可以手动将可执行程序链接至自己的软件目录内。这样 configure，make，make install 就完成了软件安装，这其中，最重要的就是 configure 这一步。如果 configure 没有问题，则 make 和 make install 一般可以顺利完成。</p>
+<h4 id="4-实战"><a href="#4-实战" class="headerlink" title="(4) 实战"></a>(4) 实战</h4><p>通过编译源代码在linux安装R</p>
+<ol>
+<li>先在<a target="_blank" rel="noopener" href="https://cloud.r-project.org/">R下载网址</a>得到源代码的下载链接</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#先在家目录创建3个目录。bin：存放每个软件的可执行程序。biosoft：软件安装目录。src：软件源代码；</span></span><br><span class="line"><span class="built_in">mkdir</span> bin biosoft src</span><br><span class="line"><span class="comment">#然后在 src 目录下载源代码</span></span><br><span class="line">wget https://cloud.r-project.org/src/base/R-4/R-4.3.1.tar.gz</span><br><span class="line"><span class="comment">#解压</span></span><br><span class="line">tar -zxvf R-4.3.1.tar.gz ../biosoft</span><br><span class="line"><span class="comment">#检查环境，先进入解压后的文件夹  ./configure --prefix=~/biosoft 可以更改安装目录（更改后make install会把软件安装在别的目录）</span></span><br><span class="line">./configure</span><br><span class="line"><span class="comment">#出现报错，需要一一解决，因为依赖包需要太多了，这次实战中止。</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-下载编译后的软件"><a href="#2-下载编译后的软件" class="headerlink" title="2. 下载编译后的软件"></a>2. 下载编译后的软件</h3><p>直接下载编译后的二进制代码。不需要编译即可直接使用。源代码与已编译有什么区别呢？源代码编译会首先检查每个系统的硬件和环境配置，然后更有针对性的进行编译，一般来说，这样的软件运行效率比已编译的版本效率更高。不过，这样的效率差别主要针对互联网应用，有很大的运行次数，如果每次差1 秒钟就会有很大的影响，生物软件影响不大。</p>
+<h4 id="1-实战"><a href="#1-实战" class="headerlink" title="(1) 实战"></a>(1) 实战</h4><p>通过直接下载编译后的代码在linux安装blast+</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#下载</span></span><br><span class="line">wget https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.14.1+-x64-linux.tar.gz</span><br><span class="line"><span class="comment">#解压</span></span><br><span class="line">tar -zxvf ncbi-blast-2.14.1+-x64-linux.tar.gz</span><br><span class="line"><span class="comment">#然后在 ~/bin 中创建可执行文件链接即可</span></span><br><span class="line"><span class="built_in">ls</span> -1 | <span class="keyword">while</span> <span class="built_in">read</span> i;<span class="keyword">do</span> <span class="built_in">ln</span> -s <span class="variable">$PWD</span>/<span class="variable">$i</span> ~/bin;<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-bioconda"><a href="#3-bioconda" class="headerlink" title="3. bioconda"></a>3. bioconda</h3><h4 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="(1) 下载安装"></a>(1) 下载安装</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#1下载bioconda</span><br><span class="line">wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh  </span><br><span class="line">#2安装</span><br><span class="line">sh Miniconda3-latest-Linux-x86_64.sh  </span><br><span class="line">source ~/.bashrc</span><br><span class="line">#3添加软件源</span><br><span class="line">conda config --add channels bioconda </span><br><span class="line">conda config --add channels conda-forge</span><br><span class="line"></span><br><span class="line">#安装mamba</span><br><span class="line">conda install -c conda-forge -y mamba</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-安装软件"><a href="#2-安装软件" class="headerlink" title="(2) 安装软件"></a>(2) 安装软件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装软件(bwa，samtools，bcftools软件为例)</span></span><br><span class="line"><span class="comment">#搜索软件    </span></span><br><span class="line">conda search bwa    </span><br><span class="line"><span class="comment">#安装软件    </span></span><br><span class="line">conda install -y samtools=1.9 bcftools=1.9    </span><br><span class="line"><span class="comment">#查看已安装软件  </span></span><br><span class="line">conda list  </span><br><span class="line"><span class="comment">#升级软件  </span></span><br><span class="line">conda update bwa  </span><br><span class="line"><span class="comment">#移除软件  </span></span><br><span class="line">conda remove bwa </span><br></pre></td></tr></table></figure>
+
+<h4 id="3-虚拟环境"><a href="#3-虚拟环境" class="headerlink" title="(3)虚拟环境"></a>(3)虚拟环境</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1 安装不同版本软件</span></span><br><span class="line"><span class="comment">#查看虚拟环境</span></span><br><span class="line">conda <span class="built_in">env</span> list</span><br><span class="line"><span class="comment">#安装指定版本软件blast 2.7.1，samtools 1.7</span></span><br><span class="line">conda create -y -n <span class="built_in">test</span> </span><br><span class="line"><span class="comment">#激活虚拟环境</span></span><br><span class="line">conda activate <span class="built_in">test</span></span><br><span class="line"><span class="comment">#安装软件</span></span><br><span class="line">conda install -y blast=2.7.1 samtools=1.7</span><br><span class="line"><span class="comment">#退出虚拟环境</span></span><br><span class="line">conda deactivate</span><br><span class="line"></span><br><span class="line"><span class="comment">#2 创建python 2.7环境</span></span><br><span class="line">conda create -n py27 -y python=2.7</span><br><span class="line"><span class="comment">#查看现有虚拟环境</span></span><br><span class="line">conda <span class="built_in">env</span> list</span><br><span class="line"><span class="comment">#激活python2.7环境</span></span><br><span class="line">conda activate py27</span><br><span class="line"><span class="comment">#查看python版本</span></span><br><span class="line">python -V</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-运行其它虚拟环境软件"><a href="#4-运行其它虚拟环境软件" class="headerlink" title="(4)运行其它虚拟环境软件"></a>(4)运行其它虚拟环境软件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># conda run --help可查看用法</span></span><br><span class="line">conda run -n rna_seq fastqc --version</span><br></pre></td></tr></table></figure>
+
+<h4 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h4><p>安装 R</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先看一下有没有</span></span><br><span class="line">mamba search r-base</span><br><span class="line"><span class="comment"># 安装R</span></span><br><span class="line">mamba install -y r-base</span><br><span class="line"></span><br><span class="line"><span class="comment">##R包下载</span></span><br><span class="line"><span class="comment">#1. 使用conda下载管理R包</span></span><br><span class="line">mamba install -y r-tidyverse</span><br><span class="line">mamba install -y bioconductor-deseq2</span><br><span class="line">mamba install -y python-</span><br><span class="line">mamba install -y perl-</span><br><span class="line"><span class="comment">#2. 使用R安装R包，进入R然后</span></span><br><span class="line">install.packages()</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、数据库"><a href="#二、数据库" class="headerlink" title="二、数据库"></a>二、数据库</h2><h3 id="1-数据库查找"><a href="#1-数据库查找" class="headerlink" title="1. 数据库查找"></a>1. 数据库查找</h3><p>数据库检索网站</p>
+<ul>
+<li>NCBI</li>
+<li>EBI</li>
+<li><a target="_blank" rel="noopener" href="https://www.cncb.ac.cn/">CNCB(中国国家生物信息中心)</a></li>
+</ul>
+<h3 id="2-数据库下载"><a href="#2-数据库下载" class="headerlink" title="2. 数据库下载"></a>2. 数据库下载</h3><h4 id="1-浏览器直接下载"><a href="#1-浏览器直接下载" class="headerlink" title="(1) 浏览器直接下载"></a>(1) 浏览器直接下载</h4><p>根据下载地址使用浏览器或迅雷等Windows下载</p>
+<h4 id="2-ftp下载"><a href="#2-ftp下载" class="headerlink" title="(2) ftp下载"></a>(2) ftp下载</h4><p>FTP 是 File Transfer Protocol（文件传输协议）的英文简称，相比于 http 协议，更加稳定，传输速度也更快。很多网站提供 ftp 协议的数据下载。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#NCBI ftp 地址，可直接在浏览器中或 xftp 中登录。ftp://...或 sftp://</span></span><br><span class="line">ftp.ncbi.nlm.nih.gov/</span><br><span class="line"><span class="comment">#ensembl ftp 地址</span></span><br><span class="line">ftp.ensembl.org/pub/</span><br><span class="line"><span class="comment">#ebi ftp地址</span></span><br><span class="line">ftp.ebi.ac.uk/</span><br><span class="line"></span><br><span class="line"><span class="comment">#命令行直接访问ftp，如果要下载文件夹，可使用 lftp 命令</span></span><br><span class="line"><span class="comment">#lftp，后面跟用户名，然后 at 符号，ftp 服务器地址。</span></span><br><span class="line">lftp ftp://ftp.ncbi.nlm.nih.gov/</span><br><span class="line"><span class="comment">#lftp anonymous@ftp.ncbi.nlm.nih.gov/blast/db</span></span><br><span class="line"><span class="comment">#这里密码是空的，我们直接敲回车即可</span></span><br><span class="line"><span class="comment">#ls 列出文件</span></span><br><span class="line">&gt;<span class="built_in">ls</span></span><br><span class="line">&gt;<span class="built_in">cd</span> /blast/db</span><br><span class="line">&gt; mget swissprot.tar.gz</span><br><span class="line"><span class="comment">#mirror 下载文件夹</span></span><br><span class="line">&gt;mirror v4</span><br><span class="line">&gt; <span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3-命令行下载"><a href="#3-命令行下载" class="headerlink" title="(3) 命令行下载"></a>(3) 命令行下载</h4><p><strong>wget</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">-o 下载信息写入日志文件</span><br><span class="line">-O 下载时重命名文件</span><br><span class="line">-c 断点续传</span><br><span class="line">-b 放到后台下载</span><br><span class="line">-r 递归下载，用于下载整个目录</span><br><span class="line">–spider 测试下载链接是否可用</span><br><span class="line">-i 从文件批量下载，将下载地址写入文件</span><br><span class="line">–mirror 镜像网站</span><br><span class="line">-r -A 下载指定格式文件</span><br><span class="line"></span><br><span class="line">//wget下载时产生<span class="built_in">log</span>文件，可以<span class="built_in">cat</span>查看，也可以使用 <span class="built_in">tail</span> -f file.log，可以实时更新文件（f=follow）</span><br></pre></td></tr></table></figure>
+
+<p><strong>curl</strong> 的使用和 wget 类似，不过 curl 可以给出预测下载完成还剩余多少时间，并通过进度条来显示下载进度。</p>
+<h4 id="4-aspera高速下载"><a href="#4-aspera高速下载" class="headerlink" title="(4) aspera高速下载"></a>(4) aspera高速下载</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 下载 aspera</span></span><br><span class="line"><span class="comment">#官网下载编译后文件</span></span><br><span class="line">wget https://download.asperasoft.com/download/sw/connect/3.9.9/ibm-aspera-connect-3.9.9.177872-linux-g2.12-64.tar.gz</span><br><span class="line">tar -zxvf ibm-aspera-connect-3.9.9.177872-linux-g2.12-64.tar.gz</span><br><span class="line">sh ibm-aspera-connect-3.9.9.177872-linux-g2.12-64.sh</span><br><span class="line"><span class="comment"># mamba下载</span></span><br><span class="line">conda install -y -c hcc aspera-cli</span><br><span class="line"><span class="comment"># 找到密钥</span></span><br><span class="line">locate asperaweb_id_dsa.openssh</span><br><span class="line"></span><br><span class="line"><span class="comment">##下载实例</span></span><br><span class="line"><span class="comment">#下载ncbi ftp中文件，anonftp 代表匿名登录 ftp</span></span><br><span class="line">ascp -v -k1 -QT -l 400m -i /home/tao/biosoft/aspera/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:/blast/db/nt_others.tar.gz ./</span><br><span class="line"><span class="comment">#下载 ebi SRR数据</span></span><br><span class="line">ascp -v -k1 -QT -l 400m -P33001 -i /home/tao/biosoft/aspera/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:/vol1/srr/SRR122/079/SRR12207279 ./</span><br><span class="line"><span class="comment"># 基因学苑模板</span></span><br><span class="line">ascp -QTr -l 6000m --overwrite=diff -i /home/tao/biosoft/aspera/asperaweb_id_dsa.openssh anonftp@ftp.ncbi.nlm.nih.gov:blast/db/FASTA/nr.gz . &amp;</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数含义</strong>：<br><code>-v</code> 能让你实时知道程序在干啥，方便查错。<br><code>-Q</code> 用于自适应流量控制，磁盘限制所需。<br><code>-T</code> 设置为无需加密传输。<br><code>-l</code> 设置最大传输速度，一般200m到500m，如果不设置，反而速度会比较低，可能有个较低的默认值。<br><code>-P</code> 用于SSH身份验证的TCP端口，一般是33001。<br><code>-k</code> 断点续传，一般设置为值1。<br><code>-i</code> 提供私钥文件的地址，免密从SRA和ENA下载，不能少，地址一般是~&#x2F;.aspera&#x2F;connect&#x2F;etc中的asperaweb_id_dsa.openssh文件。</p>
+<p><code>--overwrite=diff </code> 表示如果目前下载的文件与之前下载的文件不一致，则会overwrite</p>
+<h4 id="5-批量下载"><a href="#5-批量下载" class="headerlink" title="(5) 批量下载"></a>(5) 批量下载</h4><ol>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/sites/batchentrez">NCBI batch Entrez</a> 下载fasta序列 </li>
+<li><a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/">NCBI病毒数据库</a></li>
+</ol>
+<h2 id="三、生物软件使用"><a href="#三、生物软件使用" class="headerlink" title="三、生物软件使用"></a>三、生物软件使用</h2><p>见专栏</p>
+<h1 id="高通量测序原理与数据处理"><a href="#高通量测序原理与数据处理" class="headerlink" title="高通量测序原理与数据处理"></a>高通量测序原理与数据处理</h1><p><a href="D:\TAO\学习笔记\知识仓库\测序平台比较.xlsx">不同测序平台比较</a></p>
+<h2 id="一、illumina"><a href="#一、illumina" class="headerlink" title="一、illumina"></a>一、illumina</h2><h3 id="1-测序数据下载"><a href="#1-测序数据下载" class="headerlink" title="1. 测序数据下载"></a>1. 测序数据下载</h3><h4 id="（1）了解GEO与SRA"><a href="#（1）了解GEO与SRA" class="headerlink" title="（1）了解GEO与SRA"></a>（1）了解GEO与SRA</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-- SRA(Sequence Read Archive)数据库是NCBI用于存储二代测序的原始数据，包括 454，Illumina，SOLiD，IonTorrent等</span><br><span class="line">-- GEO (Gene Expression Omnibus database)基因表达数据库,收集整理了各种表达芯片数据，后来也加入了甲基化芯片，lncRNA，miRNA，CNV芯片等各种芯片，甚至高通量测序数据,是目前最大、最全面的公共基因表达数据资源。</span><br><span class="line"> </span><br><span class="line">-- GEO</span><br><span class="line">  GPL (GEO Platform/芯片平台)</span><br><span class="line">  GSE (GEO Series/study)</span><br><span class="line">  GSM (GEO Sample/样本)</span><br><span class="line">  GDS (GEO Dataset/数据集)</span><br><span class="line">-- SRA</span><br><span class="line">  SRP (项目研究/Studies)</span><br><span class="line">  SRX (实验设计/Experiments) </span><br><span class="line">  SRS (样本信息/Samples)</span><br><span class="line">  SRR (测序结果集/Runs)</span><br><span class="line">-- 伴随数据库 project</span><br><span class="line">  PRJNA 等同于 SRP</span><br><span class="line">  SAMN 等同于 SRS</span><br><span class="line">  </span><br><span class="line"># 通过以下url直接找到GSE数据</span><br><span class="line">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE75528</span><br><span class="line"># 通过以下url直接找到SRR数据</span><br><span class="line">https://trace.ncbi.nlm.nih.gov/Traces/sra/?run=SRR11618610</span><br><span class="line"># 根据项目号找：</span><br><span class="line">NCBI  https://www.ncbi.nlm.nih.gov/bioproject/?term=PRJNA590857</span><br><span class="line">EBI   https://www.ebi.ac.uk/ena/browser/view/PRJNA590857</span><br></pre></td></tr></table></figure>
+<h4 id="（2）直接下载"><a href="#（2）直接下载" class="headerlink" title="（2）直接下载"></a>（2）直接下载</h4><p>网页端直接点击链接或者在命令行通过<code>wget</code>下载</p>
+<h4 id="（3）prefetch-下载数据"><a href="#（3）prefetch-下载数据" class="headerlink" title="（3）prefetch 下载数据"></a>（3）prefetch 下载数据</h4><p>sratoolkits 中的 prefetch 软件</p>
+<p>直接用 conda 安装的prefetch的时候出现了问题：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(download) [tree022@st8-Horsea-12U bin]$prefetch SRR11618610</span><br><span class="line">2022-12-03T12:52:10 prefetch.2.8.0 sys: connection failed while opening file within cryptographic module - mbedtls_ssl_handshake returned -9984 ( X509 - Certificate verification failed, e.g. CRL, CA or signature check failed )</span><br><span class="line">2022-12-03T12:52:10 prefetch.2.8.0 sys: mbedtls_ssl_get_verify_result returned 0x8 (  !! The certificate is not correctly signed by the trusted CA  )</span><br><span class="line">2022-12-03T12:52:10 prefetch.2.8.0 err: path not found while resolving tree within virtual file system module - &#x27;SRR11618746&#x27; cannot be found.</span><br></pre></td></tr></table></figure>
+<p>是sratoolkits版本的问题，需要从官网上下载最新版的sratoolkits</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/3.0.1/sratoolkit.3.0.1-centos_linux64.tar.gz  <span class="comment"># wget -c是断点续传的意思</span></span><br><span class="line">tar -zxvf sratoolkit.3.0.1-centos_linux64.tar.gz <span class="comment"># 解压</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export PATH=~/package/sratoolkit.3.0.1-centos_linux64/bin:$PATH&#x27;</span> &gt;&gt; ~/.bashrc  <span class="comment"># 将路径加入环境变量</span></span><br><span class="line"><span class="comment">#或者链接至bin目录下 ln -s </span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line">prefetch SRR11618610 SRR11618616 SRR11618621  <span class="comment"># 举例</span></span><br><span class="line"><span class="comment"># 首次运行需要运行配置</span></span><br><span class="line">vdb-config --interactive</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-数据格式"><a href="#2-数据格式" class="headerlink" title="2. 数据格式"></a>2. 数据格式</h3><ul>
+<li><p>fasta（.fa），就是平常 genebank 下载的序列，以<code>&gt;</code>开头</p>
+</li>
+<li><p>fastq（.fq），四行结构，存储高通量测序数据。包括芯片信息，碱基质量（Q20 Q30），碱基序列</p>
+</li>
+<li><p>sam文件，将数据与参考基因组比对后的文件，开头是注释信息，然后是比对信息。</p>
+</li>
+<li><p>bam文件，sam文件压缩后的文件。</p>
+</li>
+<li><p>gtf,gff文件，基因组注释信息</p>
+</li>
+</ul>
+<h3 id="3-sra数据格式转换"><a href="#3-sra数据格式转换" class="headerlink" title="3. sra数据格式转换"></a>3. sra数据格式转换</h3><p>通过 sratoolkits 中的 fasterq-dump 命令或者 fastq-dump 转换 sra 数据为 fastq 文件</p>
+<h4 id="fasterq-dump-fastq-dump"><a href="#fasterq-dump-fastq-dump" class="headerlink" title="fasterq-dump&#x2F;fastq-dump"></a>fasterq-dump&#x2F;fastq-dump</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fasterq-dump --split-3 -e 4 -O ./ --include-technical SRR*</span><br><span class="line"><span class="comment"># 压缩fq文件</span></span><br><span class="line"><span class="built_in">ls</span> *.fastq | <span class="keyword">while</span> <span class="built_in">read</span> <span class="built_in">id</span> ;<span class="keyword">do</span>(gzip <span class="variable">$id</span> &amp;);<span class="keyword">done</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># fastq-dump</span></span><br><span class="line">fastq-dump --split-3 --gzip -O ./ SRR*</span><br></pre></td></tr></table></figure>
+
+<p><code>-e</code> 线程数，<code>--include-technical</code> 对于10X的单细胞测序数据，虽然速度极快，但是fasterq-dump没有把SRR分为-1，-2，-3三个部分，这可能会影响CellRanger的后续分析。对于10x的SRR需要加–include-technical参数，<code>--split-3</code> 将双端测序分为两份,放在不同的文件，对于一方有而一方没有的reads会单独放在一个文件夹里。</p>
+<p>fasterq-dump更快但是不支持gzip，最多也只能先解压为fastq再用其它工具压缩为gzip。fastq-dump支持gzip格式但是要转换的SRA数据比较多的话会很慢。所以下次下载的时候可以直接从EBI下载fastq.gz数据。</p>
+<h3 id="4-fastq-文件处理"><a href="#4-fastq-文件处理" class="headerlink" title="4. fastq 文件处理"></a>4. fastq 文件处理</h3><p>seqkit、seqtk</p>
+<h3 id="5-illumina数据质控过滤"><a href="#5-illumina数据质控过滤" class="headerlink" title="5. illumina数据质控过滤"></a>5. illumina数据质控过滤</h3><h4 id="5-1-查看数据质量"><a href="#5-1-查看数据质量" class="headerlink" title="5.1 查看数据质量"></a>5.1 查看数据质量</h4><h5 id="fastqc-查看数据质量"><a href="#fastqc-查看数据质量" class="headerlink" title="fastqc 查看数据质量"></a>fastqc 查看数据质量</h5><p>[fastqc](# fastqc)   [falco](# falco)</p>
+<h5 id="multiqc-整合结果"><a href="#multiqc-整合结果" class="headerlink" title="multiqc 整合结果"></a>multiqc 整合结果</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multiqc .</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2-数据过滤"><a href="#5-2-数据过滤" class="headerlink" title="5.2 数据过滤"></a>5.2 数据过滤</h4><h5 id="5-2-1-数据过滤原理"><a href="#5-2-1-数据过滤原理" class="headerlink" title="5.2.1 数据过滤原理"></a>5.2.1 数据过滤原理</h5><p>&#x3D;&#x3D;需要过滤什么？&#x3D;&#x3D;</p>
+<ol>
+<li><p>非目片段的序列，如：Adapter接头序列、测序引物、barcode、index等</p>
+<ul>
+<li>为什么会测到 adapter? 空载（adapter之间无插入片段）、插入片段序列过短</li>
+</ul>
+</li>
+<li><p>含 N 碱基过多的序列</p>
+</li>
+<li><p>去除低质量序列，如小于 Q20</p>
+</li>
+<li><p>去除 duplication（按需）</p>
+</li>
+</ol>
+<blockquote>
+<p>  关于 duplication</p>
+<ul>
+<li>两条 reads，reads1完全一致，reads2 完全一致。说明这两条reads来自基因组同一个位置，是由于打断不随机造成的 duplication</li>
+<li>拼接基因组时需要去除 duplication,否则会被认为是重复序列而去除这个片段</li>
+<li>RNAseq 与 16S测序的 duplication 并不是打断不随机造成的，不能去除 duplication 序列，否则会造成丰度信息丢失</li>
+</ul>
+</blockquote>
+<p>&#x3D;&#x3D;数据过滤原则&#x3D;&#x3D;</p>
+<ul>
+<li>不要求 100% 精确，原则是不影响后续分析</li>
+<li>可以根据最终结果，重新过滤数据</li>
+</ul>
+<h5 id="fastp-过滤数据"><a href="#fastp-过滤数据" class="headerlink" title="fastp 过滤数据"></a>fastp 过滤数据</h5><p>[fastp](# fastp)</p>
+<h5 id="trim-galore-过滤数据"><a href="#trim-galore-过滤数据" class="headerlink" title="trim_galore 过滤数据"></a>trim_galore 过滤数据</h5><p>[trim_galore](# trim_galore)</p>
+<h2 id="二、Pacbio"><a href="#二、Pacbio" class="headerlink" title="二、Pacbio"></a>二、Pacbio</h2><h3 id="1-测序原理"><a href="#1-测序原理" class="headerlink" title="1. 测序原理"></a>1. 测序原理</h3><p>&#x3D;&#x3D;优点&#x3D;&#x3D;</p>
+<ul>
+<li>超长读长。PacBio RS:10-15kb，PacBio Sequel:5-70KB</li>
+<li>SMRT的错误是随即发生的</li>
+<li>均匀的覆盖率：SMRT不需要扩增过程，不受GC偏向影响</li>
+<li>可直接检测碱基上的化学修饰</li>
+<li>hifi reads 在准确性和长度之间达到平衡，99.999%</li>
+</ul>
+<p>&#x3D;&#x3D;缺点&#x3D;&#x3D;</p>
+<ul>
+<li>数据量小，一张芯片只能测20G左右</li>
+<li>单分子测序原始数据错误率高，需要重复测序降低错误率</li>
+<li>价格较高，成本高于二代测序</li>
+<li>长度没有纳米孔测序长</li>
+<li>测序仪成本高，提高准确性需要牺牲长度和数据量。</li>
+</ul>
+<p>&#x3D;&#x3D;原理&#x3D;&#x3D;</p>
+<ul>
+<li>单分子实时测序（SMRT）。基于光信号，边合成边测序</li>
+<li>DNA聚合酶</li>
+<li>ZMW 零模波导孔</li>
+<li>哑铃状文库</li>
+</ul>
+<p>&#x3D;&#x3D;碱基识别&#x3D;&#x3D;</p>
+<ol>
+<li>当聚合酶抓住一个dNTP的时候，会停留一段时间这时激发波长才会激发基团发出荧光，而孔中其他少量的游离dNTP则不会被激发</li>
+<li>芯片的背面CMOS与测序Cell结合，每一个ZMW底部都对应一个CMOS感受器，可以将荧光信号转化为电信号从而完成碱基的识别与储存</li>
+<li>ZMW是一个直径只有10~50nm的孔，当激光打在ZMW底部时，只能照亮很小的区域，只有在这个区域内碱基携带的荧光基团被激活从而被检测到，大幅地降低了背景荧光干扰。</li>
+<li>通过机器学习算法，即可将波信号转化成碱基序列</li>
+</ol>
+<h4 id="1-1-Pacbio测序结果"><a href="#1-1-Pacbio测序结果" class="headerlink" title="1.1 Pacbio测序结果"></a>1.1 Pacbio测序结果</h4><ol>
+<li>Polymerase Read: 是一个测序聚合酶，在一个环状文库分子上，一直读取的序列，一般会很长，可能对环状分子读取了多遍。</li>
+<li>Subreads: Polymerase Read 的序列中，去掉哑铃状的测序接头序列，即可以得到多条subreads 序列。</li>
+<li>CLR (Standard Sequencing for Continuous Long Reads) ，称为超长测序模式，插入片段较长，产生的数据是基于单循环测序的结果。</li>
+<li>CCS(Circular Consensus Sequence): 环状一致性序列，是一个Polymerase read 上的多条subreads 序列，相互校正得到的一条反映真实文库的序列。</li>
+<li>Hifi reads: HiFi reads (High fidelity reads) 是Sequel ll三代测序平台推出的兼顾长读长和高准确度的测序序列，HiFi reads具有 &gt;99.9% (Q20) 单分子reads准确度的准确率（Hifi reads一般 8-13kb）</li>
+</ol>
+<h3 id="2-Pacbio-数据质控"><a href="#2-Pacbio-数据质控" class="headerlink" title="2. Pacbio 数据质控"></a>2. Pacbio 数据质控</h3><p><a target="_blank" rel="noopener" href="https://www.pacb.com/smrt-science/smrt-resources/datasets/">Pacbio官网示例数据</a></p>
+<p>下例的数据：<a target="_blank" rel="noopener" href="https://downloads.pacbcloud.com/public/dataset/HiFiViral/Nov_2021/">Index of &#x2F;public&#x2F;dataset&#x2F;HiFiViral&#x2F;Nov_2021 (pacbcloud.com)</a></p>
+<p>[proj_B8](D:\TAO\1. 生信与组学\1. 项目\proj_B8 Pacbio示例数据1)</p>
+<h5 id="fastqc-查看质量"><a href="#fastqc-查看质量" class="headerlink" title="fastqc 查看质量"></a>fastqc 查看质量</h5><h5 id="filtlong-过滤"><a href="#filtlong-过滤" class="headerlink" title="filtlong 过滤"></a>filtlong 过滤</h5><p>[filtlong](# filtlong)</p>
+<h2 id="三、Nanopore"><a href="#三、Nanopore" class="headerlink" title="三、Nanopore"></a>三、Nanopore</h2><h3 id="1-测序原理-1"><a href="#1-测序原理-1" class="headerlink" title="1. 测序原理"></a>1. 测序原理</h3><p>&#x3D;&#x3D;优点&#x3D;&#x3D;</p>
+<ul>
+<li>超长读长、速度快、通量高</li>
+<li>无 GC 偏向性</li>
+<li>可直接对RNA测序、碱基修饰</li>
+</ul>
+<p>&#x3D;&#x3D;缺点&#x3D;&#x3D;</p>
+<ul>
+<li>准确性低</li>
+<li>价格高</li>
+<li>小的插入缺失错误</li>
+</ul>
+<p>&#x3D;&#x3D;原理&#x3D;&#x3D;</p>
+<ul>
+<li><p>电信号</p>
+</li>
+<li><p>Y形接头</p>
+</li>
+<li><p>连接试剂盒：</p>
+<p>1D（只测1条链）、2D（能够测序正反链，停售）、1D^2^（正链测完测反链）</p>
+</li>
+</ul>
+<h3 id="2-数据处理"><a href="#2-数据处理" class="headerlink" title="2. 数据处理"></a>2. 数据处理</h3><p>下机数据格式：fast5。储存了电流信息、碱基修饰等非常全面的数据，因此需要非常大的存储空间。</p>
+<h4 id="2-1-basecalling"><a href="#2-1-basecalling" class="headerlink" title="2.1 basecalling"></a>2.1 basecalling</h4><h5 id="guppy-碱基识别"><a href="#guppy-碱基识别" class="headerlink" title="guppy 碱基识别"></a>guppy 碱基识别</h5><p>[guppy](# guppy)</p>
+<h4 id="2-2-拆分barcode"><a href="#2-2-拆分barcode" class="headerlink" title="2.2 拆分barcode"></a>2.2 拆分barcode</h4><p>[guppy](# guppy)</p>
+<img src="/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/image-20231029030434440.png" alt="image-20231029030434440" style="zoom:30%;">
+
+<h4 id="2-3-查看数据质量"><a href="#2-3-查看数据质量" class="headerlink" title="2.3 查看数据质量"></a>2.3 查看数据质量</h4><h5 id="NanoPlot-fastqc"><a href="#NanoPlot-fastqc" class="headerlink" title="NanoPlot&#x2F;fastqc"></a>NanoPlot&#x2F;fastqc</h5><p>[nanoplot](# nanoplot)</p>
+<h4 id="2-4-数据过滤（可选）"><a href="#2-4-数据过滤（可选）" class="headerlink" title="2.4 数据过滤（可选）"></a>2.4 数据过滤（可选）</h4><h5 id="filtlong-过滤-1"><a href="#filtlong-过滤-1" class="headerlink" title="filtlong 过滤"></a>filtlong 过滤</h5><p>[filtlong](# fil)</p>
+<h1 id="基因组"><a href="#基因组" class="headerlink" title="基因组"></a>基因组</h1><h2 id="基因组拼接"><a href="#基因组拼接" class="headerlink" title="基因组拼接"></a>基因组拼接</h2><h3 id="实战-1"><a href="#实战-1" class="headerlink" title="实战"></a>实战</h3><ol>
+<li><p>[一次基因组组装实战 | FCV](D:\TAO\1. 生信与组学\1. 项目\proj_G2 HY BGI 病毒基因组测序数据分析)</p>
+</li>
+<li><p>[1个细菌基因组拼接](D:\TAO\1. 生信与组学\1. 项目\子项目\proj_sub1 kmer估计基因组大小)</p>
+</li>
+</ol>
+<blockquote>
+<p>  视频教程为基因学苑第 10 节，讲义为第 5 期</p>
+</blockquote>
+<p>案例文章：Comparison of long-read sequencing technologies in the hybridassembly of complex bacterial genomes</p>
+<h3 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h3><h4 id="已测序基因组物种查询"><a href="#已测序基因组物种查询" class="headerlink" title="已测序基因组物种查询"></a>已测序基因组物种查询</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_sequenced_plant_genomes">https://en.wikipedia.org/wiki/List_of_sequenced_plant_genomes</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_sequenced_eukaryotic_genomes">https://en.wikipedia.org/wiki/List_of_sequenced_eukaryotic_genomes</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_sequenced_archaeal_genomes">https://en.wikipedia.org/wiki/List_of_sequenced_archaeal_genomes</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_sequenced_bacterial_genomes">https://en.wikipedia.org/wiki/List_of_sequenced_bacterial_genomes</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_sequenced_fungi_genomes">https://en.wikipedia.org/wiki/List_of_sequenced_fungi_genomes</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_sequenced_plastomes">https://en.wikipedia.org/wiki/List_of_sequenced_plastomes</a></li>
+</ul>
+<h4 id="基因组大小查询"><a href="#基因组大小查询" class="headerlink" title="基因组大小查询"></a>基因组大小查询</h4><p>1、动物：<a target="_blank" rel="noopener" href="http://www.genomesize.com/search.php">http://www.genomesize.com/search.php</a></p>
+<p>2、植物：<a target="_blank" rel="noopener" href="http://data.kew.org/cvalues/">http://data.kew.org/cvalues/</a></p>
+<p>3、真菌：<a target="_blank" rel="noopener" href="http://www.zbi.ee/fungal-genomesize/">www.zbi.ee/fungal-genomesize/</a></p>
+<p>4、原核生物：<a target="_blank" rel="noopener" href="http://www.sci.sdsu.edu/~smaloy/MicrobialGenetics/topics/chroms-genes-prots/genomes.html">http://www.sci.sdsu.edu/~smaloy/MicrobialGenetics/topics/chroms-genes-prots/genomes.html</a></p>
+<h4 id="基因组序列下载"><a href="#基因组序列下载" class="headerlink" title="基因组序列下载"></a>基因组序列下载</h4><ul>
+<li><strong>NCBI:</strong> <a href="ftp://ftp.ncbi.nlm.nih.gov/">ftp://ftp.ncbi.nlm.nih.gov/</a></li>
+<li><strong>EMBL</strong>：<a href="ftp://ftp.ensembl.org/pub/">ftp://ftp.ensembl.org/pub/</a></li>
+<li><strong>UCSC:</strong> <a target="_blank" rel="noopener" href="http://genome.ucsc.edu/">http://genome.ucsc.edu/</a></li>
+<li><strong>JGI</strong>：<a target="_blank" rel="noopener" href="https://jgi.doe.gov/">https://jgi.doe.gov/</a></li>
+<li><strong>ENSEMBL：</strong><a target="_blank" rel="noopener" href="http://asia.ensembl.org/info/about/species.html">http://asia.ensembl.org/info/about/species.html</a></li>
+</ul>
+<h4 id="基因组拼接难点"><a href="#基因组拼接难点" class="headerlink" title="基因组拼接难点"></a>基因组拼接难点</h4><ul>
+<li>内因<ul>
+<li>基因组存在重复序列</li>
+<li>多染色体多倍体</li>
+<li>多倍体杂合</li>
+<li>线粒体叶绿体质粒</li>
+<li>高低GC</li>
+<li>混合样本</li>
+</ul>
+</li>
+<li>外因<ul>
+<li>测序饱和度</li>
+<li>测序错误</li>
+<li>测序覆盖均匀</li>
+<li>读长短</li>
+<li>计算资源不足</li>
+<li>软件算法</li>
+</ul>
+</li>
+</ul>
+<h4 id="基因组拼接原理"><a href="#基因组拼接原理" class="headerlink" title="基因组拼接原理"></a>基因组拼接原理</h4><p>目前基因组拼接的算法主要有两种，一种是适用于长读长测序的基于有 overlap 的共有（consensus）序列组装的方法。这种算法被称为 Overlap Layout Consensus，简写为 OLC算法，另一种是用于短读长测序的基于 De Bruijn 图的短序列拼接</p>
+<ul>
+<li><p>reads：直接测序出来的片段就称为 reads，不同测序平台测序出来的我们都可以称为 reads。</p>
+</li>
+<li><p>pairend reads：illumina 高通量测序的是双末端测序，reads 具有物理上的关系。小片段文库的这种物理关系叫做 pairend，大片段文库的这种关系称为 matepair 文库。</p>
+</li>
+<li><p>insertsize：illumina 双末端测序中间物理距离叫做 insertsize，其实就是随机打断后用来测序片段的长度。在序列拼接中会用到 reads 之间的这种关系，这个 insertsize 的值也非常重要。</p>
+</li>
+<li><p>overlap：reads 之间具有共有序列，这个共有序列关系成为 overlap；</p>
+</li>
+<li><p>kmer：将 reads 切割成固定长度的小片段。这样原来的 reads 就变成了很多的更短的 kmer。</p>
+<blockquote>
+<p>  为什么要用 kmer？去除二代测序中的测序错误。包含测序错误碱基的 kmer 频数为 1，需要把这些 kmer 过滤掉。</p>
+</blockquote>
+</li>
+<li><p>contig：通过 kmer 之间的 overlap 连接成更长的片段，就是 contig。contig 是片段重叠群的意思。有时候我们也直接说 reads 通过 overlap 连接成 contig，都可以。准确来说是利用 kmer 连接成 contig；</p>
+</li>
+<li><p>scaffold：congtig 之间我们可以通过 reads 之间的 pairend 关系再连接成更长的片段，这个就叫做 scaffold，</p>
+</li>
+<li><p>gap：contig 连接 scaffold 过程中，中间区域使用 N 碱基来填充，称为 gap。</p>
+</li>
+</ul>
+<p>为了排除测序错误，需要先去除测序错误的位点，流程为切 kmer -&gt; 统计相同 kmer 的频数 -&gt; 删除 kmer 频数为1的 kmer -&gt; 根据准确的 kmer 拼接成 contig</p>
+<h4 id="通过-kmer-估计基因组大小及杂合度"><a href="#通过-kmer-估计基因组大小及杂合度" class="headerlink" title="通过 kmer 估计基因组大小及杂合度"></a>通过 kmer 估计基因组大小及杂合度</h4><img src="/2024/02/11/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/image-20240117190823134.png" alt="image-20240117190823134" style="zoom:50%;">
+
+<p>最左边的峰为测序错误峰；第二个峰为杂合峰，如果基因组杂合度比较低，则不会出现该峰；第三个峰为纯合峰，杂合峰的峰值所在位置一般为纯合峰所在位置的一半，基因组的杂合度越高，则杂合峰与纯合峰的比值越大；第四个峰为重复序列峰，在纯合峰值所在位置的两倍以上，重复序列越高，重复峰所占面积越大。<a target="_blank" rel="noopener" href="https://bioinformatics.uconn.edu/genome-size-estimation-tutorial/#">教程</a></p>
+<h4 id="序列拼接步骤"><a href="#序列拼接步骤" class="headerlink" title="序列拼接步骤"></a>序列拼接步骤</h4><p>Pregraph（构图）-&gt; 生成 Contig -&gt; 重新 Map -&gt; 构建 Scaffold</p>
+<ol>
+<li><p>Pregraph（构图，De Bruijn 图）：切 kmer，根据 kmer 之间的 overlap 构图，将 kmer 连接起来（只有相差1个碱基的 kmer 才会被连接），最后形成 1 条长的 contig。contig 并不仅仅会出现 1 条，在最长的 contig 这条主干上会出现很多支流 contig，因为由于(1)测序错误存在（短的分支）、(2)多倍体杂合（形成bubble，随机选择1个SNP）、(3)存在重复序列（切除重复序列）、(4)去除低覆盖度分支</p>
+</li>
+<li><p>mapping：将 reads 重新 map 到 contig 上，如果 reads1、reads2 落在同一个 contig 上，可以用于计算 insertsize，如果 reads1 在 contig1 上，reads2 在 contig2 上，则可以将 contig1、contig2 连接起来，连接成为 scaffold。</p>
+</li>
+<li><p>scaffold：根据 mapping 的结果首先确定各个 contig 的先后关系，然后将其连接成为 scaffold，接着再对中间的空缺处用 N 填充（N的数量基于 insertsize，有时候并不是非常准确，因为 insertsize 的大小是不确定的）</p>
+<blockquote>
+<p>  pairend太短？构建 matepair 文库、构建大片段文库、sanger测序补洞、三代测序补洞</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>  软件在识别重复序列时会把 reads 数突然增多的判定为重复序列，因此基因组拼接不能有 duplication，否则会被软件误判为重复序列</p>
+</blockquote>
+<h3 id="基因组拼接结果评估"><a href="#基因组拼接结果评估" class="headerlink" title="基因组拼接结果评估"></a>基因组拼接结果评估</h3><p>原则：评估<strong>准确性</strong>与<strong>完整性</strong></p>
+<ul>
+<li>N50：N50是基因组拼接之后一个评价指标。将拼接得到的所有的序列，根据序列大小从大到小进行排序，然后逐步开始累加，当加和长度超过总长一半时，加入的序列长度即为N50长度。N50越长，拼接得到的更长的序列越多。类似的还有N90等</li>
+</ul>
+<h3 id="拼接策略"><a href="#拼接策略" class="headerlink" title="拼接策略"></a>拼接策略</h3><ul>
+<li><input disabled type="checkbox"> illumina 单独拼接</li>
+<li><input checked disabled type="checkbox"> illumina 拼接 + ONT 连接框架</li>
+<li><input disabled type="checkbox"> ONT 单独拼接</li>
+<li><input checked disabled type="checkbox"> ONT 单独拼接 + illumina 纠错</li>
+</ul>
+<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/zQ8ytEgldJ_k6rgHt09-sQ">vtig-kit</a>: 宏基因&#x2F;病毒组鉴定病毒序列流程设计逻辑</p>
+<h1 id="生信学习网站资料"><a href="#生信学习网站资料" class="headerlink" title="生信学习网站资料"></a>生信学习网站资料</h1><ol>
+<li><p><a target="_blank" rel="noopener" href="https://bioinformatics.uconn.edu/resources-and-events/tutorials-2/#">https://bioinformatics.uconn.edu/resources-and-events/tutorials-2/#</a>    UCONN大学生信学习教程</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://diytranscriptomics.com/">https://diytranscriptomics.com/</a>   宾夕法尼亚兽医学院在线课程，转录组分析</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://qcb.ucla.edu/collaboratory/workshops/">https://qcb.ucla.edu/collaboratory/workshops/</a>  UCLA生物信息学培训系统课程</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://github.com/crazyhottommy/getting-started-with-genomics-tools-and-resources">GitHub 哈弗大学生信科学家分享的资料</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/158047941">单细胞-哈佛-生信宝典</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.bio-info-trainee.com/2834.html">生信完全入门线路图及资源大全</a> </p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.jingege.wang/category/methods/cell/">王进</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.yuque.com/biotrainee">生信技能树 · 语雀 (yuque.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.mubucm.com/doc/2RgtkfD33Eq">https://www.mubucm.com/doc/2RgtkfD33Eq</a> 生信技能树马拉松-学习资料彩蛋</p>
+</li>
+</ol>
+<h2 id="公众号"><a href="#公众号" class="headerlink" title="公众号"></a>公众号</h2><ol>
+<li><p>生信技能树（生信菜鸟团、单细胞天地）</p>
+</li>
+<li><p>基因学苑</p>
+</li>
+<li><p>生信宝典</p>
+</li>
+<li><p>解螺旋</p>
+</li>
+<li><p>组学大讲堂</p>
+</li>
+<li><p>农心生信工作室</p>
+</li>
+</ol>
+<h2 id="搜索技巧"><a href="#搜索技巧" class="headerlink" title="搜索技巧"></a>搜索技巧</h2><p>学会搜索哦，<a target="_blank" rel="noopener" href="https://cn.bing.com/?ensearch=1">https://cn.bing.com/?ensearch=1</a><br>小技巧1：site 限定网页内部搜索site这个单词，被绝大部分搜索引擎内置为一个语法：搜索的关键词：deseq site:biotrainee.com<br>小技巧2：filetype 限定文件类型搜索的关键词：deseq  filetype:pdf</p>
+<h2 id="文献检索，文献下载"><a href="#文献检索，文献下载" class="headerlink" title="文献检索，文献下载"></a>文献检索，文献下载</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.ablesci.com/assist/detail?id=eyGGjd">科研通</a></li>
+</ul>
+<h2 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/UVMt9Hi6rHDAk1WyogGC6w">生物学家如何进行机器学习</a>：A guide to machine learning for biologists</li>
+</ul>
+<h2 id="动物"><a href="#动物" class="headerlink" title="动物"></a>动物</h2><h3 id="转录因子数据库"><a href="#转录因子数据库" class="headerlink" title="转录因子数据库"></a>转录因子数据库</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/343884679">最强攻略5：史上最全转录因子数据库汇总解读 - 知乎 (zhihu.com)</a></p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="http://bioinfo.life.hust.edu.cn/AnimalTFDB4/#/">动物转录因子数据库AnimalTFDB</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://footprintdb.eead.csic.es/?search">footprintDB</a></p>
+</li>
+<li><p>CISBP</p>
+</li>
+<li><p>Cistrome DB(人与小鼠)</p>
+</li>
+<li><p><a href="https://link.zhihu.com/?target=http://www.cuilab.cn/transmir">TransmiR</a></p>
+</li>
+</ul>
+<h2 id="病毒"><a href="#病毒" class="headerlink" title="病毒"></a>病毒</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.bv-brc.org/">BVBRC</a>:BACTERIAL AND VIRAL BIOINFORMATICS RESOURCE CENTER【细菌和病毒生物信息资源中心】</li>
+<li>VirusDIP： 病毒数据平台（Virus Data Integration Platform）整合了CNGBdb、GISAID、NCBI病毒序列数据资源，可提供元信息检索和数据下载，并提供多种工具：BLAST序列比对，进化分析和基因组浏览器，多方安全计算工具。为病原快速鉴定，疫情起源追踪，研究分析病毒的进化来源、致病病理机制提供参考依据。【病毒基因组序列信息】</li>
+<li><a target="_blank" rel="noopener" href="https://www.genome.jp/virushostdb">Virus-Host DB</a>, 关于病毒与其宿主信息的数据库。</li>
+<li><a target="_blank" rel="noopener" href="https://www.virus.org.cn/">https://www.virus.org.cn/</a> 中国科学院武汉病毒研究所，有把病毒毒株、细胞系等信息</li>
+</ul>
+<h2 id="组学"><a href="#组学" class="headerlink" title="组学"></a>组学</h2><ul>
+<li>组学相关R包：<a target="_blank" rel="noopener" href="https://cran.r-project.org/web/views/Omics.html">CRAN Task View: Genomics, Proteomics, Metabolomics, Transcriptomics, and Other Omics (r-project.org)</a>【软件】</li>
+</ul>
+<h3 id="多组学"><a href="#多组学" class="headerlink" title="多组学"></a>多组学</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://ianimal.pro/">Ianimal数据库</a>，华中农大，动物跨物种多组学数据库。21个动物物种多组学数据（WGS&#x2F;RNA-seq&#x2F;ChIP-Seq&#x2F;ATAC-Aeq）,以及基于2794237篇摘要的文献组学信息。</li>
+</ul>
+<h3 id="基因组-1"><a href="#基因组-1" class="headerlink" title="基因组"></a>基因组</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://support.illumina.com/sequencing/sequencing_software/igenome.html">基因组下载网址汇总的网址</a></li>
+</ul>
+<h3 id="转录组"><a href="#转录组" class="headerlink" title="转录组"></a>转录组</h3><h4 id="芯片学习资源"><a href="#芯片学习资源" class="headerlink" title="芯片学习资源"></a>芯片学习资源</h4><p>每个人的技巧不一样（TNBC表达矩阵探索，<br><a target="_blank" rel="noopener" href="https://m.bilibili.com/video/BV1dy4y1C7jz">https://m.bilibili.com/video/BV1dy4y1C7jz</a>  当时有人编辑修饰视频，加工，耗费了很多精力 </p>
+<p>配套代码在GitHub哈：<a target="_blank" rel="noopener" href="https://github.com/jmzeng1314/GSE76275-TNBC">https://github.com/jmzeng1314/GSE76275-TNBC</a><br>TCGA数据库挖掘，代码在：<a target="_blank" rel="noopener" href="https://github.com/jmzeng1314/TCGA_BRCA">https://github.com/jmzeng1314/TCGA_BRCA</a><br>GTEx数据库挖掘，代码在：<a target="_blank" rel="noopener" href="https://github.com/jmzeng1314/gtex_BRCA">https://github.com/jmzeng1314/gtex_BRCA</a><br>METABRIC数据库挖掘，代码在：<a target="_blank" rel="noopener" href="https://github.com/jmzeng1314/METABRIC">https://github.com/jmzeng1314/METABRIC</a> </p>
+<p>学徒配套笔记：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/OivyB28Gs9aZ6f7VX11SFw">https://mp.weixin.qq.com/s/OivyB28Gs9aZ6f7VX11SFw</a></p>
+<h3 id="蛋白组"><a href="#蛋白组" class="headerlink" title="蛋白组"></a>蛋白组</h3><h3 id="代谢组"><a href="#代谢组" class="headerlink" title="代谢组"></a>代谢组</h3><h3 id="耐药数据库"><a href="#耐药数据库" class="headerlink" title="耐药数据库"></a>耐药数据库</h3><ul>
+<li>DRESIS</li>
+</ul>
+<h1 id="PCR"><a href="#PCR" class="headerlink" title="PCR"></a>PCR</h1><h2 id="引物设计软件"><a href="#引物设计软件" class="headerlink" title="引物设计软件"></a>引物设计软件</h2><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/EDXLvRPAA_ImYvi6eSG3hg">iMeta | tNGS利器：跨物种超多重靶向测序引物设计软件MultiPrime</a></p>
+<h1 id="未分类"><a href="#未分类" class="headerlink" title="未分类"></a>未分类</h1><h3 id="流式细胞术"><a href="#流式细胞术" class="headerlink" title="流式细胞术"></a>流式细胞术</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/265497789">科研小白的第一步——看懂流式细胞图 - 知乎 (zhihu.com)</a></p>
+<h3 id="序列比对"><a href="#序列比对" class="headerlink" title="序列比对"></a>序列比对</h3><h4 id="理论知识-D-TAO-1-生信与组学-1-项目-书籍笔记-书籍笔记-生物信息学第2版-李霞-md"><a href="#理论知识-D-TAO-1-生信与组学-1-项目-书籍笔记-书籍笔记-生物信息学第2版-李霞-md" class="headerlink" title="[理论知识](D:\TAO\1. 生信与组学\1. 项目\书籍笔记\书籍笔记-生物信息学第2版-李霞.md)"></a>[理论知识](D:\TAO\1. 生信与组学\1. 项目\书籍笔记\书籍笔记-生物信息学第2版-李霞.md)</h4><h4 id="工具"><a href="#工具" class="headerlink" title="### 工具"></a>### 工具</h4><p><strong>在线比对</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.ebi.ac.uk/Tools/psa/">双序列与多序列比对 | EMBL</a></li>
+<li><a target="_blank" rel="noopener" href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">局部比对 | NCBI-blast</a></li>
+<li><a target="_blank" rel="noopener" href="https://genome.ucsc.edu/cgi-bin/hgBlat">映射到基因组 | USUC-blat</a></li>
+</ul>
+<p><strong>本地比对</strong></p>
+<ul>
+<li><p><a href="#blast">局部比对 | 本地 blast</a></p>
+</li>
+<li><p><a href="#blat">双序列比对 | blat</a></p>
+</li>
+<li><p>比对软件</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Rz4y1j7X2/?vd_source=1c4c40ff55a9e4c9791000eb80def7b2">DNAMAN</a></p>
+</li>
+<li><p>[MEGA](D:\TAO\5. 软件使用方法笔记\Window系统软件使用\进化树构建教程.md)</p>
+</li>
+<li><p><a href="#mafft">mafft</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="电子书"><a href="#电子书" class="headerlink" title="电子书"></a>电子书</h1><p><a target="_blank" rel="noopener" href="https://biobooks.readthedocs.io/zh-cn/latest/">基因学苑</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/" rel="tag"># 生物信息学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/02/08/%E6%97%A0%E7%BC%9D%E5%85%8B%E9%9A%86%E5%BC%95%E7%89%A9%E8%AE%BE%E8%AE%A1/" rel="prev" title="=======无缝克隆=======">
+      <i class="fa fa-chevron-left"></i> =======无缝克隆=======
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/02/11/linux/" rel="next" title="======= Linux =======">
+      ======= Linux ======= <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E7%89%A9%E8%BD%AF%E4%BB%B6%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">生物软件与数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%9F%E7%89%A9%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">一、生物软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E7%BC%96%E8%AF%91%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 编译源代码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-configure"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">(1) configure</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-make"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">(2) make</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-make-install"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">(3) make install</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%AE%9E%E6%88%98"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">(4) 实战</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E4%B8%8B%E8%BD%BD%E7%BC%96%E8%AF%91%E5%90%8E%E7%9A%84%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 下载编译后的软件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%9E%E6%88%98"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">(1) 实战</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-bioconda"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. bioconda</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">(1) 下载安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">(2) 安装软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">1.1.3.3.</span> <span class="nav-text">(3)虚拟环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E8%BF%90%E8%A1%8C%E5%85%B6%E5%AE%83%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E8%BD%AF%E4%BB%B6"><span class="nav-number">1.1.3.4.</span> <span class="nav-text">(4)运行其它虚拟环境软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E6%88%98"><span class="nav-number">1.1.3.5.</span> <span class="nav-text">实战</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.2.</span> <span class="nav-text">二、数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E6%89%BE"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 数据库查找</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 数据库下载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">(1) 浏览器直接下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-ftp%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">(2) ftp下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.2.3.</span> <span class="nav-text">(3) 命令行下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-aspera%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.2.4.</span> <span class="nav-text">(4) aspera高速下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.2.2.5.</span> <span class="nav-text">(5) 批量下载</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%94%9F%E7%89%A9%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">三、生物软件使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%AB%98%E9%80%9A%E9%87%8F%E6%B5%8B%E5%BA%8F%E5%8E%9F%E7%90%86%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">高通量测序原理与数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81illumina"><span class="nav-number">2.1.</span> <span class="nav-text">一、illumina</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.1.</span> <span class="nav-text">1. 测序数据下载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E4%BA%86%E8%A7%A3GEO%E4%B8%8ESRA"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">（1）了解GEO与SRA</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">（2）直接下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89prefetch-%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">（3）prefetch 下载数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.1.2.</span> <span class="nav-text">2. 数据格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-sra%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">2.1.3.</span> <span class="nav-text">3. sra数据格式转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fasterq-dump-fastq-dump"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">fasterq-dump&#x2F;fastq-dump</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-fastq-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86"><span class="nav-number">2.1.4.</span> <span class="nav-text">4. fastq 文件处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-illumina%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7%E8%BF%87%E6%BB%A4"><span class="nav-number">2.1.5.</span> <span class="nav-text">5. illumina数据质控过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F"><span class="nav-number">2.1.5.1.</span> <span class="nav-text">5.1 查看数据质量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#fastqc-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F"><span class="nav-number">2.1.5.1.1.</span> <span class="nav-text">fastqc 查看数据质量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#multiqc-%E6%95%B4%E5%90%88%E7%BB%93%E6%9E%9C"><span class="nav-number">2.1.5.1.2.</span> <span class="nav-text">multiqc 整合结果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4"><span class="nav-number">2.1.5.2.</span> <span class="nav-text">5.2 数据过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-1-%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4%E5%8E%9F%E7%90%86"><span class="nav-number">2.1.5.2.1.</span> <span class="nav-text">5.2.1 数据过滤原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#fastp-%E8%BF%87%E6%BB%A4%E6%95%B0%E6%8D%AE"><span class="nav-number">2.1.5.2.2.</span> <span class="nav-text">fastp 过滤数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#trim-galore-%E8%BF%87%E6%BB%A4%E6%95%B0%E6%8D%AE"><span class="nav-number">2.1.5.2.3.</span> <span class="nav-text">trim_galore 过滤数据</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Pacbio"><span class="nav-number">2.2.</span> <span class="nav-text">二、Pacbio</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%B5%8B%E5%BA%8F%E5%8E%9F%E7%90%86"><span class="nav-number">2.2.1.</span> <span class="nav-text">1. 测序原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-Pacbio%E6%B5%8B%E5%BA%8F%E7%BB%93%E6%9E%9C"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">1.1 Pacbio测序结果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Pacbio-%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7"><span class="nav-number">2.2.2.</span> <span class="nav-text">2. Pacbio 数据质控</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#fastqc-%E6%9F%A5%E7%9C%8B%E8%B4%A8%E9%87%8F"><span class="nav-number">2.2.2.0.1.</span> <span class="nav-text">fastqc 查看质量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#filtlong-%E8%BF%87%E6%BB%A4"><span class="nav-number">2.2.2.0.2.</span> <span class="nav-text">filtlong 过滤</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Nanopore"><span class="nav-number">2.3.</span> <span class="nav-text">三、Nanopore</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%B5%8B%E5%BA%8F%E5%8E%9F%E7%90%86-1"><span class="nav-number">2.3.1.</span> <span class="nav-text">1. 测序原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">2.3.2.</span> <span class="nav-text">2. 数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-basecalling"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">2.1 basecalling</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#guppy-%E7%A2%B1%E5%9F%BA%E8%AF%86%E5%88%AB"><span class="nav-number">2.3.2.1.1.</span> <span class="nav-text">guppy 碱基识别</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-%E6%8B%86%E5%88%86barcode"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">2.2 拆分barcode</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F"><span class="nav-number">2.3.2.3.</span> <span class="nav-text">2.3 查看数据质量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#NanoPlot-fastqc"><span class="nav-number">2.3.2.3.1.</span> <span class="nav-text">NanoPlot&#x2F;fastqc</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-%E6%95%B0%E6%8D%AE%E8%BF%87%E6%BB%A4%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">2.3.2.4.</span> <span class="nav-text">2.4 数据过滤（可选）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#filtlong-%E8%BF%87%E6%BB%A4-1"><span class="nav-number">2.3.2.4.1.</span> <span class="nav-text">filtlong 过滤</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E5%9B%A0%E7%BB%84"><span class="nav-number">3.</span> <span class="nav-text">基因组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%8B%BC%E6%8E%A5"><span class="nav-number">3.1.</span> <span class="nav-text">基因组拼接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E6%88%98-1"><span class="nav-number">3.1.1.</span> <span class="nav-text">实战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%90%86%E8%AE%BA"><span class="nav-number">3.1.2.</span> <span class="nav-text">理论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%B2%E6%B5%8B%E5%BA%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%89%A9%E7%A7%8D%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">已测序基因组物种查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%A4%A7%E5%B0%8F%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">基因组大小查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%BA%8F%E5%88%97%E4%B8%8B%E8%BD%BD"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">基因组序列下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%8B%BC%E6%8E%A5%E9%9A%BE%E7%82%B9"><span class="nav-number">3.1.2.4.</span> <span class="nav-text">基因组拼接难点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%8B%BC%E6%8E%A5%E5%8E%9F%E7%90%86"><span class="nav-number">3.1.2.5.</span> <span class="nav-text">基因组拼接原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87-kmer-%E4%BC%B0%E8%AE%A1%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%A4%A7%E5%B0%8F%E5%8F%8A%E6%9D%82%E5%90%88%E5%BA%A6"><span class="nav-number">3.1.2.6.</span> <span class="nav-text">通过 kmer 估计基因组大小及杂合度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E6%8B%BC%E6%8E%A5%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.1.2.7.</span> <span class="nav-text">序列拼接步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%8B%BC%E6%8E%A5%E7%BB%93%E6%9E%9C%E8%AF%84%E4%BC%B0"><span class="nav-number">3.1.3.</span> <span class="nav-text">基因组拼接结果评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%BC%E6%8E%A5%E7%AD%96%E7%95%A5"><span class="nav-number">3.1.4.</span> <span class="nav-text">拼接策略</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%81%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%9F%E4%BF%A1%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99%E8%B5%84%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">生信学习网站资料</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="nav-number">5.1.</span> <span class="nav-text">公众号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7"><span class="nav-number">5.2.</span> <span class="nav-text">搜索技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E7%8C%AE%E6%A3%80%E7%B4%A2%EF%BC%8C%E6%96%87%E7%8C%AE%E4%B8%8B%E8%BD%BD"><span class="nav-number">5.3.</span> <span class="nav-text">文献检索，文献下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">5.4.</span> <span class="nav-text">机器学习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E7%89%A9"><span class="nav-number">5.5.</span> <span class="nav-text">动物</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%BD%95%E5%9B%A0%E5%AD%90%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">5.5.1.</span> <span class="nav-text">转录因子数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%97%85%E6%AF%92"><span class="nav-number">5.6.</span> <span class="nav-text">病毒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E5%AD%A6"><span class="nav-number">5.7.</span> <span class="nav-text">组学</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%BB%84%E5%AD%A6"><span class="nav-number">5.7.1.</span> <span class="nav-text">多组学</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E5%9B%A0%E7%BB%84-1"><span class="nav-number">5.7.2.</span> <span class="nav-text">基因组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E5%BD%95%E7%BB%84"><span class="nav-number">5.7.3.</span> <span class="nav-text">转录组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8A%AF%E7%89%87%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90"><span class="nav-number">5.7.3.1.</span> <span class="nav-text">芯片学习资源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9B%8B%E7%99%BD%E7%BB%84"><span class="nav-number">5.7.4.</span> <span class="nav-text">蛋白组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E8%B0%A2%E7%BB%84"><span class="nav-number">5.7.5.</span> <span class="nav-text">代谢组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%80%90%E8%8D%AF%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">5.7.6.</span> <span class="nav-text">耐药数据库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PCR"><span class="nav-number">6.</span> <span class="nav-text">PCR</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E7%89%A9%E8%AE%BE%E8%AE%A1%E8%BD%AF%E4%BB%B6"><span class="nav-number">6.1.</span> <span class="nav-text">引物设计软件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AA%E5%88%86%E7%B1%BB"><span class="nav-number">7.</span> <span class="nav-text">未分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%81%E5%BC%8F%E7%BB%86%E8%83%9E%E6%9C%AF"><span class="nav-number">7.0.1.</span> <span class="nav-text">流式细胞术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9"><span class="nav-number">7.0.2.</span> <span class="nav-text">序列比对</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86-D-TAO-1-%E7%94%9F%E4%BF%A1%E4%B8%8E%E7%BB%84%E5%AD%A6-1-%E9%A1%B9%E7%9B%AE-%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0-%E4%B9%A6%E7%B1%8D%E7%AC%94%E8%AE%B0-%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E7%AC%AC2%E7%89%88-%E6%9D%8E%E9%9C%9E-md"><span class="nav-number">7.0.2.1.</span> <span class="nav-text">[理论知识](D:\TAO\1. 生信与组学\1. 项目\书籍笔记\书籍笔记-生物信息学第2版-李霞.md)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">7.0.2.2.</span> <span class="nav-text">### 工具</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%94%B5%E5%AD%90%E4%B9%A6"><span class="nav-number">8.</span> <span class="nav-text">电子书</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="水瓶之翼"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">水瓶之翼</p>
+  <div class="site-description" itemprop="description">躺平了</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">水瓶之翼</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'Mdmc1I6TUmAZfI19jt0kRu8e-gzGzoHsz',
+      appKey     : 'DJRCgUX7mIx8PPT0Cy3cvLFN',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : 'zh-CN' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
